@@ -24,7 +24,7 @@ export default async function Content({
   const data = await getData(title);
 
   return (
-    <div className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
+    <div className="relative isolate overflow-hidden bg-white px-6 py-32 lg:overflow-visible lg:px-0">
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <svg
           className="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
@@ -97,14 +97,17 @@ export default async function Content({
           <h2>Instructions</h2>
           <div className="lg:pr-4">
             <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
-              <>
+              <ol>
                 {instructions.map((item: any) => (
-                  <span key={item}>{item}</span>
+                  <li key={item}>{item.slice(2)}</li>
                 ))}
-              </>
+              </ol>
             </div>
           </div>
         </div>
+        <a href="/recipes" className="button primary mx-auto">
+          Back to recipes
+        </a>
       </div>
     </div>
   );

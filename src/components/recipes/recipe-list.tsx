@@ -12,7 +12,7 @@ export default function RecipeList({
   const meals = ["Breakfast", "Lunch", "Dinner", "Snack", "Dessert"];
   return (
     <div className="bg-white py-16">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl w-full px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             {title}.
@@ -39,7 +39,7 @@ export default function RecipeList({
             <a
               href={`/recipes/${id}`}
               key={id}
-              className="flex max-w-xl flex-col items-start justify-between hover:bg-gray-200 p-2 rounded-md"
+              className="flex max-w-xl h-36 max-h-36 flex-col items-start justify-between hover:bg-gray-200 p-2 rounded-md"
             >
               <div className="flex items-center gap-x-4 text-xs lg:items-start">
                 <time
