@@ -4,7 +4,7 @@ export default function RecipeList({
   description,
   recipes,
 }: {
-  mealPage?: boolean;
+  mealPage: boolean;
   title: string;
   description: string;
   recipes: any[];
@@ -12,14 +12,14 @@ export default function RecipeList({
   const meals = ["Breakfast", "Lunch", "Dinner", "Snack", "Dessert"];
   return (
     <div className="bg-white py-16">
-      <div className="mx-auto max-w-7xl w-full px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             {title}.
           </h2>
           <p className="mt-2 text-lg leading-8 text-gray-600">{description}</p>
         </div>
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 space-y-4 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 space-y-4 md:space-y-0 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {mealPage && (
             <div className="flex items-center space-x2">
               {meals.map((meal) => (
@@ -39,7 +39,7 @@ export default function RecipeList({
             <a
               href={`/recipes/${id}`}
               key={id}
-              className="flex max-w-xl h-36 max-h-36 flex-col items-start justify-between hover:bg-gray-200 p-2 rounded-md"
+              className="flex max-w-xl flex-col items-start justify-between hover:bg-gray-200 p-2 rounded-md"
             >
               <div className="flex items-center gap-x-4 text-xs lg:items-start">
                 <time
@@ -68,7 +68,7 @@ export default function RecipeList({
             </a>
           ))}
         </div>
-        <div className="flex justify-center mt-4">
+        <div className="flex justify-center">
           <a href="/recipes" className="button primary mx-auto">
             See all
           </a>
