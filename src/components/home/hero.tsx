@@ -21,8 +21,8 @@ export default function Hero() {
           <p className="mt-6 text-lg leading-8 text-gray-600">
             SSR is a super simple recipe blog that utilises ChatGPT to generate
             recipes using various prompts, try making some of these crazy good
-            meals. You can also sign in, like and comment on recipes and save
-            them to favourites.
+            meals. Images from the{" "}
+            <a href="https://api.unsplash.com">Unsplash API</a>.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a href="/recipes" className="button primary">

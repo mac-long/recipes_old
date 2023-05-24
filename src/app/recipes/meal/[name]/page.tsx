@@ -8,13 +8,15 @@ export const metadata = {
 };
 
 export default async function Home({ params }: any) {
-  const { rows } = await sql`SELECT * FROM recipes WHERE `;
+  const name = `${params.name.charAt(0).toUpperCase()}${params.name.slice(1)}`;
+  const { rows } = await sql`SELECT * FROM recipes WHERE MEAL = ${name}`;
 
   return (
     <main>
       <RecipeList
-        title={params.name}
-        description={`A collection of recipes perfect for ${params.name}.`}
+        mealPage
+        title={name}
+        description={`A collection of recipes perfect for ${name}`}
         recipes={rows}
       />
     </main>

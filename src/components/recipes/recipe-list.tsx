@@ -1,22 +1,40 @@
 export default function RecipeList({
+  mealPage,
   title,
   description,
   recipes,
 }: {
+  mealPage: boolean;
   title: string;
   description: string;
   recipes: any[];
 }) {
+  const meals = ["Breakfast", "Lunch", "Dinner", "Snack", "Dessert"];
   return (
-    <div className="bg-white py-16 sm:py-32">
+    <div className="bg-white py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            {title}
+            {title}.
           </h2>
           <p className="mt-2 text-lg leading-8 text-gray-600">{description}</p>
         </div>
-        <div className="mx-auto mt-10 -space-y-4  lg:-space-y-0 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 space-y-4 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          {mealPage && (
+            <div className="flex items-center space-x2">
+              {meals.map((meal) => (
+                <a
+                  key={meal}
+                  href={`/recipes/meal/${meal.toLowerCase()}`}
+                  className={`tag ${
+                    meal.toLowerCase() === title.toLowerCase() && "active"
+                  } `}
+                >
+                  {meal}
+                </a>
+              ))}
+            </div>
+          )}
           {recipes.map(({ id, title, summary, meal, created_on }) => (
             <a
               href={`/recipes/${id}`}
@@ -32,8 +50,8 @@ export default function RecipeList({
                 </time>
                 <div className="flex items-center justify-center space-x-1">
                   <a
-                    href={`/recipes/meals/${meal.toLowerCase()}`}
-                    className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-indigo-600 hover:text-gray-50"
+                    href={`/recipes/meal/${meal.toLowerCase()}`}
+                    className="tag"
                   >
                     {meal}
                   </a>
@@ -49,11 +67,11 @@ export default function RecipeList({
               </div>
             </a>
           ))}
-          {recipes.length <= 3 && (
-            <a href="/recipes" className="button primary mx-auto">
-              See more
-            </a>
-          )}
+        </div>
+        <div className="flex justify-center">
+          <a href="/recipes" className="button primary mx-auto">
+            See all
+          </a>
         </div>
       </div>
     </div>
