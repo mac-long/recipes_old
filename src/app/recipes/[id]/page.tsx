@@ -12,6 +12,7 @@ export default async function Home({ params }: any) {
 
   return (
     <main>
+      {/* @ts-expect-error Async Server Component */}
       <Content {...rows[0]} />
     </main>
   );

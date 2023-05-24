@@ -13,7 +13,6 @@ async function getData(query: any) {
   return res.json();
 }
 
-{/* @ts-expect-error Async Server Component */}
 export default async function Content({
   meal,
   title,
