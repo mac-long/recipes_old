@@ -5,7 +5,6 @@
 @layer base {
   body {
     @apply text-slate-700 scroll-smooth;
-    @apply dark:text-slate-300 dark:bg-slate-700;
   }
 
   header h1 {
@@ -14,7 +13,6 @@
 
   main {
     @apply text-slate-900 prose flex flex-col justify-center items-center mx-auto;
-    @apply dark:text-slate-100;
   }
 
   a {

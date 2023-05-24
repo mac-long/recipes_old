@@ -1,4 +1,4 @@
-import RecipeList from "@/components/layout/recipe-list";
+import RecipeList from "@/components/recipes/recipe-list";
 import { sql } from "@vercel/postgres";
 
 export const metadata = {
