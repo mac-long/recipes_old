@@ -4,7 +4,7 @@ export default function RecipeList({
   description,
   recipes,
 }: {
-  mealPage: boolean;
+  mealPage?: boolean;
   title: string;
   description: string;
   recipes: any[];
