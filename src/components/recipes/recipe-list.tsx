@@ -68,7 +68,7 @@ export default function RecipeList({
             </a>
           ))}
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-4">
           <a href="/recipes" className="button primary mx-auto">
             See all
           </a>
