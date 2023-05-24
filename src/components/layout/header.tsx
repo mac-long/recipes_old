@@ -15,7 +15,7 @@ export default function Header() {
     <header className="absolute inset-x-0 top-0 z-50">
       <nav className="flex items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
-          <a href="#">
+          <a href="/">
             <h1 className="text-xl m-0 font-bold text-gray-900">SSR</h1>
           </a>
         </div>
@@ -77,6 +77,14 @@ export default function Header() {
                     {item.name}
                   </a>
                 ))}
+              </div>
+              <div className="py-6">
+                <a
+                  href="/login"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Log in
+                </a>
               </div>
             </div>
           </div>
