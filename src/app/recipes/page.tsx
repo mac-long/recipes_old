@@ -8,7 +8,7 @@ export const metadata = {
 };
 
 export default async function Home() {
-  const { rows } = await sql`SELECT * FROM recipes`;
+  const { rows } = await sql`SELECT * FROM recipes ORDER BY CREATED_ON DESC`;
 
   return (
     <main>

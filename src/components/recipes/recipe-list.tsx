@@ -8,7 +8,7 @@ export default function RecipeList({
   recipes: any[];
 }) {
   return (
-    <div className="bg-white py-4 sm:py-32">
+    <div className="bg-white py-16 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -49,6 +49,11 @@ export default function RecipeList({
               </div>
             </a>
           ))}
+          {recipes.length <= 3 && (
+            <a href="/recipes" className="button primary mx-auto">
+              See more
+            </a>
+          )}
         </div>
       </div>
     </div>
