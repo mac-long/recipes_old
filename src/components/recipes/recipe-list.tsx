@@ -19,7 +19,7 @@ export default function RecipeList({
           </h2>
           <p className="mt-2 text-lg leading-8 text-gray-600">{description}</p>
         </div>
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 space-y-4 md:space-y-0 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 md:gap-y-8 space-y-4 md:space-y-0 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {mealPage && (
             <div className="flex items-center space-x2">
               {meals.map((meal) => (
@@ -39,9 +39,9 @@ export default function RecipeList({
             <a
               href={`/recipes/${id}`}
               key={id}
-              className="flex max-w-xl flex-col items-start justify-between hover:bg-gray-200 p-2 rounded-md"
+              className="flex max-w-xl flex-col justify-start hover:bg-gray-200 p-2 rounded-md"
             >
-              <div className="flex items-center gap-x-4 text-xs lg:items-start">
+              <div className="flex items-start gap-x-4 text-xs lg:items-start">
                 <time
                   dateTime={created_on.toDateString()}
                   className="text-gray-500"
@@ -57,18 +57,18 @@ export default function RecipeList({
                   </a>
                 </div>
               </div>
-              <div className="group relative cursor-pointer">
+              <div className="group relative flex flex-col h-full justify-between cursor-pointer">
                 <h3 className="mt-3 text-lg font-semibold leading-6 group-hover:text-indigo-600">
                   {title}
                 </h3>
-                <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
+                <p className="mt-3 text-sm leading-6 text-gray-600">
                   {summary}
                 </p>
               </div>
             </a>
           ))}
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-4">
           <a href="/recipes" className="button primary mx-auto">
             See all
           </a>

@@ -76,7 +76,7 @@ export default async function Content({
                   <li key={item}>{item}</li>
                 ))}
               </ul>
-              <h2>Cooking Time</h2>
+              <h2>Creation Time</h2>
               <span className="text-gray-700 font-bold leading-8 flex items-center">
                 <ClockIcon className="w-6 h-6 mr-1" />
                 {cookingtime}
@@ -99,7 +99,7 @@ export default async function Content({
             <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
               <ol>
                 {instructions.map((item: any) => (
-                  <li key={item}>{item.slice(2)}</li>
+                  <li key={item}>{item.slice(3)}</li>
                 ))}
               </ol>
             </div>
