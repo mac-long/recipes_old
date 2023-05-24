@@ -12,6 +12,20 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      animation: {
+        slideLeft: "slideLeft .5s ease-in",
+        slideRight: "slideRight 1s ease-in",
+      },
+      keyframes: {
+        slideLeft: {
+          "0%": { opacity: 0, transform: "translateX(-50px)" },
+          "100%": { opacity: 1, transform: "translateX(0)" },
+        },
+        slideRight: {
+          "0%": { opacity: 0, transform: "translateX(110%)" },
+          "100%": { opacity: 1, transform: "translateX(0)" },
+        },
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],

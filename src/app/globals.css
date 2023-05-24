@@ -13,7 +13,8 @@
   }
 
   main {
-    @apply prose text-slate-100 flex flex-col justify-center items-center mx-auto;
+    @apply text-slate-900 prose flex flex-col justify-center items-center mx-auto;
+    @apply dark:text-slate-100;
   }
 
   a {
