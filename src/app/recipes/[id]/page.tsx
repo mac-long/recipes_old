@@ -1,4 +1,4 @@
-import Header from "@/components/recipes/header";
+import Content from "@/components/recipes/content";
 import { sql } from "@vercel/postgres";
 
 export const metadata = {
@@ -12,7 +12,7 @@ export default async function Home({ params }: any) {
 
   return (
     <main>
-      <Header {...rows[0]} />
+      <Content {...rows[0]} />
     </main>
   );
 }

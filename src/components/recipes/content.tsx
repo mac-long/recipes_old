@@ -12,7 +12,8 @@ async function getData(query: any) {
 
   return res.json();
 }
-export default async function Header({
+
+export default async function Content({
   meal,
   title,
   summary,
@@ -85,20 +86,22 @@ export default async function Header({
         </div>
         <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 animate-slideRight">
           <Image
-            className="w-[64rem] sm:w-[32rem] md:[8rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10"
+            className="w-[64rem] sm:w-[32rem] md:[8rem] max-w-none rounded-xl bg-gray-900 shadow-2xl ring-1 ring-gray-400/10"
             src={data.urls.raw}
             alt={`${title} a food for ${meal}.`}
             width={1024}
             height={672}
           />
         </div>
-        <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+        <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:w-full lg:max-w-7xl lg:gap-x-8 lg:px-8 flex flex-col">
           <h2>Instructions</h2>
           <div className="lg:pr-4">
             <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
-              {instructions.map((item: any) => (
-                <span key={item}>{item}</span>
-              ))}
+              <>
+                {instructions.map((item: any) => (
+                  <span key={item}>{item}</span>
+                ))}
+              </>
             </div>
           </div>
         </div>
