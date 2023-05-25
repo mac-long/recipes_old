@@ -17,7 +17,7 @@ export const getRecipesByMeal = (meal: string) =>
     .execute();
 
 export const getRecipeById = (id: number) =>
-  db.selectFrom("recipes").selectAll().orderBy("id", "desc").limit(1).execute();
+  db.selectFrom("recipes").selectAll().where("id", "=", id).limit(1).execute();
 
 export const newRecipe = (values: any) =>
   db.insertInto("recipes").values(values).execute();
