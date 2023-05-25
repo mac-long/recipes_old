@@ -92,6 +92,9 @@ export default async function Content({
             alt={`${title} a food for ${meal}.`}
             width={1024}
             height={672}
+            priority
+            placeholder="blur"
+            blurDataURL="https://placehold.co/1024x762"
           />
           <a
             className="flex items-center w-64 text-xs font-extralight"
