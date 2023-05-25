@@ -1,28 +1,15 @@
 import { ClockIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
-async function getData(query: any) {
-  const res = await fetch(
-    `https://api.unsplash.com/photos/random?query='${query}'&client_id=IVuqCPp50fkkZ4Cx3QX5SsONLZguKnjVUFE2UC2lP-Y`
-  );
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-
-  return res.json();
-}
-
 export default async function Content({
   meal,
   title,
+  image_url,
   summary,
   ingredients,
-  cookingtime,
+  cooking_time,
   instructions
 }: any) {
-  const data = await getData(title);
-
   return (
     <div className="overflow-hidden relative py-32 px-6 bg-white lg:overflow-visible lg:px-0 isolate">
       <div className="overflow-hidden absolute inset-0 -z-10">
@@ -79,7 +66,7 @@ export default async function Content({
               <h2>Creation Time</h2>
               <span className="flex items-center font-bold leading-8 text-gray-700">
                 <ClockIcon className="mr-1 w-6 h-6" />
-                {cookingtime}
+                {cooking_time}
               </span>
             </div>
           </div>
@@ -89,7 +76,7 @@ export default async function Content({
               <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
                 <ol className="md:p-0">
                   {instructions.map((item: any) => (
-                    <li key={item}>{item.slice(3)}</li>
+                    <li key={item}>{item}</li>
                   ))}
                 </ol>
               </div>
@@ -99,7 +86,7 @@ export default async function Content({
         <div className="p-12 -mt-12 -ml-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 animate-slideRight">
           <Image
             className="max-w-none bg-gray-900 rounded-xl ring-1 shadow-2xl w-[64rem] ring-gray-400/10 sm:w-[32rem] md:[8rem]"
-            src={data.urls.raw}
+            src={image_url}
             alt={`${title} a food for ${meal}.`}
             width={1024}
             height={672}

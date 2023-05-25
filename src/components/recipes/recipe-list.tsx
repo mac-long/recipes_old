@@ -62,17 +62,19 @@ export default function RecipeList({
                   {title}
                 </h3>
                 <p className="mt-3 text-sm leading-6 text-gray-600">
-                  {summary}
+                  {summary.slice(0, 52)}...
                 </p>
               </div>
             </a>
           ))}
         </div>
-        <div className="flex justify-center mt-4">
-          <a href="/recipes" className="mx-auto button primary">
-            See all
-          </a>
-        </div>
+        {recipes.length <= 3 && (
+          <div className="flex justify-center mt-4">
+            <a href="/recipes" className="mx-auto button primary">
+              See all
+            </a>
+          </div>
+        )}
       </div>
     </div>
   );

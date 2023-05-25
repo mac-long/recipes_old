@@ -2,11 +2,10 @@ import Features from "@/components/home/features";
 import Hero from "@/components/home/hero";
 import Stats from "@/components/home/stats";
 import RecipeList from "@/components/recipes/recipe-list";
-import { sql } from "@vercel/postgres";
+import { getAllRecipes } from "./lib/kysely";
 
 export default async function Home() {
-  const { rows } =
-    await sql`SELECT * FROM recipes ORDER BY CREATED_ON DESC LIMIT 3`;
+  const latestRecipes = await getAllRecipes();
 
   return (
     <main>
@@ -16,7 +15,7 @@ export default async function Home() {
       <RecipeList
         title="Our latest recipes"
         description="Enjoy trying out the most recent culinary adventures we have shared."
-        recipes={rows}
+        recipes={latestRecipes}
       />
     </main>
   );
