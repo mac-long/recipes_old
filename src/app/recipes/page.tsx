@@ -1,5 +1,5 @@
 import RecipeList from "@/components/recipes/recipe-list";
-import { sql } from "@vercel/postgres";
+import { getAllRecipes } from "../lib/kysely";
 
 export const metadata = {
   title: "Recipes | Super Sweet Recipes",
@@ -7,15 +7,15 @@ export const metadata = {
     "SSR is a super simple recipe blog that utilises ChatGPT to generate recipes using various prompts, try making some of these crazy good meals. You can also sign in, like and comment on recipes and save them to favourites."
 };
 
-export default async function Home() {
-  const { rows } = await sql`SELECT * FROM recipes ORDER BY CREATED_ON DESC`;
+export default async function Recipes() {
+  const recipes = await getAllRecipes();
 
   return (
     <main>
       <RecipeList
         title="Our recipes"
         description="Enjoy searching through our crazy assortment of cuisine from around the world."
-        recipes={rows}
+        recipes={recipes}
       />
     </main>
   );

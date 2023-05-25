@@ -1,5 +1,5 @@
+import { getRecipesByMeal } from "@/app/lib/kysely";
 import RecipeList from "@/components/recipes/recipe-list";
-import { sql } from "@vercel/postgres";
 
 export const metadata = {
   title: "Recipes | Super Sweet Recipes",
@@ -9,7 +9,7 @@ export const metadata = {
 
 export default async function Home({ params }: any) {
   const name = `${params.name.charAt(0).toUpperCase()}${params.name.slice(1)}`;
-  const { rows } = await sql`SELECT * FROM recipes WHERE MEAL = ${name}`;
+  const recipes = await getRecipesByMeal(name);
 
   return (
     <main>
@@ -17,7 +17,7 @@ export default async function Home({ params }: any) {
         mealPage
         title={name}
         description={`A collection of recipes perfect for ${name}`}
-        recipes={rows}
+        recipes={recipes}
       />
     </main>
   );

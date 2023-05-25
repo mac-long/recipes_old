@@ -9,7 +9,6 @@ export default function RecipeList({
   description: string;
   recipes: any[];
 }) {
-  const meals = ["Breakfast", "Lunch", "Dinner", "Snack", "Dessert"];
   return (
     <div className="py-16 bg-white">
       <div className="px-6 mx-auto max-w-7xl lg:px-8">
@@ -20,21 +19,6 @@ export default function RecipeList({
           <p className="mt-2 text-lg leading-8 text-gray-600">{description}</p>
         </div>
         <div className="grid grid-cols-1 gap-x-8 pt-10 mx-auto space-y-4 max-w-2xl border-t border-gray-200 sm:pt-16 sm:mt-16 md:gap-y-8 md:space-y-0 lg:grid-cols-3 lg:mx-0 lg:max-w-none">
-          {mealPage && (
-            <div className="flex items-center space-x2">
-              {meals.map((meal) => (
-                <a
-                  key={meal}
-                  href={`/recipes/meal/${meal.toLowerCase()}`}
-                  className={`tag ${
-                    meal.toLowerCase() === title.toLowerCase() && "active"
-                  } `}
-                >
-                  {meal}
-                </a>
-              ))}
-            </div>
-          )}
           {recipes.map(({ id, title, summary, meal, created_on }) => (
             <a
               href={`/recipes/${id}`}
