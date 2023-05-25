@@ -2,7 +2,7 @@ export default function RecipeList({
   mealPage,
   title,
   description,
-  recipes,
+  recipes
 }: {
   mealPage?: boolean;
   title: string;
@@ -11,15 +11,15 @@ export default function RecipeList({
 }) {
   const meals = ["Breakfast", "Lunch", "Dinner", "Snack", "Dessert"];
   return (
-    <div className="bg-white py-16">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className="py-16 bg-white">
+      <div className="px-6 mx-auto max-w-7xl lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             {title}.
           </h2>
           <p className="mt-2 text-lg leading-8 text-gray-600">{description}</p>
         </div>
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 md:gap-y-8 space-y-4 md:space-y-0 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-x-8 pt-10 mx-auto space-y-4 max-w-2xl border-t border-gray-200 sm:pt-16 sm:mt-16 md:gap-y-8 md:space-y-0 lg:grid-cols-3 lg:mx-0 lg:max-w-none">
           {mealPage && (
             <div className="flex items-center space-x2">
               {meals.map((meal) => (
@@ -39,16 +39,16 @@ export default function RecipeList({
             <a
               href={`/recipes/${id}`}
               key={id}
-              className="flex max-w-xl flex-col justify-start hover:bg-gray-200 p-2 rounded-md"
+              className="flex flex-col justify-start p-2 max-w-xl rounded-md hover:bg-gray-200"
             >
-              <div className="flex items-start gap-x-4 text-xs lg:items-start">
+              <div className="flex gap-x-4 items-start text-xs lg:items-start">
                 <time
                   dateTime={created_on.toDateString()}
                   className="text-gray-500"
                 >
                   {created_on.toDateString()}
                 </time>
-                <div className="flex items-center justify-center space-x-1">
+                <div className="flex justify-center items-center space-x-1">
                   <a
                     href={`/recipes/meal/${meal.toLowerCase()}`}
                     className="tag"
@@ -57,7 +57,7 @@ export default function RecipeList({
                   </a>
                 </div>
               </div>
-              <div className="group relative flex flex-col h-full justify-between cursor-pointer">
+              <div className="flex relative flex-col justify-between h-full cursor-pointer group">
                 <h3 className="mt-3 text-lg font-semibold leading-6 group-hover:text-indigo-600">
                   {title}
                 </h3>
@@ -69,7 +69,7 @@ export default function RecipeList({
           ))}
         </div>
         <div className="flex justify-center mt-4">
-          <a href="/recipes" className="button primary mx-auto">
+          <a href="/recipes" className="mx-auto button primary">
             See all
           </a>
         </div>

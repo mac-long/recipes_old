@@ -5,7 +5,7 @@ import { InView } from "react-intersection-observer";
 export default function AnimationOnScroll({
   children,
   classNameInView,
-  classNameNotInView,
+  classNameNotInView
 }: {
   children: React.ReactNode;
   classNameInView: string;

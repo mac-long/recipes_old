@@ -2,7 +2,7 @@ import {
   AcademicCapIcon,
   ChatBubbleBottomCenterIcon,
   FunnelIcon,
-  ShareIcon,
+  ShareIcon
 } from "@heroicons/react/24/outline";
 
 const features = [
@@ -10,32 +10,32 @@ const features = [
     name: "Share your favourites",
     description:
       "Send the recipe to the whole family so everyone can try out the amazing recipes you discover and enjoy.",
-    icon: ShareIcon,
+    icon: ShareIcon
   },
   {
     name: "Learn new dishes",
     description:
       "Enhance your culinary ability by exploring food from all over the world. Incredible for your taste buds and your mind.",
-    icon: AcademicCapIcon,
+    icon: AcademicCapIcon
   },
   {
     name: "Discuss with the community",
     description:
       "Chat with other readers of the site to learn what other people have improvised with when low on ingredients.",
-    icon: ChatBubbleBottomCenterIcon,
+    icon: ChatBubbleBottomCenterIcon
   },
   {
     name: "Exquisite filters for fine tuning your meal",
     description:
       "Search for recipes by meal, cuisine, difficulty, diet and more! Ensuring you get the exact meal you're after.",
-    icon: FunnelIcon,
-  },
+    icon: FunnelIcon
+  }
 ];
 
 export default function Features() {
   return (
-    <div id="features" className="bg-white py-24 sm:py-32 animate-slideLeft">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div id="features" className="py-24 bg-white sm:py-32 animate-slideLeft">
+      <div className="px-6 mx-auto max-w-7xl lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-indigo-600">
             Tasty Meals
@@ -49,13 +49,13 @@ export default function Features() {
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+          <dl className="grid grid-cols-1 gap-x-8 gap-y-10 max-w-xl lg:grid-cols-2 lg:gap-y-16 lg:max-w-none">
             {features.map((feature) => (
               <div key={feature.name} className="relative pl-16">
                 <dt className="text-base font-semibold leading-7 text-gray-900">
-                  <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                  <div className="flex absolute top-0 left-0 justify-center items-center w-10 h-10 bg-indigo-600 rounded-lg">
                     <feature.icon
-                      className="h-6 w-6 text-white"
+                      className="w-6 h-6 text-white"
                       aria-hidden="true"
                     />
                   </div>

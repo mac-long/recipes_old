@@ -19,13 +19,13 @@ export default async function Content({
   summary,
   ingredients,
   cookingtime,
-  instructions,
+  instructions
 }: any) {
   const data = await getData(title);
 
   return (
-    <div className="relative isolate overflow-hidden bg-white px-6 py-32 lg:overflow-visible lg:px-0">
-      <div className="absolute inset-0 -z-10 overflow-hidden">
+    <div className="overflow-hidden relative py-32 px-6 bg-white lg:overflow-visible lg:px-0 isolate">
+      <div className="overflow-hidden absolute inset-0 -z-10">
         <svg
           className="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
           aria-hidden="true"
@@ -56,8 +56,8 @@ export default async function Content({
           />
         </svg>
       </div>
-      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10 animate-slideLeft">
-        <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+      <div className="grid grid-cols-1 gap-x-8 gap-y-16 mx-auto max-w-2xl lg:grid-cols-2 lg:gap-y-10 lg:items-start lg:mx-0 lg:max-w-none animate-slideLeft">
+        <div className="lg:grid lg:grid-cols-2 lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:gap-x-8 lg:px-8 lg:mx-auto lg:w-full lg:max-w-7xl">
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
               <a
@@ -77,13 +77,13 @@ export default async function Content({
                 ))}
               </ul>
               <h2>Creation Time</h2>
-              <span className="text-gray-700 font-bold leading-8 flex items-center">
-                <ClockIcon className="w-6 h-6 mr-1" />
+              <span className="flex items-center font-bold leading-8 text-gray-700">
+                <ClockIcon className="mr-1 w-6 h-6" />
                 {cookingtime}
               </span>
             </div>
           </div>
-          <div className="lg:col-span-1 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:w-full lg:max-w-lg lg:gap-x-8 lg:px-0 flex flex-col">
+          <div className="flex flex-col lg:col-span-1 lg:col-start-1 lg:row-start-2 lg:gap-x-8 lg:px-0 lg:mx-auto lg:w-full lg:max-w-lg">
             <h2>Instructions</h2>
             <div className="lg:pr-4">
               <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
@@ -96,16 +96,16 @@ export default async function Content({
             </div>
           </div>
         </div>
-        <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 animate-slideRight">
+        <div className="p-12 -mt-12 -ml-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 animate-slideRight">
           <Image
-            className="w-[64rem] sm:w-[32rem] md:[8rem] max-w-none rounded-xl bg-gray-900 shadow-2xl ring-1 ring-gray-400/10"
+            className="max-w-none bg-gray-900 rounded-xl ring-1 shadow-2xl w-[64rem] ring-gray-400/10 sm:w-[32rem] md:[8rem]"
             src={data.urls.raw}
             alt={`${title} a food for ${meal}.`}
             width={1024}
             height={672}
           />
         </div>
-        <a href="/recipes" className="button primary mx-auto">
+        <a href="/recipes" className="mx-auto button primary">
           Back to recipes
         </a>
       </div>
