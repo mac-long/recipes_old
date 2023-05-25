@@ -1,5 +1,5 @@
+import { getRecipeById } from "@/app/lib/kysely";
 import Content from "@/components/recipes/content";
-import { sql } from "@vercel/postgres";
 
 export const metadata = {
   title: "Recipes | Super Sweet Recipes",
@@ -8,12 +8,12 @@ export const metadata = {
 };
 
 export default async function Home({ params }: any) {
-  const { rows } = await sql`SELECT * FROM recipes WHERE ID = ${params.id}`;
+  const recipe = await getRecipeById(params.id);
 
   return (
     <main>
       {/* @ts-expect-error Async Server Component */}
-      <Content {...rows[0]} />
+      <Content {...recipe[0]} />
     </main>
   );
 }

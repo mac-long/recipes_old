@@ -1,9 +1,11 @@
-import { ClockIcon } from "@heroicons/react/24/outline";
+import { CameraIcon, ClockIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
 export default async function Content({
   meal,
   title,
+  photographer_name,
+  photographer_url,
   image_url,
   summary,
   ingredients,
@@ -85,12 +87,23 @@ export default async function Content({
         </div>
         <div className="p-12 -mt-12 -ml-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 animate-slideRight">
           <Image
-            className="max-w-none bg-gray-900 rounded-xl ring-1 shadow-2xl w-[64rem] ring-gray-400/10 sm:w-[32rem] md:[8rem]"
+            className="max-w-none bg-gray-900 rounded-xl ring-1 shadow-2xl w-[64rem] ring-gray-400/10 sm:w-[32rem]"
             src={image_url}
             alt={`${title} a food for ${meal}.`}
             width={1024}
             height={672}
           />
+          <a
+            className="flex items-center w-64 font-extralight text-xs"
+            href={
+              photographer_url ||
+              `https://unsplash.com/s/users/${photographer_name}`
+            }
+            target="_blank"
+          >
+            <CameraIcon className="w-6 h-6 mr-1" />
+            {photographer_name}
+          </a>
         </div>
         <a href="/recipes" className="mx-auto button primary">
           Back to recipes
