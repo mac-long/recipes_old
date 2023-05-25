@@ -6,7 +6,7 @@ export async function GET() {
   const recipes = await db.selectFrom("recipes").select("title").execute();
   const response: any = await openai.createCompletion({
     model: "text-davinci-003",
-    prompt: `Generate a random recipe in a JSON object like this example: {"title": "string", "summary": "string", "cooking_time": "string", "ingredients": ["string", "string1"], "instructions": ["string", "string1"] "meal": "string", "cuisine": "string"} The meals can be: Breakfast, Lunch, Snack, Dinner, Dessert, make sure they are stored in strings. Make sure all the recipes are vegan. Keep the response all one one line with no escaped new line characters.`,
+    prompt: `Generate a random recipe in a JSON object like this example: {"title": "string", "summary": "string", "cooking_time": "string", "ingredients": ["string", "string1"], "instructions": ["string", "string1"] "meal": "string", "cuisine": "string"} The meals can be: Breakfast, Lunch, Snack, Dinner, Dessert, make sure they are stored in strings. Make sure all the recipes are vegan. Ensure there are no html tags in any of the instructions. Keep the response all one one line with no escaped new line characters.`,
     temperature: 1,
     max_tokens: 2048,
     top_p: 1,
