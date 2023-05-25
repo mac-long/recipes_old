@@ -94,14 +94,14 @@ export default async function Content({
             height={672}
           />
           <a
-            className="flex items-center w-64 font-extralight text-xs"
+            className="flex items-center w-64 text-xs font-extralight"
             href={
               photographer_url ||
               `https://unsplash.com/s/users/${photographer_name}`
             }
             target="_blank"
           >
-            <CameraIcon className="w-6 h-6 mr-1" />
+            <CameraIcon className="mr-1 w-6 h-6" />
             {photographer_name}
           </a>
         </div>

@@ -29,6 +29,9 @@
     "tailwindcss": "3.3.2",
     "typescript": "5.0.4"
   },
+  "eslintConfig": {
+    "extends": "next/core-web-vitals"
+  },
   "prettier": {
     "trailingComma": "none"
   }
