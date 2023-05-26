@@ -1,5 +1,6 @@
 import { CameraIcon, ClockIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import Link from "next/link";
 
 export default async function Content({
   meal,
@@ -49,12 +50,12 @@ export default async function Content({
         <div className="lg:grid lg:grid-cols-2 lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:gap-x-8 lg:px-8 lg:mx-auto lg:w-full lg:max-w-7xl">
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
-              <a
+              <Link
                 href={`/recipes/meals/${meal.toLowerCase()}`}
                 className="text-base font-semibold leading-7 text-indigo-600"
               >
                 {meal}
-              </a>
+              </Link>
               <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                 {title}
               </h1>
@@ -96,7 +97,7 @@ export default async function Content({
             placeholder="blur"
             blurDataURL="https://placehold.co/1024x762"
           />
-          <a
+          <Link
             className="flex items-center w-64 text-xs font-extralight"
             href={
               photographer_url ||
@@ -106,11 +107,11 @@ export default async function Content({
           >
             <CameraIcon className="mr-1 w-6 h-6" />
             {photographer_name}
-          </a>
+          </Link>
         </div>
-        <a href="/recipes" className="mx-auto button primary">
+        <Link href="/recipes" className="mx-auto button primary">
           Back to recipes
-        </a>
+        </Link>
       </div>
     </div>
   );

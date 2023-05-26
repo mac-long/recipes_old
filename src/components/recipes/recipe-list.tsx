@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function RecipeList({
   mealPage,
   title,
@@ -20,7 +22,7 @@ export default function RecipeList({
         </div>
         <div className="grid grid-cols-1 gap-x-8 pt-10 mx-auto space-y-4 max-w-2xl border-t border-gray-200 sm:pt-16 sm:mt-16 md:gap-y-8 md:space-y-0 lg:grid-cols-3 lg:mx-0 lg:max-w-none">
           {recipes.map(({ id, title, summary, meal, created_on }) => (
-            <a
+            <Link
               href={`/recipes/${id}`}
               key={id}
               className="flex flex-col justify-start p-2 max-w-xl rounded-md hover:bg-gray-200"
@@ -33,12 +35,12 @@ export default function RecipeList({
                   {created_on.toDateString()}
                 </time>
                 <div className="flex justify-center items-center space-x-1">
-                  <a
+                  <Link
                     href={`/recipes/meal/${meal.toLowerCase()}`}
                     className="tag"
                   >
                     {meal}
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="flex relative flex-col justify-between h-full cursor-pointer group">
@@ -49,14 +51,14 @@ export default function RecipeList({
                   {summary.slice(0, 52)}...
                 </p>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
         {recipes.length <= 3 && (
           <div className="flex justify-center mt-4">
-            <a href="/recipes" className="mx-auto button primary">
+            <Link href="/recipes" className="mx-auto button primary">
               See all
-            </a>
+            </Link>
           </div>
         )}
       </div>

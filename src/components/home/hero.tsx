@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <div className="relative px-6 pt-14 lg:px-8 isolate animate-fadeIn">
@@ -24,15 +26,15 @@ export default function Hero() {
             instructions, try making some of these crazy good meals.
           </p>
           <div className="flex gap-x-6 justify-center items-center mt-10">
-            <a href="/recipes" className="button primary">
+            <Link href="/recipes" className="button primary">
               Get Cooking
-            </a>
-            <a
+            </Link>
+            <Link
               href="#features"
               className="text-sm font-semibold leading-6 text-gray-900"
             >
               Learn more <span aria-hidden="true">→</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
