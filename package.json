@@ -38,7 +38,8 @@
     "extends": "next/core-web-vitals"
   },
   "prettier": {
-    "trailingComma": "none"
+    "trailingComma": "none",
+    "bracketSpacing": false
   },
   "postcss": {
     "plugins": {
