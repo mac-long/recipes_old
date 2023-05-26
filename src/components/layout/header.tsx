@@ -2,16 +2,22 @@
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import Logo from "./logo";
 
 const navigation = [
-  { name: "Recipes", href: "/recipes" },
-  { name: "Author", href: "https://mac-long.vercel.app" }
+  { name: "Home", href: "/" },
+  { name: "Recipes", href: "/recipes" }
 ];
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [pathname]);
 
   return (
     <header className="absolute inset-x-0 top-0 z-50">
@@ -28,13 +34,18 @@ export default function Header() {
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
-          {navigation.map((item) => (
+          {navigation.map(({ name, href }) => (
             <Link
-              key={item.name}
-              href={item.href}
-              className="text-sm font-semibold leading-6 text-gray-900"
+              key={name}
+              href={href}
+              target={name === "Github" ? "_blank" : "_self"}
+              rel={name === "Github" ? "noreferrer" : ""}
+              className={`text-sm font-semibold leading-6 text-gray-900 ${
+                href === pathname &&
+                "text-indigo-600 border-b-2 border-indigo-600"
+              }`}
             >
-              {item.name}
+              {name}
             </Link>
           ))}
         </div>
@@ -64,13 +75,15 @@ export default function Header() {
           <div className="flow-root mt-6">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="py-6 space-y-2">
-                {navigation.map((item) => (
+                {navigation.map(({ href, name }) => (
                   <Link
-                    key={item.name}
-                    href={item.href}
-                    className="block py-2 px-3 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50"
+                    key={name}
+                    href={href}
+                    className={`block py-2 px-3 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50 ${
+                      href === pathname && "text-indigo-600"
+                    }`}
                   >
-                    {item.name}
+                    {name}
                   </Link>
                 ))}
               </div>
