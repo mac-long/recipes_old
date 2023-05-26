@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Developer from "./developer";
 import FooterFeatures from "./features";
 import NewsletterForm from "./form";
 import FooterHeading from "./heading";
@@ -13,23 +13,7 @@ export default function Footer() {
             <NewsletterForm />
             <FooterFeatures />
           </div>
-        </div>
-        <div className="absolute bottom-1 w-full flex font-light items-center justify-center">
-          <Link
-            href="https://mac-long.vercel.app"
-            target="_blank"
-            rel="norefferer"
-          >
-            Developer{" "}
-          </Link>
-          <span className="mx-2">|</span>
-          <Link
-            href="https://github.com/mac-long/recipes"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Github
-          </Link>
+          <Developer />
         </div>
       </div>
     </footer>
