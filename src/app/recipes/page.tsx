@@ -1,8 +1,5 @@
-import RecipesHeading from "@/components/recipes/heading";
 import RecipeList from "@/components/recipes/recipe-list";
-import { Suspense } from "react";
 import { getAllRecipes } from "../lib/kysely";
-import Loading from "./loading";
 
 export const metadata = {
   title: "Recipes | Super Sweet Recipes",
@@ -14,14 +11,10 @@ export default async function Recipes() {
   const recipes = await getAllRecipes();
 
   return (
-    <div className="py-16 bg-white px-6 mx-auto max-w-7xl lg:px-8">
-      <RecipesHeading
-        title="Our recipes"
-        description="Enjoy searching through our crazy assortment of cuisine from around the world."
-      />
-      <Suspense fallback={<Loading />}>
-        <RecipeList recipes={recipes} />
-      </Suspense>
-    </div>
+    <RecipeList
+      title="Our recipes."
+      description="Enjoy searching through our crazy assortment of cuisine from around the world."
+      recipes={recipes}
+    />
   );
 }
