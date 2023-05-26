@@ -4,6 +4,9 @@ SSR is a super simple recipe blog that utilises ChatGPT to generate recipes and 
 
 **Get Cooking.**
 
+## Tools
+- Next.js
+
 ## Todo List
 
 - [x] Fix desktop view recipe list.
