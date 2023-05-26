@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply text-slate-700 scroll-smooth;
+    @apply scroll-smooth;
   }
 
   #logo-heading {
@@ -12,7 +12,7 @@
   }
 
   main {
-    @apply text-slate-900 prose flex flex-col justify-center items-center mx-auto;
+    @apply prose flex flex-col justify-center items-center mx-auto;
   }
 
   button.primary,
@@ -28,11 +28,28 @@
   }
 
   a.tag {
-    @apply relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600;
-    @apply hover:bg-indigo-600 hover:text-gray-50;
+    @apply relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-slate-700;
+    @apply hover:bg-indigo-600 hover:text-slate-50;
   }
 
   a.tag.active {
-    @apply bg-indigo-600 text-gray-50;
+    @apply bg-indigo-600 text-slate-50;
+  }
+}
+
+@layer components {
+  .buttons {
+    @apply flex items-center space-x-2;
+  }
+  .container {
+    @apply py-32 mx-auto max-w-2xl sm:py-48 lg:py-56 flex flex-col justify-center items-center;
+  }
+
+  .container h2 {
+    @apply text-4xl;
+  }
+
+  .container p {
+    @apply max-w-xs text-center;
   }
 }

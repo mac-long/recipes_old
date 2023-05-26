@@ -19,10 +19,10 @@ export default function Stats() {
                 key={stat.id}
                 className="flex flex-col gap-y-4 mx-auto max-w-xs"
               >
-                <dt className="text-base leading-7 text-gray-600">
+                <dt className="text-base leading-7 text-slate-600">
                   {stat.name}
                 </dt>
-                <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                <dd className="order-first text-3xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
                   {stat.value}
                 </dd>
               </div>

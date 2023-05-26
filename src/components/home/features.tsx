@@ -40,10 +40,10 @@ export default function Features() {
           <h2 className="text-base font-semibold leading-7 text-indigo-600">
             Tasty Meals
           </h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <p className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
             Fabricate fantastically flavourful food
           </p>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-6 text-lg leading-8 text-slate-600">
             Make sure you remember to save your favourite recipes for quick and
             easy access whenever you are in the mood to cook them again.
           </p>
@@ -52,7 +52,7 @@ export default function Features() {
           <dl className="grid grid-cols-1 gap-x-8 gap-y-10 max-w-xl lg:grid-cols-2 lg:gap-y-16 lg:max-w-none">
             {features.map((feature) => (
               <div key={feature.name} className="relative pl-16">
-                <dt className="text-base font-semibold leading-7 text-gray-900">
+                <dt className="text-base font-semibold leading-7 text-slate-900">
                   <div className="flex absolute top-0 left-0 justify-center items-center w-10 h-10 bg-indigo-600 rounded-lg">
                     <feature.icon
                       className="w-6 h-6 text-white"
@@ -61,7 +61,7 @@ export default function Features() {
                   </div>
                   {feature.name}
                 </dt>
-                <dd className="mt-2 text-base leading-7 text-gray-600">
+                <dd className="mt-2 text-base leading-7 text-slate-600">
                   {feature.description}
                 </dd>
               </div>

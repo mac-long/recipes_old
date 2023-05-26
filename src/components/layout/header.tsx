@@ -26,7 +26,7 @@ export default function Header() {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="inline-flex justify-center items-center text-gray-700 rounded-md"
+            className="inline-flex justify-center items-center text-slate-700 rounded-md"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
@@ -40,7 +40,7 @@ export default function Header() {
               href={href}
               target={name === "Github" ? "_blank" : "_self"}
               rel={name === "Github" ? "noreferrer" : ""}
-              className={`text-sm font-semibold leading-6 text-gray-900 ${
+              className={`text-sm font-semibold leading-6 text-slate-900 ${
                 href === pathname &&
                 "text-indigo-600 border-b-2 border-indigo-600"
               }`}
@@ -62,7 +62,7 @@ export default function Header() {
             <Logo />
             <button
               type="button"
-              className="p-2.5 -m-2.5 text-gray-700 rounded-md"
+              className="p-2.5 -m-2.5 text-slate-700 rounded-md"
               onClick={() => setMobileMenuOpen(false)}
             >
               <XMarkIcon
@@ -79,7 +79,7 @@ export default function Header() {
                   <Link
                     key={name}
                     href={href}
-                    className={`block py-2 px-3 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50 ${
+                    className={`block py-2 px-3 -mx-3 text-base font-semibold leading-7 text-slate-900 rounded-lg hover:bg-gray-50 ${
                       href === pathname && "text-indigo-600"
                     }`}
                   >
@@ -90,7 +90,7 @@ export default function Header() {
               <div className="py-6">
                 <Link
                   href="/login"
-                  className="block py-2.5 px-3 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50"
+                  className="block py-2.5 px-3 -mx-3 text-base font-semibold leading-7 text-slate-900 rounded-lg hover:bg-gray-50"
                 >
                   Log in
                 </Link>

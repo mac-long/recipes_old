@@ -20,7 +20,7 @@ export default function Hero() {
           <h1 className="text-4xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-tr from-indigo-600 to-pink-500">
             Fun Recipes To Try At Home
           </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-6 text-lg leading-8 text-slate-600">
             SSR is a super simple recipe blog that utilises ChatGPT to generate
             recipes and skips out on the 4 page story before getting to the
             instructions, try making some of these crazy good meals.
@@ -31,7 +31,7 @@ export default function Hero() {
             </Link>
             <Link
               href="#features"
-              className="text-sm font-semibold leading-6 text-gray-900"
+              className="text-sm font-semibold leading-6 text-slate-900"
             >
               Learn more <span aria-hidden="true">→</span>
             </Link>

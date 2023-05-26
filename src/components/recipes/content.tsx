@@ -53,10 +53,10 @@ export default async function Content({
               <span className="text-base font-semibold leading-7 text-indigo-600">
                 {meal}
               </span>
-              <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
                 {title}
               </h1>
-              <p className="mt-6 text-xl leading-8 text-gray-700">{summary}</p>
+              <p className="mt-6 text-xl leading-8 text-slate-700">{summary}</p>
               <h2>Ingredients</h2>
               <ul>
                 {ingredients.map((item: any) => (
@@ -64,7 +64,7 @@ export default async function Content({
                 ))}
               </ul>
               <h2>Creation Time</h2>
-              <span className="flex items-center font-bold leading-8 text-gray-700">
+              <span className="flex items-center font-bold leading-8 text-slate-700">
                 <ClockIcon className="mr-1 w-6 h-6" />
                 {cooking_time}
               </span>
@@ -73,7 +73,7 @@ export default async function Content({
           <div className="flex flex-col lg:col-span-1 lg:col-start-1 lg:row-start-2 lg:gap-x-8 lg:px-0 lg:mx-auto lg:w-full lg:max-w-lg">
             <h2>Instructions</h2>
             <div className="lg:pr-4">
-              <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
+              <div className="max-w-xl text-base leading-7 text-slate-700 lg:max-w-lg">
                 <ol className="md:p-0">
                   {instructions.map((item: any) => (
                     <li key={item}>{item}</li>

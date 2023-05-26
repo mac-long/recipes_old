@@ -8,7 +8,7 @@ export default function FooterGradient() {
           <CalendarDaysIcon className="w-6 h-6 text-white" aria-hidden="true" />
         </div>
         <dt className="mt-4 font-semibold text-white">Weekly articles</dt>
-        <dd className="mt-2 leading-7 text-gray-400">
+        <dd className="mt-2 leading-7 text-slate-400">
           Regular meal updates is great for your health, both mental and
           physical. So enjoy recieving a variety of recipes.
         </dd>
@@ -18,7 +18,7 @@ export default function FooterGradient() {
           <HandRaisedIcon className="w-6 h-6 text-white" aria-hidden="true" />
         </div>
         <dt className="mt-4 font-semibold text-white">No spam</dt>
-        <dd className="mt-2 leading-7 text-gray-400">
+        <dd className="mt-2 leading-7 text-slate-400">
           Only the highest quality recipes and nothing more from these
           newsletters. No spam to worry about.
         </dd>
