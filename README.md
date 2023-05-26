@@ -20,10 +20,8 @@ SSR is a super simple recipe blog that utilises ChatGPT to generate recipes and 
 - [ ] Move styles to `global.css` where possible to avoid repeat code.
 - [ ] Add Husky for commit messages, formatting and linting.
 - [ ] Add push notifications to browser for when new posts come out.
-<<<<<<< HEAD
 - [ ] Add Sanity CMS behind `/admin` locked off unless signed in as admin, enable live editing.
 - [ ] Add Redis KV store to Auth Process.
 - [ ] Add oAuth.
-=======
->>>>>>> parent of 3b032ae (chore: cleaned up dependencies.)
+- [ ] Optimise.
 - [ ] Think about a more modern version of a newsletter that doesn't rely on a phone number.
