@@ -8,7 +8,7 @@ export default async function Home() {
   const latestRecipes = await getLatestRecipes();
 
   return (
-    <main>
+    <>
       <Hero />
       <Features />
       <Stats />
@@ -17,6 +17,6 @@ export default async function Home() {
         description="Enjoy trying out the most recent culinary adventures we have shared."
         recipes={latestRecipes}
       />
-    </main>
+    </>
   );
 }

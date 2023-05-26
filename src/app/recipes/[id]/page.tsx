@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: Props) {
   const { title, summary } = recipe[0];
 
   return {
-    title,
+    title: `${title} | Super Simple Recipe`,
     description: summary
   };
 }
@@ -21,9 +21,9 @@ export default async function Home({ params }: Props) {
   const recipe = await getRecipeById(params.id);
 
   return (
-    <main>
+    <>
       {/* @ts-expect-error Async Server Component */}
       <Content {...recipe[0]} />
-    </main>
+    </>
   );
 }
