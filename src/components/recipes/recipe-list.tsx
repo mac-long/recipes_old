@@ -27,7 +27,7 @@ export default function RecipeList({
               key={id}
               className="flex flex-col justify-start p-2 max-w-xl rounded-md hover:bg-gray-200"
             >
-              <div className="flex gap-x-4 items-start text-xs lg:items-start">
+              <div className="flex gap-x-4 items-center text-xs lg:items-start">
                 <time
                   dateTime={created_on.toDateString()}
                   className="text-gray-500"

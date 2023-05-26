@@ -13,7 +13,7 @@ SSR is a super simple recipe blog that utilises ChatGPT to generate recipes and 
 - Nodemailer
 - OpenAI
 - Typescript
-- 
+-
 - ESLint & Prettier
 
 ## Todo List
@@ -35,3 +35,7 @@ SSR is a super simple recipe blog that utilises ChatGPT to generate recipes and 
 - [ ] Add TypeScript types for everything.
 - [ ] Optimise.
 - [ ] Add push notifications to browser for when new posts come out.
+
+## Issues
+
+- [ ] Figure out why cards have weird space on load.

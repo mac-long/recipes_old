@@ -8,9 +8,13 @@ interface Props {
 }
 
 export async function generateMetadata({ params }: Props) {
-  const recipe = await getRecipeById(params.id).then();
+  const recipe = await getRecipeById(params.id);
+  const { title, summary } = recipe[0];
 
-  return
+  return {
+    title,
+    description: summary
+  };
 }
 
 export default async function Home({ params }: Props) {
