@@ -74,7 +74,7 @@ export default function NewsletterForm() {
             <CheckCircleIcon className="w-5 h-5" />
           )}
           {formResponse.status === "loading" && (
-            <div className="inline-block h-5 w-5 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]" />
+            <div className="inline-block h-5 w-5 animate-spin rounded-full border-2 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]" />
           )}
           {formResponse.status === 500 && <XCircleIcon className="w-5 h-5" />}
           <span>{formResponse.message}</span>
@@ -83,4 +83,3 @@ export default function NewsletterForm() {
     </form>
   );
 }
-
