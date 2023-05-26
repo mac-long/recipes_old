@@ -1,4 +1,4 @@
-import Heading from "@/components/recipes/header";
+import RecipesHeading from "@/components/recipes/heading";
 import RecipeList from "@/components/recipes/recipe-list";
 import { Suspense } from "react";
 import { getAllRecipes } from "../lib/kysely";
@@ -15,7 +15,7 @@ export default async function Recipes() {
 
   return (
     <div className="py-16 bg-white px-6 mx-auto max-w-7xl lg:px-8">
-      <Heading
+      <RecipesHeading
         title="Our recipes"
         description="Enjoy searching through our crazy assortment of cuisine from around the world."
       />

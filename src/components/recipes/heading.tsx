@@ -1,4 +1,4 @@
-export default function Heading({
+export default function RecipesHeading({
   title,
   description
 }: {
