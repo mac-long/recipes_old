@@ -13,7 +13,7 @@ SSR is a super simple recipe blog that utilises ChatGPT to generate recipes and 
 - Nodemailer
 - OpenAI
 - Typescript
--
+- Sentry
 - ESLint & Prettier
 
 ## Todo List
@@ -21,8 +21,8 @@ SSR is a super simple recipe blog that utilises ChatGPT to generate recipes and 
 - [x] Fix desktop view recipe list.
 - [x] Add cron function to generate a new recipe every day, make sure to send chatgpt to current json object of recipes to ensure it doesn't create duplicates.
 - [x] Add Newsletter Signup, Store Emails in Table, Cron Function on Monday's that takes the most recent 5 recipes and sends to all users in mailing list.
-- [ ] Dynamic Metadata Image and Title.
-- [ ] Custom `loading.js`, `not-found.js` and `error.js`.
+- [x] Dynamic Metadata Image and Title.
+- [ ] Custom `loading.tsx`, `error.tsx` and `not-found.tsx`.
 - [ ] Add filters for cuisine and meal.
 - [ ] Update Kysely to use Code Gen.
 - [ ] Add Sanity CMS behind `/admin` locked off unless signed in as admin, enable live editing.
@@ -30,7 +30,7 @@ SSR is a super simple recipe blog that utilises ChatGPT to generate recipes and 
 - [ ] Move styles to `global.css` where possible to avoid repeat code.
 - [ ] Add Storybook for all components and pages.
 - [ ] Add Husky for commit messages, formatting and linting.
-- [ ] Add login/signup, favourites and comments.
+- [ ] Add login/signup, favourites and comments. Make sure to add a banner if email is unverified.
 - [ ] Add unit tests for everything.
 - [ ] Add TypeScript types for everything.
 - [ ] Optimise.
@@ -38,4 +38,4 @@ SSR is a super simple recipe blog that utilises ChatGPT to generate recipes and 
 
 ## Issues
 
-- [ ] Figure out why cards have weird space on load.
+- [ ] Figure out why cards have weird space on recipes load.

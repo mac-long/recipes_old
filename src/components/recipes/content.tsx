@@ -50,12 +50,9 @@ export default async function Content({
         <div className="lg:grid lg:grid-cols-2 lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:gap-x-8 lg:px-8 lg:mx-auto lg:w-full lg:max-w-7xl">
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
-              <Link
-                href={`/recipes/meals/${meal.toLowerCase()}`}
-                className="text-base font-semibold leading-7 text-indigo-600"
-              >
+              <span className="text-base font-semibold leading-7 text-indigo-600">
                 {meal}
-              </Link>
+              </span>
               <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                 {title}
               </h1>
