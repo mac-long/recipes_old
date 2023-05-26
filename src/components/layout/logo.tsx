@@ -6,9 +6,7 @@ export default function Logo() {
     <div className="flex transition-colors duration-300 lg:flex-1 hover:text-indigo-600 group">
       <Link href="/">
         <CakeIcon />
-        <h1 className="m-0 text-xl font-bold transition-colors duration-300 group-hover:text-indigo-600">
-          SSR
-        </h1>
+        <h1 id="logo-heading">SSR</h1>
       </Link>
     </div>
   );
