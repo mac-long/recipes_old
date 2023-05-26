@@ -1,9 +1,9 @@
 import { getAllEmails, getLatestRecipes, newEmail } from "@/app/lib/kysely";
 import { NextResponse } from "next/server";
+const nodemailer = require("nodemailer");
 
 export async function GET() {
   const emails = await getAllEmails();
-<<<<<<< HEAD
   const recipes = await getLatestRecipes();
 
   const transporter = nodemailer.createTransport({
@@ -57,8 +57,6 @@ export async function GET() {
     return NextResponse.json({ status: 500, error });
   }
 
-=======
->>>>>>> parent of 4959383 (feat: emails sending)
   return NextResponse.json({ status: 200, emails });
 }
 
