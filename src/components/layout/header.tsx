@@ -26,7 +26,7 @@ export default function Header() {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="inline-flex justify-center items-center text-slate-700 rounded-md"
+            className="inline-flex justify-center items-center rounded-md text-slate-700"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
@@ -62,7 +62,7 @@ export default function Header() {
             <Logo />
             <button
               type="button"
-              className="p-2.5 -m-2.5 text-slate-700 rounded-md"
+              className="p-2.5 -m-2.5 rounded-md text-slate-700"
               onClick={() => setMobileMenuOpen(false)}
             >
               <XMarkIcon
@@ -90,7 +90,7 @@ export default function Header() {
               <div className="py-6">
                 <Link
                   href="/login"
-                  className="block py-2.5 px-3 -mx-3 text-base font-semibold leading-7 text-slate-900 rounded-lg hover:bg-gray-50"
+                  className="block py-2.5 px-3 -mx-3 text-base font-semibold leading-7 rounded-lg hover:bg-gray-50 text-slate-900"
                 >
                   Log in
                 </Link>

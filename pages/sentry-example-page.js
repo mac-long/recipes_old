@@ -15,13 +15,13 @@ export default function Home() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          alignItems: "center",
+          alignItems: "center"
         }}
       >
         <h1 style={{ fontSize: "4rem", margin: "14px 0" }}>
           <svg
             style={{
-              height: "1em",
+              height: "1em"
             }}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 200 44"
@@ -44,11 +44,11 @@ export default function Home() {
             border: "none",
             color: "white",
             fontSize: "14px",
-            margin: "18px",
+            margin: "18px"
           }}
           onClick={async () => {
             const transaction = Sentry.startTransaction({
-              name: "Example Frontend Transaction",
+              name: "Example Frontend Transaction"
             });
 
             Sentry.configureScope((scope) => {
@@ -70,7 +70,10 @@ export default function Home() {
 
         <p>
           Next, look for the error on the{" "}
-          <a href="https://evolve-20.sentry.io/issues/?project=4505252353212416">Issues Page</a>.
+          <a href="https://evolve-20.sentry.io/issues/?project=4505252353212416">
+            Issues Page
+          </a>
+          .
         </p>
         <p style={{ marginTop: "24px" }}>
           For more information, see{" "}

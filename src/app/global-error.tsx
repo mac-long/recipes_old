@@ -15,13 +15,13 @@ export default function Error({
 
   return (
     <div className="container">
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col justify-center items-center">
         <BugAntIcon className="w-32 h-32" />
         <h2 className="mt-0">Something went wrong!</h2>
         <p>If problem persists contact me...</p>
       </div>
       <div className="buttons">
-        <button className="primary flex items-center">
+        <button className="flex items-center primary">
           <ArrowPathIcon className="w-6 h-6" />
           <span className="ml-2">Try again</span>
         </button>

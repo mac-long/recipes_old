@@ -35,7 +35,7 @@ export default function NewsletterForm() {
   };
   return (
     <form
-      className="flex gap-x-4 mt-6 max-w-md items-end"
+      className="flex gap-x-4 items-end mt-6 max-w-md"
       onSubmit={handleSubmit}
     >
       <div className="flex flex-col space-y-2 sm:flex-row sm:space-x-2">
@@ -74,7 +74,7 @@ export default function NewsletterForm() {
             <CheckCircleIcon className="w-5 h-5" />
           )}
           {formResponse.status === "loading" && (
-            <div className="inline-block h-5 w-5 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]" />
+            <div className="inline-block w-5 h-5 rounded-full border-4 border-current border-solid animate-spin border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]" />
           )}
           {formResponse.status === 500 && <XCircleIcon className="w-5 h-5" />}
           <span>{formResponse.message}</span>

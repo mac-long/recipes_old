@@ -40,7 +40,7 @@ export default function Features() {
           <h2 className="text-base font-semibold leading-7 text-indigo-600">
             Tasty Meals
           </h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+          <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl text-slate-900">
             Fabricate fantastically flavourful food
           </p>
           <p className="mt-6 text-lg leading-8 text-slate-600">

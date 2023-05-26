@@ -10,7 +10,7 @@ export default function NotFound() {
       <p>
         Whoops, we couldn{"'"}t seem to find that page, double check your url.
       </p>
-      <button className="primary flex items-center">
+      <button className="flex items-center primary">
         <HomeIcon className="w-6 h-6" />
         <span className="ml-2">Head on home</span>
       </button>

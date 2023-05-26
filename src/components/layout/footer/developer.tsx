@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Developer() {
   return (
-    <div className="absolute bottom-1 w-full flex text-slate-600 items-center justify-center">
+    <div className="flex absolute bottom-1 justify-center items-center w-full text-slate-600">
       <Link href="https://mac-long.vercel.app" target="_blank" rel="norefferer">
         Developer{" "}
       </Link>

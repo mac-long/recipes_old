@@ -22,7 +22,7 @@ export default function Stats() {
                 <dt className="text-base leading-7 text-slate-600">
                   {stat.name}
                 </dt>
-                <dd className="order-first text-3xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
+                <dd className="order-first text-3xl font-semibold tracking-tight sm:text-5xl text-slate-900">
                   {stat.value}
                 </dd>
               </div>
