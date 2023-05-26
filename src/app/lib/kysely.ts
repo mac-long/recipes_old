@@ -26,4 +26,4 @@ export const newEmail = (data: any) =>
   db.insertInto("newsletter").values(data).execute();
 
 export const getAllEmails = () =>
-  db.selectFrom("newsletter").select(["name", "email"]).execute();
+  db.selectFrom("newsletter").selectAll().execute();
