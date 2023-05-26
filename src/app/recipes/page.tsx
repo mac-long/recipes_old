@@ -4,7 +4,7 @@ import { getAllRecipes } from "../lib/kysely";
 export const metadata = {
   title: "Recipes | Super Sweet Recipes",
   description:
-    "SSR is a super simple recipe blog that utilises ChatGPT to generate recipes using various prompts, try making some of these crazy good meals. You can also sign in, like and comment on recipes and save them to favourites."
+    "SSR is a super simple recipe blog that utilises ChatGPT to generate recipes and skips out on the 4 page story before getting to the instructions, try making some of these crazy good meals."
 };
 
 export default async function Recipes() {
