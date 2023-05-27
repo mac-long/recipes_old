@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write . & rustywind --write .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.14",
@@ -30,7 +32,9 @@
     "autoprefixer": "10.4.14",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.3",
+    "husky": "^8.0.0",
     "postcss": "8.4.23",
+    "rustywind": "^0.16.0",
     "typescript": "5.0.4"
   },
   "eslintConfig": {
@@ -38,7 +42,8 @@
   },
   "prettier": {
     "trailingComma": "none",
-    "bracketSpacing": false
+    "bracketSpacing": false,
+    "singleQuote": true
   },
   "postcss": {
     "plugins": {

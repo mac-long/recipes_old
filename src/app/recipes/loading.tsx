@@ -1,9 +1,9 @@
-import Filters from "@/components/recipes/filters/filters";
-import RecipeCard from "@/components/recipes/list/card";
-import RecipeListContainer from "@/components/recipes/list/container";
-import RecipesHeading from "@/components/recipes/list/heading";
-import List from "@/components/recipes/list/list";
-import {getRecipeFilterCategories} from "../lib/kysely";
+import Filters from '@/components/recipes/filters/filters';
+import RecipeCard from '@/components/recipes/list/card';
+import RecipeListContainer from '@/components/recipes/list/container';
+import RecipesHeading from '@/components/recipes/list/heading';
+import List from '@/components/recipes/list/list';
+import {getRecipeFilterCategories} from '../lib/kysely';
 
 export default async function Recipes({filters}: any) {
   let cards = [];

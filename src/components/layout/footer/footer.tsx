@@ -1,7 +1,7 @@
-import Developer from "./developer";
-import FooterFeatures from "./features";
-import NewsletterForm from "./form";
-import FooterHeading from "./heading";
+import Developer from './developer';
+import FooterFeatures from './features';
+import NewsletterForm from './form';
+import FooterHeading from './heading';
 
 export default function Footer() {
   return (

@@ -1,5 +1,5 @@
-import Link from "next/link";
-import AnimateOnScroll from "../../animate";
+import Link from 'next/link';
+import AnimateOnScroll from '../../animate';
 
 export default function RecipeCard({
   id,

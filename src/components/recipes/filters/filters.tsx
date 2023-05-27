@@ -1,9 +1,9 @@
-"use client";
+'use client';
 import {
   AdjustmentsVerticalIcon,
   XCircleIcon
-} from "@heroicons/react/24/outline";
-import Select from "./select";
+} from '@heroicons/react/24/outline';
+import Select from './select';
 
 export default function Filters({
   filters,
@@ -53,7 +53,7 @@ export default function Filters({
         {query?.length > 0 && (
           <XCircleIcon
             className="ml-2 w-5 h-5 text-gray-400 cursor-pointer"
-            onClick={() => setQuery("")}
+            onClick={() => setQuery('')}
           />
         )}
       </div>

@@ -1,10 +1,10 @@
-import AnimateOnScroll from "../animate";
+import AnimateOnScroll from '../animate';
 
 export default function Stats() {
   const stats = [
-    {id: 1, name: "Users signed up", value: "0"},
-    {id: 2, name: "Recipes and counting", value: "10"},
-    {id: 3, name: "Comments made", value: "0"}
+    {id: 1, name: 'Users signed up', value: '0'},
+    {id: 2, name: 'Recipes and counting', value: '10'},
+    {id: 3, name: 'Comments made', value: '0'}
   ];
   return (
     <>

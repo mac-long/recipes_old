@@ -1,4 +1,4 @@
-import AnimateOnScroll from "@/components/animate";
+import AnimateOnScroll from '@/components/animate';
 
 export default function Container({children}: any) {
   return (

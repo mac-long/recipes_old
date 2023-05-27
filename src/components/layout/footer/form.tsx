@@ -1,21 +1,21 @@
-"use client";
-import {CheckCircleIcon, XCircleIcon} from "@heroicons/react/24/outline";
-import {useState} from "react";
+'use client';
+import {CheckCircleIcon, XCircleIcon} from '@heroicons/react/24/outline';
+import {useState} from 'react';
 
 export default function NewsletterForm() {
   const [formResponse, setformResponse] = useState<any>({
     status: null,
-    message: "Subscribe"
+    message: 'Subscribe'
   });
   const handleSubmit = async (event: any) => {
     event.preventDefault();
 
-    setformResponse({status: "loading", message: "Loading..."});
+    setformResponse({status: 'loading', message: 'Loading...'});
 
-    const response = await fetch("/api/newsletter", {
-      method: "POST",
+    const response = await fetch('/api/newsletter', {
+      method: 'POST',
       headers: {
-        "Content-Type": "applications/json"
+        'Content-Type': 'applications/json'
       },
       body: JSON.stringify({
         name: event.target.name.value,
@@ -28,7 +28,7 @@ export default function NewsletterForm() {
     setTimeout(() => {
       setformResponse({
         status: null,
-        message: "Subscribe"
+        message: 'Subscribe'
       });
       event.target.reset();
     }, 5000);
@@ -65,15 +65,15 @@ export default function NewsletterForm() {
       <button
         type="submit"
         className={`flex-none py-2.5 px-3.5 text-sm font-semibold text-white bg-indigo-500 rounded-md shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500
-         ${formResponse.status === 500 && "bg-red-400"} ${
-          formResponse.status === 200 && "bg-green-300 text-black"
+         ${formResponse.status === 500 && 'bg-red-400'} ${
+          formResponse.status === 200 && 'bg-green-300 text-black'
         }`}
       >
         <div className="flex items-center space-x-2">
           {formResponse.status === 200 && (
             <CheckCircleIcon className="w-5 h-5" />
           )}
-          {formResponse.status === "loading" && (
+          {formResponse.status === 'loading' && (
             <div className="inline-block w-5 h-5 rounded-full border-4 border-current border-solid animate-spin border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]" />
           )}
           {formResponse.status === 500 && <XCircleIcon className="w-5 h-5" />}

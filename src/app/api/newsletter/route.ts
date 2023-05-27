@@ -1,15 +1,15 @@
-import {getAllEmails, getLatestRecipes, newEmail} from "@/app/lib/kysely";
-import {NextResponse} from "next/server";
-const nodemailer = require("nodemailer");
+import {getAllEmails, getLatestRecipes, newEmail} from '@/app/lib/kysely';
+import {NextResponse} from 'next/server';
+const nodemailer = require('nodemailer');
 
 export async function GET() {
   const emails = await getAllEmails();
   const recipes = await getLatestRecipes();
 
   const transporter = nodemailer.createTransport({
-    service: "gmail",
+    service: 'gmail',
     auth: {
-      user: "mac@3sidedcube.com",
+      user: 'mac@3sidedcube.com',
       pass: process.env.GMAIL_PASS
     }
   });
@@ -18,12 +18,12 @@ export async function GET() {
   emails.forEach((email) => {
     emailAddresses.push(email.email);
   });
-  const baseUrl = "https://recipes-sand.vercel.app/";
+  const baseUrl = 'https://recipes-sand.vercel.app/';
 
   const mailOptions = {
-    from: "mac@3sidedcube.com",
+    from: 'mac@3sidedcube.com',
     to: emailAddresses,
-    subject: "Super Simple Recipes | Newsletter",
+    subject: 'Super Simple Recipes | Newsletter',
     html: `
         <style>
           .button{margin-top: 2rem;text-decoration:none;padding-top:.625rem;padding-bottom:.625rem;padding-left:.875rem;padding-right:.875rem;background-color:#4f46e5;color:#fff;font-size:.875rem;line-height:1.25rem;font-weight:600;border-radius:.375rem;box-shadow:0 1px 2px 0 rgba(0,0,0,.05);cursor:pointer}
@@ -50,7 +50,7 @@ export async function GET() {
       {
         error
           ? console.log(error)
-          : console.log("Email sent: " + info.response);
+          : console.log('Email sent: ' + info.response);
       }
     });
   } catch (error: any) {
@@ -66,10 +66,10 @@ export async function POST(request: Request) {
   try {
     await newEmail(request);
   } catch (error: any) {
-    if (error.code === "23505")
-      return NextResponse.json({status: 500, message: "Already subscribed"});
-    else return NextResponse.json({status: 500, message: "Oops! Try again"});
+    if (error.code === '23505')
+      return NextResponse.json({status: 500, message: 'Already subscribed'});
+    else return NextResponse.json({status: 500, message: 'Oops! Try again'});
   }
 
-  return NextResponse.json({status: 200, message: "Success"});
+  return NextResponse.json({status: 200, message: 'Success'});
 }
