@@ -28,6 +28,7 @@ SSR is a super simple recipe blog that utilises ChatGPT to generate recipes and 
 - [x] Add a search bar to recipes page.
 - [x] Add Husky for commit messages, formatting and linting.
 - [ ] Add Sanity CMS behind `/admin` locked off unless signed in as admin, enable live editing.
+- [ ] Add share options [SMS, Twitter, Facebook, Copy Link and Email] to recipe pages.
 - [ ] Split App into Components.
 - [ ] Add Storybook for all components and pages.
 - [ ] Move styles to `global.css` where possible to avoid repeat code.

@@ -31,7 +31,7 @@ export default function NewsletterForm() {
         message: 'Subscribe'
       });
       event.target.reset();
-    }, 5000);
+    }, 4000);
   };
   return (
     <form
