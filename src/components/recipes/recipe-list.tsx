@@ -13,7 +13,7 @@ export default function RecipeList({
   description: string;
   recipes?: any[];
   loading?: boolean;
-  filters: boolean;
+  filters?: boolean;
 }) {
   let cards = [];
 
