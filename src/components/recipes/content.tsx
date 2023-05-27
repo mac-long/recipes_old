@@ -167,9 +167,6 @@ export default async function Content({
             {photographer_name}
           </Link>
         </div>
-        <Link href="/recipes" className="mx-auto button primary">
-          Back to recipes
-        </Link>
       </div>
     </div>
   );
