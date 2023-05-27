@@ -18,7 +18,7 @@ export default function RecipeListContainer({
   useEffect(() => {
     let newRecipes = recipesData;
 
-    if (filters.cuisines !== "All") {
+    if (filters.cuisine !== "All") {
       newRecipes = newRecipes.filter(
         (recipe: any) => recipe.cuisine === filters.cuisine
       );
