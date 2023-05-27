@@ -1,5 +1,5 @@
 import Link from "next/link";
-import AnimateOnScroll from "../animate";
+import AnimateOnScroll from "../../animate";
 
 export default function RecipeCard({
   id,
@@ -32,10 +32,18 @@ export default function RecipeCard({
           </div>
           <Link href={`/recipes/${id}`}>
             <div className="flex relative flex-col justify-between h-full cursor-pointer group">
-              <h3 className="mt-3 text-lg font-semibold leading-6 group-hover:text-indigo-600 h-[48px]">
+              <h3
+                className={`mt-3 text-lg font-semibold leading-6 group-hover:text-indigo-600 ${
+                  loading && "h-[48px]"
+                }`}
+              >
                 {title}
               </h3>
-              <p className="mt-3 text-sm leading-6 text-slate-600 lg:h-[72px]">
+              <p
+                className={`text-sm leading-6 text-slate-600 ${
+                  loading && "lg:h-[72px]"
+                }`}
+              >
                 <span className="lg:hidden">{summary}</span>
                 <span className="hidden lg:block">
                   {summary?.slice(0, 52)}...

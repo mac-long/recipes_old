@@ -1,4 +1,4 @@
-export default function RecipeListContainer({children}: any) {
+export default function Container({children}: any) {
   return (
     <div className="list-container">
       <div className="content">{children}</div>

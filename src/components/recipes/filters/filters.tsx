@@ -1,7 +1,7 @@
 import {AdjustmentsVerticalIcon} from "@heroicons/react/24/outline";
 import Select from "./select";
 
-export default function Filters({current, meals, cuisines}: any) {
+export default function Filters({meals, cuisines}: any) {
   return (
     <div className="space-y-2">
       <h3 className="flex items-center space-x-1 m-0">

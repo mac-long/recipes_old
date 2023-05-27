@@ -12,7 +12,9 @@ export default function Select({
   options: any;
 }) {
   const selected = signal(options[0]);
-  const setSelected = (e: any) => (selected.value = e);
+  const setSelected = (e: any) => {
+    selected.value = e;
+  };
 
   return (
     <Listbox value={selected.value} onChange={setSelected}>

@@ -1,8 +1,5 @@
-import RecipeListContainer from "@/components/recipes/container";
-import Filters from "@/components/recipes/filters/filters";
-import RecipesHeading from "@/components/recipes/heading";
-import RecipeList from "@/components/recipes/list";
-import {signal} from "@preact/signals";
+import Container from "@/components/recipes/list/container";
+import RecipeListContainer from "@/components/recipes/list/list-container";
 import {getAllRecipes, getRecipeFilterCategories} from "../lib/kysely";
 
 export const metadata = {
@@ -14,22 +11,14 @@ export const metadata = {
 export default async function Recipes() {
   const recipes = await getAllRecipes();
   const {meals, cuisines} = await getRecipeFilterCategories();
-  const currentFilter = signal({
-    meal: null,
-    cuisine: null
-  });
 
   return (
-    <>
-      <RecipeListContainer>
-        <RecipesHeading
-          title="Our recipes."
-          description="Enjoy searching through our crazy assortment of cuisine from around the world."
-        >
-          <Filters current={currentFilter} meals={meals} cuisines={cuisines} />
-        </RecipesHeading>
-        <RecipeList recipes={recipes} />
-      </RecipeListContainer>
-    </>
+    <Container>
+      <RecipeListContainer
+        recipes={recipes}
+        meals={meals}
+        cuisines={cuisines}
+      />
+    </Container>
   );
 }

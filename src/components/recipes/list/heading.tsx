@@ -1,4 +1,4 @@
-import AnimateOnScroll from "../animate";
+import AnimateOnScroll from "@/components/animate";
 
 export default function RecipesHeading({
   title,

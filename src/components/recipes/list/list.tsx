@@ -2,8 +2,8 @@ import RecipeCard from "./card";
 
 export default function RecipeList({recipes}: any) {
   let cards: any = [];
-  recipes?.map((recipe: any) =>
-    cards.push(<RecipeCard key={recipe.id} {...recipe} />)
+  recipes?.map((recipe: any, i: number) =>
+    cards.push(<RecipeCard key={i} {...recipe} />)
   );
 
   return (
