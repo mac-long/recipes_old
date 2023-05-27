@@ -8,37 +8,7 @@ export default function RecipeCard({
   created_on,
   loading
 }: any) {
-  if (!loading) {
-    return (
-      <Link
-        href={`/recipes/${id}`}
-        key={id}
-        className="flex flex-col justify-start p-2 max-w-xl rounded-md hover:bg-gray-200"
-      >
-        <div className="flex gap-x-4 items-center text-xs">
-          <time
-            dateTime={created_on?.toDateString()}
-            className="text-slate-500"
-          >
-            {created_on?.toDateString()}
-          </time>
-          <div className="flex justify-center items-center space-x-1">
-            <Link href={`/recipes/meal/${meal?.toLowerCase()}`} className="tag">
-              {meal}
-            </Link>
-          </div>
-        </div>
-        <div className="flex relative flex-col justify-between h-full cursor-pointer group">
-          <h3 className="mt-3 text-lg font-semibold leading-6 group-hover:text-indigo-600">
-            {title}
-          </h3>
-          <p className="mt-3 text-sm leading-6 text-slate-600">
-            {summary?.slice(0, 52)}
-          </p>
-        </div>
-      </Link>
-    );
-  } else {
+  if (loading) {
     return (
       <div className="flex flex-col justify-start p-2 max-w-xl bg-gray-300 rounded-md animate-pulse h-[144px] md:h-[169px]">
         <div className="flex gap-x-4 items-center text-xs">
@@ -52,4 +22,30 @@ export default function RecipeCard({
       </div>
     );
   }
+  return (
+    <Link
+      href={`/recipes/${id}`}
+      key={id}
+      className="flex flex-col justify-start p-2 max-w-xl rounded-md hover:bg-gray-200"
+    >
+      <div className="flex gap-x-4 items-center text-xs">
+        <time dateTime={created_on?.toDateString()} className="text-slate-500">
+          {created_on?.toDateString()}
+        </time>
+        <div className="flex justify-center items-center space-x-1">
+          <Link href={`/recipes/meal/${meal?.toLowerCase()}`} className="tag">
+            {meal}
+          </Link>
+        </div>
+      </div>
+      <div className="flex relative flex-col justify-between h-full cursor-pointer group">
+        <h3 className="mt-3 text-lg font-semibold leading-6 group-hover:text-indigo-600">
+          {title}
+        </h3>
+        <p className="mt-3 text-sm leading-6 text-slate-600">
+          {summary?.slice(0, 52)}
+        </p>
+      </div>
+    </Link>
+  );
 }
