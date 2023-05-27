@@ -1,7 +1,7 @@
 "use client";
 import {Listbox, Transition} from "@headlessui/react";
 import {CheckIcon, ChevronUpDownIcon} from "@heroicons/react/20/solid";
-import {Fragment, useEffect, useState} from "react";
+import {Fragment, useState} from "react";
 
 export default function Select({
   filters,
@@ -15,23 +15,13 @@ export default function Select({
   const [selected, setSelected] = useState(options[0]);
 
   const handleChange = async (e: any) => {
+    let newFilters;
     setSelected(e);
 
-    if (label === "Cuisines") setFilters({...filters, cuisine: e});
-    else setFilters({...filters, meal: e});
-
-    if (filters.cuisines !== "All") {
-      setRecipes(
-        recipesData.filter((recipe: any) => recipe.cuisine === filters.cuisine)
-      );
-    } else {
-      setRecipes(recipesData);
-    }
+    if (label === "Cuisines") newFilters = {...filters, cuisine: e};
+    else newFilters = {...filters, meal: e};
+    setFilters(newFilters);
   };
-
-  useEffect(() => {
-    console.log(recipes);
-  }, [recipes]);
 
   return (
     <Listbox value={selected} onChange={(e) => handleChange(e)}>

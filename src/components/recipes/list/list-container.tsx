@@ -1,5 +1,5 @@
 "use client";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import Filters from "../filters/filters";
 import RecipesHeading from "./heading";
 import RecipeList from "./list";
@@ -15,13 +15,38 @@ export default function RecipeListContainer({
     meal: "All"
   });
 
+  useEffect(() => {
+    let newRecipes;
+
+    newRecipes = recipesData;
+
+    if (filters.cuisines !== "All") {
+      newRecipes = recipesData.filter(
+        (recipe: any) => recipe.cuisine === filters.cuisine
+      );
+    }
+
+    if (filters.meal !== "All") {
+      newRecipes = recipesData.filter(
+        (recipe: any) => recipe.meal === filters.meal
+      );
+    }
+
+    if (filters.meal !== "All" && filters.cuisines !== "All") {
+      newRecipes = recipesData
+        .filter((recipe: any) => recipe.cuisine === filters.cuisine)
+        .filter((recipe: any) => recipe.meal === filters.meal);
+    }
+
+    setRecipes(newRecipes);
+  }, [recipesData, filters, setRecipes]);
+
   return (
     <>
       <RecipesHeading
         title="Our recipes."
         description="Enjoy searching through our crazy assortment of cuisine from around the world."
       >
-        {JSON.stringify(filters)}
         <Filters
           filters={filters}
           setFilters={setFilters}
