@@ -16,26 +16,18 @@ export default function RecipeListContainer({
   });
 
   useEffect(() => {
-    let newRecipes;
-
-    newRecipes = recipesData;
+    let newRecipes = recipesData;
 
     if (filters.cuisines !== "All") {
-      newRecipes = recipesData.filter(
+      newRecipes = newRecipes.filter(
         (recipe: any) => recipe.cuisine === filters.cuisine
       );
     }
 
     if (filters.meal !== "All") {
-      newRecipes = recipesData.filter(
+      newRecipes = newRecipes.filter(
         (recipe: any) => recipe.meal === filters.meal
       );
-    }
-
-    if (filters.meal !== "All" && filters.cuisines !== "All") {
-      newRecipes = recipesData
-        .filter((recipe: any) => recipe.cuisine === filters.cuisine)
-        .filter((recipe: any) => recipe.meal === filters.meal);
     }
 
     setRecipes(newRecipes);
