@@ -16,7 +16,6 @@ export default function Filters({
   meals,
   cuisines
 }: any) {
-  console.log(query);
   return (
     <div className="space-y-2 w-full">
       <h3 className="flex items-center space-x-1 m-0">
