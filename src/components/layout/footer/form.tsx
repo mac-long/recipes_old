@@ -25,13 +25,13 @@ export default function NewsletterForm() {
 
     await setformResponse(response);
 
-    if (response.status === 500)
-      setTimeout(() => {
-        setformResponse({
-          status: null,
-          message: "Subscribe"
-        });
-      }, 3000);
+    setTimeout(() => {
+      setformResponse({
+        status: null,
+        message: "Subscribe"
+      });
+      event.target.reset();
+    }, 5000);
   };
   return (
     <form
