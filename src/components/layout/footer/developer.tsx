@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Developer() {
   return (
-    <div className="flex absolute bottom-2 justify-center items-center  text-slate-600">
+    <div className="flex absolute bottom-2 justify-center items-center text-slate-600">
       <Link
         className="hover:text-indigo-500"
         href="https://mac-long.vercel.app"

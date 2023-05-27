@@ -18,7 +18,7 @@ export default function Filters({
 }: any) {
   return (
     <div className="space-y-2 w-full">
-      <h3 className="flex items-center space-x-1 m-0">
+      <h3 className="flex items-center m-0 space-x-1">
         <AdjustmentsVerticalIcon className="w-5 h-5" /> <span>Filters</span>
       </h3>
       <div className="flex space-x-4">
@@ -41,9 +41,9 @@ export default function Filters({
           options={meals}
         />
       </div>
-      <div className="sm:pt-4 min-w-full flex justify-between items-center">
+      <div className="flex justify-between items-center min-w-full sm:pt-4">
         <input
-          className="w-full bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm"
+          className="py-1.5 pl-1 w-full text-gray-900 bg-transparent sm:text-sm focus:ring-0 placeholder:text-gray-400"
           type="text"
           name="query"
           value={query}
@@ -52,7 +52,7 @@ export default function Filters({
         />
         {query?.length > 0 && (
           <XCircleIcon
-            className="cursor-pointer ml-2 text-gray-400 w-5 h-5"
+            className="ml-2 w-5 h-5 text-gray-400 cursor-pointer"
             onClick={() => setQuery("")}
           />
         )}

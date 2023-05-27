@@ -12,15 +12,15 @@ export default function RecipeCard({
 }: any) {
   if (!loading) {
     return (
-      <div className="flex flex-col p-2 pt-4 justify-center rounded-md hover:bg-gray-200 lg:w-48">
-        <div className="flex space-x-4 items-center lg:items-start text-xs">
+      <div className="flex flex-col justify-center p-2 pt-4 rounded-md lg:w-48 hover:bg-gray-200">
+        <div className="flex items-center space-x-4 text-xs lg:items-start">
           <time
             dateTime={created_on?.toDateString()}
             className="text-slate-500"
           >
             {created_on?.toDateString()}
           </time>
-          <div className="flex justify-center lg:flex-col lg:items-end lg:space-x-0 lg:space-y-2 space-x-1">
+          <div className="flex justify-center space-x-1 lg:flex-col lg:items-end lg:space-y-2 lg:space-x-0">
             <Link href={`#`} className="tag">
               {meal}
             </Link>
@@ -47,10 +47,10 @@ export default function RecipeCard({
   } else {
     return (
       <AnimateOnScroll classNameInView="animate-fadeIn">
-        <div className="flex flex-col p-2 pt-4 justify-center rounded-md animate-pulse bg-gray-300 lg:w-48">
-          <div className="flex space-x-4 items-center text-xs">
+        <div className="flex flex-col justify-center p-2 pt-4 bg-gray-300 rounded-md animate-pulse lg:w-48">
+          <div className="flex items-center space-x-4 text-xs">
             <time className="bg-gray-200 rounded-md animate-pulse text-slate-500 w-[94px] h-[16px] md:w-[75px] md:h-[32px]" />
-            <div className="flex justify-center sm:flex-col  items-center sm:space-x-0 sm:space-y-2 space-x-1">
+            <div className="flex justify-center items-center space-x-1 sm:flex-col sm:space-y-2 sm:space-x-0">
               <div className="flex justify-center items-center space-x-1 bg-gray-200 rounded-full animate-pulse w-[62px] h-[28px]" />
               <div className="flex justify-center items-center space-x-1 bg-gray-200 rounded-full animate-pulse w-[62px] h-[28px]" />
             </div>

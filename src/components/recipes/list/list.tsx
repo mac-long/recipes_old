@@ -14,7 +14,7 @@ export default function RecipeList({recipes}: any) {
           {cards}
         </div>
       ) : (
-        <div className="pt-16 flex flex-col items-center text-center">
+        <div className="flex flex-col items-center pt-16 text-center">
           <QuestionMarkCircleIcon className="w-10 h-10" />
           <h3 className="m-0">No Recipes Here...</h3>
           <p className="max-w-xs">
