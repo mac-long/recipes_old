@@ -1,8 +1,7 @@
 "use client";
 import {Listbox, Transition} from "@headlessui/react";
 import {CheckIcon, ChevronUpDownIcon} from "@heroicons/react/20/solid";
-import {signal} from "@preact/signals";
-import {Fragment} from "react";
+import {Fragment, useState} from "react";
 
 export default function Select({
   label,
@@ -11,19 +10,16 @@ export default function Select({
   label: string;
   options: any;
 }) {
-  const selected = signal(options[0]);
-  const setSelected = (e: any) => {
-    selected.value = e;
-  };
+  const [selected, setSelected] = useState(options[0]);
 
   return (
-    <Listbox value={selected.value} onChange={setSelected}>
+    <Listbox value={selected} onChange={setSelected}>
       {({open}) => (
         <div className="flex flex-col items-start">
           <Listbox.Label className="font-semibold">{label}</Listbox.Label>
           <div className="relative">
             <Listbox.Button className="relative cursor-pointer mb-4 sm:mb-0 rounded-md pl-3 w-[150px] h-7 text-left shadow-sm ring-1 ring-inset focus:outline-none focus:ring-2 focus:ring-indigo-500">
-              <span>{selected.value}</span>
+              <span>{selected}</span>
               <span className="pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center pr-2">
                 <ChevronUpDownIcon
                   className="h-5 w-5 text-gray-400"

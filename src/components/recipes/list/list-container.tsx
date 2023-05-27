@@ -13,7 +13,11 @@ export default function RecipeListContainer({recipes, meals, cuisines}: any) {
       >
         <Filters meals={["All", ...meals]} cuisines={["All", ...cuisines]} />
       </RecipesHeading>
-      <RecipeList recipes={recipes} />
+      <RecipeList
+        recipes={recipes
+          .filter((recipe: any) => recipe.meal === "Dinner")
+          .filter((recipe: any) => recipe.cuisine === "American")}
+      />
     </>
   );
 }
