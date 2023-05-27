@@ -10,6 +10,7 @@ export default function RecipeListContainer({
   cuisines
 }: any) {
   const [recipes, setRecipes] = useState<any>(recipesData);
+  const [query, setQuery] = useState<string>("");
   const [filters, setFilters] = useState<any>({
     cuisine: "All",
     meal: "All"
@@ -30,8 +31,14 @@ export default function RecipeListContainer({
       );
     }
 
+    if (query.length > 0) {
+      newRecipes = newRecipes.filter((recipe: any) =>
+        recipe.title.toLowerCase().includes(query.toLowerCase())
+      );
+    }
+
     setRecipes(newRecipes);
-  }, [recipesData, filters, setRecipes]);
+  }, [query, recipesData, filters, setRecipes]);
 
   return (
     <>
@@ -40,6 +47,8 @@ export default function RecipeListContainer({
         description="Enjoy searching through our crazy assortment of cuisine from around the world."
       >
         <Filters
+          query={query}
+          setQuery={setQuery}
           filters={filters}
           setFilters={setFilters}
           recipes={recipes}
