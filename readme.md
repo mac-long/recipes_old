@@ -24,7 +24,7 @@ SSR is a super simple recipe blog that utilises ChatGPT to generate recipes and 
 - [x] Dynamic Metadata Image and Title.
 - [x] Custom `loading.tsx`, `error.tsx` and `not-found.tsx`.
 - [x] Setup Sentry.
-- [ ] Add filters for cuisine and meal. Find a way to open the pages with chosen meal or cuisine.
+- [x] Add filters for cuisine and meal. Find a way to open the pages with chosen meal or cuisine.
 - [ ] Add a search bar to recipes page.
 - [ ] Update Kysely to use Code Gen.
 - [ ] Add Sanity CMS behind `/admin` locked off unless signed in as admin, enable live editing.
