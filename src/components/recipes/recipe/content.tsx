@@ -1,6 +1,6 @@
-import {CameraIcon, ClockIcon} from "@heroicons/react/24/outline";
-import Image from "next/image";
-import Link from "next/link";
+import {CameraIcon, ClockIcon} from '@heroicons/react/24/outline';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default async function Content({
   meal,
@@ -53,26 +53,26 @@ export default async function Content({
             <div className="lg:max-w-lg">
               <span
                 className={`text-base font-semibold leading-7 ${
-                  loading ? "skeleton" : "text-indigo-600"
+                  loading ? 'skeleton' : 'text-indigo-600'
                 }`}
               >
-                {meal ? meal : "Test"}
+                {meal ? meal : 'Test'}
               </span>
               <h1
                 className={`mt-2 text-3xl font-bold tracking-tight sm:text-4xl ${
-                  loading ? "skeleton" : "text-slate-900"
+                  loading ? 'skeleton' : 'text-slate-900'
                 }`}
               >
-                {title ? title : "Some Great Title"}
+                {title ? title : 'Some Great Title'}
               </h1>
               <p
                 className={`mt-6 text-xl leading-8 ${
-                  loading ? "skeleton h-7" : "text-slate-700"
+                  loading ? 'skeleton h-7' : 'text-slate-700'
                 }`}
               >
                 {summary}
               </p>
-              <h2 className={`${loading && "skeleton w-[130px]"}`}>
+              <h2 className={`${loading && 'skeleton w-[130px]'}`}>
                 Ingredients
               </h2>
               <ul>
@@ -90,19 +90,19 @@ export default async function Content({
                   </>
                 )}
               </ul>
-              <h2 className={`${loading && "skeleton w-[200px]"}`}>
+              <h2 className={`${loading && 'skeleton w-[200px]'}`}>
                 Creation Time
               </h2>
               <span className="flex items-center font-bold leading-8 text-slate-700">
                 <ClockIcon className="mr-1 w-6 h-6" />
-                <span className={`${loading && "skeleton h-6 p-0"}`}>
-                  {cooking_time ? cooking_time : "90 minutes"}
+                <span className={`${loading && 'skeleton h-6 p-0'}`}>
+                  {cooking_time ? cooking_time : '90 minutes'}
                 </span>
               </span>
             </div>
           </div>
           <div className="flex flex-col lg:col-span-1 lg:col-start-1 lg:row-start-2 lg:gap-x-8 lg:px-0 lg:mx-auto lg:w-full lg:max-w-lg">
-            <h2 className={`${loading && "skeleton w-[150px]"}`}>
+            <h2 className={`${loading && 'skeleton w-[150px]'}`}>
               Instructions
             </h2>
             <div className="lg:pr-4">
@@ -146,8 +146,8 @@ export default async function Content({
         </div>
         <div className="p-12 -mt-12 -ml-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 animate-slideRight">
           <Image
-            className="max-w-none bg-gray-900 rounded-xl ring-1 shadow-2xl w-[64rem] ring-gray-400/10 sm:max-w-2xl"
-            style={{width: "auto", height: "auto"}}
+            className="max-w-none bg-gray-900 rounded-xl ring-1 shadow-2xl sm:max-w-2xl w-[64rem] ring-gray-400/10"
+            style={{width: 'auto', height: 'auto'}}
             src={image_url}
             alt={`${title} a food for ${meal}.`}
             width={1024}

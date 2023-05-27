@@ -36,6 +36,14 @@
     @apply py-32 mx-auto max-w-2xl sm:py-48 lg:py-56 flex flex-col justify-center items-center;
   }
 
+  .list-container {
+    @apply py-16 bg-white;
+  }
+
+  .list-container .content {
+    @apply mx-auto max-w-2xl lg:mx-0;
+  }
+
   .container h2 {
     @apply text-4xl;
   }

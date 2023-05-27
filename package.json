@@ -6,14 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write '!.next/**/*' . & rustywind --write . & wait",
+    "precommit": "pnpm format & pnpm lint & wait"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.14",
     "@heroicons/react": "^2.0.18",
     "@sentry/nextjs": "^7.53.1",
     "@vercel/postgres-kysely": "^0.3.0",
-    "kysely": "^0.24.2",
+    "kysely": "^0.25.0",
     "next": "13.4.4",
     "nodemailer": "^6.9.2",
     "openai": "^3.2.1",
@@ -30,8 +32,9 @@
     "autoprefixer": "10.4.14",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.3",
-    "kysely-codegen": "^0.10.0",
+    "husky": "^8.0.0",
     "postcss": "8.4.23",
+    "rustywind": "^0.16.0",
     "typescript": "5.0.4"
   },
   "eslintConfig": {
@@ -39,7 +42,8 @@
   },
   "prettier": {
     "trailingComma": "none",
-    "bracketSpacing": false
+    "bracketSpacing": false,
+    "singleQuote": true
   },
   "postcss": {
     "plugins": {

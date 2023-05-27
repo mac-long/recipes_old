@@ -1,33 +1,33 @@
-import { getRecipeById } from "@/app/lib/kysely";
-import { ImageResponse } from "next/server";
+import {getRecipeById} from '@/app/lib/kysely';
+import {ImageResponse} from 'next/server';
 
-export const alt = "Awesome Recipe";
+export const alt = 'Awesome Recipe';
 export const size = {
   width: 1200,
   height: 630
 };
 
-export const contentType = "image/png";
+export const contentType = 'image/png';
 
-export default async function Image({ params }: { params: { id: number } }) {
+export default async function Image({params}: {params: {id: number}}) {
   const recipe = await getRecipeById(params.id);
-  const { title, summary } = recipe[0];
+  const {title, summary} = recipe[0];
 
   return new ImageResponse(
     (
       <div
         style={{
-          display: "flex",
-          height: "100%",
-          width: "100%",
-          alignItems: "center",
-          justifyContent: "center",
-          flexDirection: "column",
-          backgroundImage: "linear-gradient(to bottom, #dbf4ff, #fff1f1)",
+          display: 'flex',
+          height: '100%',
+          width: '100%',
+          alignItems: 'center',
+          justifyContent: 'center',
+          flexDirection: 'column',
+          backgroundImage: 'linear-gradient(to bottom, #dbf4ff, #fff1f1)',
           fontSize: 60,
           letterSpacing: -2,
           fontWeight: 700,
-          textAlign: "center"
+          textAlign: 'center'
         }}
       >
         <svg
@@ -48,18 +48,18 @@ export default async function Image({ params }: { params: { id: number } }) {
 
         <div
           style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
             backgroundImage:
-              "linear-gradient(90deg, rgb(0, 124, 240), rgb(0, 223, 216))",
-            backgroundClip: "text",
-            color: "transparent"
+              'linear-gradient(90deg, rgb(0, 124, 240), rgb(0, 223, 216))',
+            backgroundClip: 'text',
+            color: 'transparent'
           }}
         >
           {title}
         </div>
-        <p style={{ fontSize: 26 }}>{summary}</p>
+        <p style={{fontSize: 26}}>{summary}</p>
       </div>
     )
   );

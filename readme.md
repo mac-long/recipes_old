@@ -24,19 +24,17 @@ SSR is a super simple recipe blog that utilises ChatGPT to generate recipes and 
 - [x] Dynamic Metadata Image and Title.
 - [x] Custom `loading.tsx`, `error.tsx` and `not-found.tsx`.
 - [x] Setup Sentry.
-- [ ] Add filters for cuisine and meal. Find a way to open the pages with chosen meal or cuisine.
-- [ ] Update Kysely to use Code Gen.
+- [x] Add filters for cuisine and meal. Find a way to open the pages with chosen meal or cuisine.
+- [x] Add a search bar to recipes page.
+- [x] Add Husky for commit messages, formatting and linting.
 - [ ] Add Sanity CMS behind `/admin` locked off unless signed in as admin, enable live editing.
+- [ ] Add share options [SMS, Twitter, Facebook, Copy Link and Email] to recipe pages.
 - [ ] Split App into Components.
-- [ ] Move styles to `global.css` where possible to avoid repeat code.
 - [ ] Add Storybook for all components and pages.
-- [ ] Add Husky for commit messages, formatting and linting.
+- [ ] Move styles to `global.css` where possible to avoid repeat code.
 - [ ] Add login/signup, favourites and comments. Make sure to add a banner if email is unverified.
-- [ ] Add unit tests for everything.
+- [ ] Add tests for everything. Unit and E2E. Make sure to add a husky hook for testing.
 - [ ] Add TypeScript types for everything.
-- [ ] Optimise.
+- [ ] Add some fancy animations. Make numbers count up to value.
+- [ ] Optimise: Try using Signals to replace State. Page Speed Insights.
 - [ ] Add push notifications to browser for when new posts come out.
-
-## Issues
-
-- [ ] Figure out why cards have weird space on recipes load.
