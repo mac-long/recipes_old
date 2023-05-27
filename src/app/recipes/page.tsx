@@ -9,13 +9,13 @@ export const metadata = {
 };
 
 export default async function Recipes() {
-  const recipes = await getAllRecipes();
+  const recipesData = await getAllRecipes();
   const {meals, cuisines} = await getRecipeFilterCategories();
 
   return (
     <Container>
       <RecipeListContainer
-        recipes={recipes}
+        recipesData={recipesData}
         meals={meals}
         cuisines={cuisines}
       />

@@ -1,19 +1,40 @@
 "use client";
 import {Listbox, Transition} from "@headlessui/react";
 import {CheckIcon, ChevronUpDownIcon} from "@heroicons/react/20/solid";
-import {Fragment, useState} from "react";
+import {Fragment, useEffect, useState} from "react";
 
 export default function Select({
+  filters,
+  setFilters,
+  recipes,
+  setRecipes,
+  recipesData,
   label,
   options
-}: {
-  label: string;
-  options: any;
-}) {
+}: any) {
   const [selected, setSelected] = useState(options[0]);
 
+  const handleChange = async (e: any) => {
+    setSelected(e);
+
+    if (label === "Cuisines") setFilters({...filters, cuisine: e});
+    else setFilters({...filters, meal: e});
+
+    if (filters.cuisines !== "All") {
+      setRecipes(
+        recipesData.filter((recipe: any) => recipe.cuisine === filters.cuisine)
+      );
+    } else {
+      setRecipes(recipesData);
+    }
+  };
+
+  useEffect(() => {
+    console.log(recipes);
+  }, [recipes]);
+
   return (
-    <Listbox value={selected} onChange={setSelected}>
+    <Listbox value={selected} onChange={(e) => handleChange(e)}>
       {({open}) => (
         <div className="flex flex-col items-start">
           <Listbox.Label className="font-semibold">{label}</Listbox.Label>
