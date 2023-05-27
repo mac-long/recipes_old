@@ -1,23 +1,18 @@
 "use client";
 
-import { InView } from "react-intersection-observer";
+import {InView} from "react-intersection-observer";
 
-export default function AnimationOnScroll({
+export default function AnimateOnScroll({
   children,
-  classNameInView,
-  classNameNotInView
+  classNameInView
 }: {
   children: React.ReactNode;
   classNameInView: string;
-  classNameNotInView: string;
 }) {
   return (
     <InView triggerOnce threshold={1}>
-      {({ inView, ref, entry }) => (
-        <div
-          ref={ref}
-          className={inView ? classNameInView : classNameNotInView}
-        >
+      {({inView, ref, entry}) => (
+        <div ref={ref} className={inView ? classNameInView : "opacity-0"}>
           {children}
         </div>
       )}
