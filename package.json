@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write . & rustywind --write .",
-    "prepare": "husky install"
+    "format": "prettier --write . & rustywind --write ."
   },
   "dependencies": {
     "@headlessui/react": "^1.7.14",
