@@ -52,8 +52,4 @@
   .container p {
     @apply max-w-xs text-center;
   }
-
-  .skeleton {
-    @apply text-gray-400 bg-gray-400 animate-pulse rounded-md p-1;
-  }
 }
