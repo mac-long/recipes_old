@@ -3,10 +3,10 @@ import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 import AnimateOnScroll from '../animate';
 
-export default function Stats() {
+export default function Stats({ recipeCount }: any) {
   const stats = [
     { name: 'Users signed up', value: 500 },
-    { name: 'Recipes and counting', value: 5000 },
+    { name: 'Recipes and counting', value: recipeCount },
     { name: 'Comments made', value: 400 }
   ];
 

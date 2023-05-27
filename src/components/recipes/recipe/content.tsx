@@ -1,6 +1,7 @@
 import { CameraIcon, ClockIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import Link from 'next/link';
+import ShareButton from './share';
 
 export default async function Content({
   meal,
@@ -59,11 +60,12 @@ export default async function Content({
                 {meal ? meal : 'Test'}
               </span>
               <h1
-                className={`mt-2 text-3xl font-bold tracking-tight sm:text-4xl ${
+                className={`space-x-3 mt-2 text-3xl font-bold tracking-tight sm:text-4xl ${
                   loading ? 'skeleton' : 'text-slate-900'
                 }`}
               >
-                {title ? title : 'Some Great Title'}
+                <span>{title ? title : 'Some Great Title'}</span>
+                <ShareButton title={title} summary={summary} />
               </h1>
               <p
                 className={`mt-6 text-xl leading-8 ${
