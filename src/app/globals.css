@@ -27,11 +27,6 @@
     @apply hover:text-indigo-600;
   }
 
-  a.tag {
-    @apply relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-slate-700;
-    @apply hover:bg-indigo-600 hover:text-slate-50;
-  }
-
   a.tag.active {
     @apply bg-indigo-600 text-slate-50;
   }
@@ -55,5 +50,10 @@
 
   .skeleton {
     @apply text-gray-400 bg-gray-400 animate-pulse rounded-md p-1;
+  }
+
+  .tag {
+    @apply relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-slate-700;
+    @apply hover:bg-indigo-600 hover:text-slate-50;
   }
 }

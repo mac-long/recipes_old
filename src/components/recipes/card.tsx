@@ -10,11 +10,7 @@ export default function RecipeCard({
 }: any) {
   if (!loading) {
     return (
-      <Link
-        href={`/recipes/${id}`}
-        key={id}
-        className="flex flex-col justify-start p-2 max-w-xl rounded-md hover:bg-gray-200"
-      >
+      <div className="flex flex-col justify-start p-2 max-w-xl rounded-md hover:bg-gray-200">
         <div className="flex gap-x-4 items-center text-xs">
           <time
             dateTime={created_on?.toDateString()}
@@ -23,20 +19,22 @@ export default function RecipeCard({
             {created_on?.toDateString()}
           </time>
           <div className="flex justify-center items-center space-x-1">
-            <Link href={`/recipes/meal/${meal?.toLowerCase()}`} className="tag">
+            <Link href={`/recipes/meals/${meal.toLowerCase()}`} className="tag">
               {meal}
             </Link>
           </div>
         </div>
-        <div className="flex relative flex-col justify-between h-full cursor-pointer group">
-          <h3 className="mt-3 text-lg font-semibold leading-6 group-hover:text-indigo-600">
-            {title}
-          </h3>
-          <p className="mt-3 text-sm leading-6 text-slate-600">
-            {summary?.slice(0, 52)}
-          </p>
-        </div>
-      </Link>
+        <Link href={`/recipes/${id}`}>
+          <div className="flex relative flex-col justify-between h-full cursor-pointer group">
+            <h3 className="mt-3 text-lg font-semibold leading-6 group-hover:text-indigo-600">
+              {title}
+            </h3>
+            <p className="mt-3 text-sm leading-6 text-slate-600">
+              {summary?.slice(0, 52)}
+            </p>
+          </div>
+        </Link>
+      </div>
     );
   } else {
     return (

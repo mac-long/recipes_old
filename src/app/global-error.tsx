@@ -1,6 +1,7 @@
 "use client";
-import { ArrowPathIcon, BugAntIcon } from "@heroicons/react/24/outline";
-import { useEffect } from "react";
+import {ArrowPathIcon, BugAntIcon} from "@heroicons/react/24/outline";
+import Link from "next/link";
+import {useEffect} from "react";
 
 export default function Error({
   error,
@@ -25,7 +26,7 @@ export default function Error({
           <ArrowPathIcon className="w-6 h-6" />
           <span className="ml-2">Try again</span>
         </button>
-        <a href="mailto:mac@3sidedcube.com">Contact Me</a>
+        <Link href="mailto:mac@3sidedcube.com">Contact Me</Link>
       </div>
     </div>
   );
