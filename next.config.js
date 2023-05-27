@@ -7,7 +7,7 @@ const nextConfig = {
 
 module.exports = nextConfig;
 
-const {withSentryConfig} = require('@sentry/nextjs');
+const { withSentryConfig } = require('@sentry/nextjs');
 
 module.exports = withSentryConfig(
   module.exports,

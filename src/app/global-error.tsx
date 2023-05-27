@@ -1,7 +1,7 @@
 'use client';
-import {ArrowPathIcon, BugAntIcon} from '@heroicons/react/24/outline';
+import { ArrowPathIcon, BugAntIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
-import {useEffect} from 'react';
+import { useEffect } from 'react';
 
 export default function Error({
   error,

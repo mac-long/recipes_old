@@ -21,16 +21,16 @@ module.exports = {
       },
       keyframes: {
         fadeIn: {
-          '0%': {opacity: 0},
-          '100%': {opacity: 1}
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 }
         },
         slideLeft: {
-          '0%': {opacity: 0, transform: 'translateX(-50px)'},
-          '100%': {opacity: 1, transform: 'translateX(0)'}
+          '0%': { opacity: 0, transform: 'translateX(-50px)' },
+          '100%': { opacity: 1, transform: 'translateX(0)' }
         },
         slideRight: {
-          '0%': {opacity: 0, transform: 'translateX(110%)'},
-          '100%': {opacity: 1, transform: 'translateX(0)'}
+          '0%': { opacity: 0, transform: 'translateX(110%)' },
+          '100%': { opacity: 1, transform: 'translateX(0)' }
         }
       }
     }

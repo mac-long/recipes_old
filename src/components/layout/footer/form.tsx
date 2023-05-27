@@ -1,6 +1,6 @@
 'use client';
-import {CheckCircleIcon, XCircleIcon} from '@heroicons/react/24/outline';
-import {useState} from 'react';
+import { CheckCircleIcon, XCircleIcon } from '@heroicons/react/24/outline';
+import { useState } from 'react';
 
 export default function NewsletterForm() {
   const [formResponse, setformResponse] = useState<any>({
@@ -10,7 +10,7 @@ export default function NewsletterForm() {
   const handleSubmit = async (event: any) => {
     event.preventDefault();
 
-    setformResponse({status: 'loading', message: 'Loading...'});
+    setformResponse({ status: 'loading', message: 'Loading...' });
 
     const response = await fetch('/api/newsletter', {
       method: 'POST',

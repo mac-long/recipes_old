@@ -1,5 +1,5 @@
 'use client';
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import Filters from '../filters/filters';
 import RecipesHeading from './heading';
 import RecipeList from './list';

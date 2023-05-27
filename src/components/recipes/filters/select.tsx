@@ -1,7 +1,7 @@
 'use client';
-import {Listbox, Transition} from '@headlessui/react';
-import {CheckIcon, ChevronUpDownIcon} from '@heroicons/react/20/solid';
-import {Fragment, useState} from 'react';
+import { Listbox, Transition } from '@headlessui/react';
+import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid';
+import { Fragment, useState } from 'react';
 
 export default function Select({
   filters,
@@ -18,14 +18,14 @@ export default function Select({
     let newFilters;
     setSelected(e);
 
-    if (label === 'Cuisines') newFilters = {...filters, cuisine: e};
-    else newFilters = {...filters, meal: e};
+    if (label === 'Cuisines') newFilters = { ...filters, cuisine: e };
+    else newFilters = { ...filters, meal: e };
     setFilters(newFilters);
   };
 
   return (
     <Listbox value={selected} onChange={(e) => handleChange(e)}>
-      {({open}) => (
+      {({ open }) => (
         <div className="flex flex-col items-start">
           <Listbox.Label className="font-semibold">{label}</Listbox.Label>
           <div className="relative">
@@ -49,7 +49,7 @@ export default function Select({
               <Listbox.Options className="overflow-auto absolute z-20 py-1 mt-1 w-full max-h-56 text-base bg-white rounded-md ring-1 ring-black ring-opacity-5 shadow-lg cursor-pointer sm:text-sm focus:outline-none">
                 {options.map((option: string) => (
                   <Listbox.Option key={option} value={option}>
-                    {({selected}) => (
+                    {({ selected }) => (
                       <div className="flex items-center">
                         <span
                           className={`block truncate ${

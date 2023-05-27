@@ -1,6 +1,6 @@
 'use client';
 
-import {InView} from 'react-intersection-observer';
+import { InView } from 'react-intersection-observer';
 
 export default function AnimateOnScroll({
   children,
@@ -13,7 +13,7 @@ export default function AnimateOnScroll({
 }) {
   return (
     <InView triggerOnce threshold={1}>
-      {({inView, ref, entry}) => (
+      {({ inView, ref, entry }) => (
         <div
           ref={ref}
           className={

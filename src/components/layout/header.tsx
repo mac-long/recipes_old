@@ -1,14 +1,14 @@
 'use client';
-import {Dialog} from '@headlessui/react';
-import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/outline';
+import { Dialog } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
-import {usePathname} from 'next/navigation';
-import {useEffect, useState} from 'react';
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 import Logo from './logo';
 
 const navigation = [
-  {name: 'Home', href: '/'},
-  {name: 'Recipes', href: '/recipes'}
+  { name: 'Home', href: '/' },
+  { name: 'Recipes', href: '/recipes' }
 ];
 
 export default function Header() {
@@ -34,7 +34,7 @@ export default function Header() {
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
-          {navigation.map(({name, href}) => (
+          {navigation.map(({ name, href }) => (
             <Link
               key={name}
               href={href}
@@ -75,7 +75,7 @@ export default function Header() {
           <div className="flow-root mt-6">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="py-6 space-y-2">
-                {navigation.map(({href, name}) => (
+                {navigation.map(({ href, name }) => (
                   <Link
                     key={name}
                     href={href}

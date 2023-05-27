@@ -1,5 +1,5 @@
-import {getAllEmails, getLatestRecipes, newEmail} from '@/app/lib/kysely';
-import {NextResponse} from 'next/server';
+import { getAllEmails, getLatestRecipes, newEmail } from '@/app/lib/kysely';
+import { NextResponse } from 'next/server';
 const nodemailer = require('nodemailer');
 
 export async function GET() {
@@ -36,7 +36,7 @@ export async function GET() {
         <h2>Recipes</h2>
         <ul>
           ${recipes.map(
-            ({id, title}: any) =>
+            ({ id, title }: any) =>
               `<a href='${baseUrl}/recipes/${id}'><li>${title}</li></a>`
           )}
         </ul>
@@ -54,10 +54,10 @@ export async function GET() {
       }
     });
   } catch (error: any) {
-    return NextResponse.json({status: 500, error});
+    return NextResponse.json({ status: 500, error });
   }
 
-  return NextResponse.json({status: 200, emails});
+  return NextResponse.json({ status: 200, emails });
 }
 
 export async function POST(request: Request) {
@@ -67,9 +67,9 @@ export async function POST(request: Request) {
     await newEmail(request);
   } catch (error: any) {
     if (error.code === '23505')
-      return NextResponse.json({status: 500, message: 'Already subscribed'});
-    else return NextResponse.json({status: 500, message: 'Oops! Try again'});
+      return NextResponse.json({ status: 500, message: 'Already subscribed' });
+    else return NextResponse.json({ status: 500, message: 'Oops! Try again' });
   }
 
-  return NextResponse.json({status: 200, message: 'Success'});
+  return NextResponse.json({ status: 200, message: 'Success' });
 }

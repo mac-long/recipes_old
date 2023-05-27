@@ -5,7 +5,7 @@ import RecipeListContainer from '@/components/recipes/list/container';
 import RecipesHeading from '@/components/recipes/list/heading';
 import RecipeList from '@/components/recipes/list/list';
 import Link from 'next/link';
-import {getLatestRecipes} from './lib/kysely';
+import { getLatestRecipes } from './lib/kysely';
 
 export default async function Home() {
   const latestRecipes = await getLatestRecipes();

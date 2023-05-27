@@ -4,6 +4,15 @@ SSR is a super simple recipe blog that utilises ChatGPT to generate recipes and 
 
 **Get Cooking.**
 
+## Key Development Notes
+
+- Kysely interfaces beautifully with the Vercel Postgres creating simple dot notated typesafe SQL querys.
+- Husky will Format, Lint and run all tests before commits to ensure only good code is pushed to the remote.
+- Nodemailer utilises a gmail application password to send out emails via Vercel's cron functions.
+- The OpenAI prompt is carefully crafted to ensure a good JSON response each time.
+- Sentry provides error tracking and logging for detailed reports on what went wrong.
+- Typescript keeps developers from making little mistakes regulary, saving lots of time in the long run.
+
 ## Tools
 
 - Next.js
@@ -27,14 +36,14 @@ SSR is a super simple recipe blog that utilises ChatGPT to generate recipes and 
 - [x] Add filters for cuisine and meal. Find a way to open the pages with chosen meal or cuisine.
 - [x] Add a search bar to recipes page.
 - [x] Add Husky for commit messages, formatting and linting.
-- [ ] Add Sanity CMS behind `/admin` locked off unless signed in as admin, enable live editing.
+- [ ] Add some fancy animations. Make numbers count up to value.
 - [ ] Add share options [SMS, Twitter, Facebook, Copy Link and Email] to recipe pages.
 - [ ] Split App into Components.
 - [ ] Add Storybook for all components and pages.
 - [ ] Move styles to `global.css` where possible to avoid repeat code.
-- [ ] Add login/signup, favourites and comments. Make sure to add a banner if email is unverified.
 - [ ] Add tests for everything. Unit and E2E. Make sure to add a husky hook for testing.
 - [ ] Add TypeScript types for everything.
-- [ ] Add some fancy animations. Make numbers count up to value.
+- [ ] Add login/signup, favourites and comments. Make sure to add a banner if email is unverified.
 - [ ] Optimise: Try using Signals to replace State. Page Speed Insights.
 - [ ] Add push notifications to browser for when new posts come out.
+- [ ] Add Sanity CMS behind `/admin` enable live editing [NOTE: This requires an Enterprise account]

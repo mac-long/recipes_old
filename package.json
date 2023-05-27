@@ -20,6 +20,7 @@
     "nodemailer": "^6.9.2",
     "openai": "^3.2.1",
     "react": "18.2.0",
+    "react-countup": "^6.4.2",
     "react-dom": "18.2.0",
     "react-intersection-observer": "^9.4.3",
     "tailwindcss": "3.3.2"
@@ -42,7 +43,6 @@
   },
   "prettier": {
     "trailingComma": "none",
-    "bracketSpacing": false,
     "singleQuote": true
   },
   "postcss": {

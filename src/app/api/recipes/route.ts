@@ -1,6 +1,6 @@
-import {db, newRecipe} from '@/app/lib/kysely';
-import {openai} from '@/app/lib/openai';
-import {NextResponse} from 'next/server';
+import { db, newRecipe } from '@/app/lib/kysely';
+import { openai } from '@/app/lib/openai';
+import { NextResponse } from 'next/server';
 
 export async function GET() {
   const recipes = await db.selectFrom('recipes').select('title').execute();

@@ -3,12 +3,12 @@ import RecipeCard from '@/components/recipes/list/card';
 import RecipeListContainer from '@/components/recipes/list/container';
 import RecipesHeading from '@/components/recipes/list/heading';
 import List from '@/components/recipes/list/list';
-import {getRecipeFilterCategories} from '../lib/kysely';
+import { getRecipeFilterCategories } from '../lib/kysely';
 
-export default async function Recipes({filters}: any) {
+export default async function Recipes({ filters }: any) {
   let cards = [];
   for (let i = 0; i < 12; i++) cards.push(<RecipeCard key={i} loading />);
-  const {meals, cuisines} = await getRecipeFilterCategories();
+  const { meals, cuisines } = await getRecipeFilterCategories();
 
   return (
     <RecipeListContainer>

@@ -1,5 +1,5 @@
-import {getRecipeById} from '@/app/lib/kysely';
-import {ImageResponse} from 'next/server';
+import { getRecipeById } from '@/app/lib/kysely';
+import { ImageResponse } from 'next/server';
 
 export const alt = 'Awesome Recipe';
 export const size = {
@@ -9,9 +9,9 @@ export const size = {
 
 export const contentType = 'image/png';
 
-export default async function Image({params}: {params: {id: number}}) {
+export default async function Image({ params }: { params: { id: number } }) {
   const recipe = await getRecipeById(params.id);
-  const {title, summary} = recipe[0];
+  const { title, summary } = recipe[0];
 
   return new ImageResponse(
     (
@@ -59,7 +59,7 @@ export default async function Image({params}: {params: {id: number}}) {
         >
           {title}
         </div>
-        <p style={{fontSize: 26}}>{summary}</p>
+        <p style={{ fontSize: 26 }}>{summary}</p>
       </div>
     )
   );

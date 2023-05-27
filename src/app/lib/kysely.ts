@@ -1,6 +1,7 @@
-import {createKysely} from '@vercel/postgres-kysely';
+import { createKysely } from '@vercel/postgres-kysely';
 
 export const db = createKysely<any>();
+const { count } = db.fn;
 
 export const newRecipe = (data: any) =>
   db.insertInto('recipes').values(data).execute();
@@ -10,6 +11,9 @@ export const getAllRecipes = async () =>
 
 export const getLatestRecipes = () =>
   db.selectFrom('recipes').selectAll().orderBy('id', 'desc').limit(3).execute();
+
+export const getRecipeCount = () =>
+  db.selectFrom('recipes').select(count('id').as('num_recipes')).execute();
 
 export const getRecipesByMeal = (meal: string) =>
   db
@@ -37,7 +41,7 @@ export const getRecipeFilterCategories = async () => {
       }
     });
 
-  return {cuisines: [...new Set(cuisines)], meals: [...new Set(meals)]};
+  return { cuisines: [...new Set(cuisines)], meals: [...new Set(meals)] };
 };
 
 export const newEmail = (data: any) =>

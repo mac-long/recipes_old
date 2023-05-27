@@ -1,6 +1,6 @@
 import Container from '@/components/recipes/list/container';
 import RecipeListContainer from '@/components/recipes/list/list-container';
-import {getAllRecipes, getRecipeFilterCategories} from '../lib/kysely';
+import { getAllRecipes, getRecipeFilterCategories } from '../lib/kysely';
 
 export const metadata = {
   title: 'Recipes | Super Sweet Recipes',
@@ -10,7 +10,7 @@ export const metadata = {
 
 export default async function Recipes() {
   const recipesData = await getAllRecipes();
-  const {meals, cuisines} = await getRecipeFilterCategories();
+  const { meals, cuisines } = await getRecipeFilterCategories();
 
   return (
     <Container>

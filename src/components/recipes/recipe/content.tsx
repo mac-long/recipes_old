@@ -1,4 +1,4 @@
-import {CameraIcon, ClockIcon} from '@heroicons/react/24/outline';
+import { CameraIcon, ClockIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -147,7 +147,7 @@ export default async function Content({
         <div className="p-12 -mt-12 -ml-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 animate-slideRight">
           <Image
             className="max-w-none bg-gray-900 rounded-xl ring-1 shadow-2xl sm:max-w-2xl w-[64rem] ring-gray-400/10"
-            style={{width: 'auto', height: 'auto'}}
+            style={{ width: 'auto', height: 'auto' }}
             src={image_url}
             alt={`${title} a food for ${meal}.`}
             width={1024}
