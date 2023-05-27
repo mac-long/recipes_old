@@ -21,9 +21,9 @@ export default function Hero() {
             Fun Recipes To Try At Home
           </h1>
           <p className="mt-6 text-lg leading-8 text-slate-600">
-            SSR is a super simple recipe blog that utilises ChatGPT to generate
-            recipes and skips out on the 4 page story before getting to the
-            instructions, try making some of these crazy good meals.
+            SSR is a super simple recipe blog that skips out on the 4 page story
+            before getting to the instructions, try making some of these crazy
+            good meals.
           </p>
           <div className="flex gap-x-6 justify-center items-center mt-10">
             <Link href="/recipes" className="button primary">

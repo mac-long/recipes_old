@@ -33,7 +33,7 @@ export default function RecipeCard({
             <h3 className="mt-3 text-lg font-semibold leading-6 group-hover:text-indigo-600 h-[48px]">
               {title}
             </h3>
-            <p className="mt-3 text-sm leading-6 text-slate-600">
+            <p className="mt-3 text-sm leading-6 text-slate-600 h-[72px]">
               <span className="lg:hidden">{summary}</span>
               <span className="hidden lg:block">{summary.slice(0, 52)}...</span>
             </p>
