@@ -1,4 +1,4 @@
-import { CameraIcon, ClockIcon } from "@heroicons/react/24/outline";
+import {CameraIcon, ClockIcon} from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -11,7 +11,8 @@ export default async function Content({
   summary,
   ingredients,
   cooking_time,
-  instructions
+  instructions,
+  loading
 }: any) {
   return (
     <div className="overflow-hidden relative py-32 px-6 bg-white lg:overflow-visible lg:px-0 isolate">
@@ -50,34 +51,94 @@ export default async function Content({
         <div className="lg:grid lg:grid-cols-2 lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:gap-x-8 lg:px-8 lg:mx-auto lg:w-full lg:max-w-7xl">
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
-              <span className="text-base font-semibold leading-7 text-indigo-600">
-                {meal}
+              <span
+                className={`text-base font-semibold leading-7 ${
+                  loading ? "skeleton" : "text-indigo-600"
+                }`}
+              >
+                {meal ? meal : "Test"}
               </span>
-              <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl text-slate-900">
-                {title}
+              <h1
+                className={`mt-2 text-3xl font-bold tracking-tight sm:text-4xl ${
+                  loading ? "skeleton" : "text-slate-900"
+                }`}
+              >
+                {title ? title : "Some Great Title"}
               </h1>
-              <p className="mt-6 text-xl leading-8 text-slate-700">{summary}</p>
-              <h2>Ingredients</h2>
+              <p
+                className={`mt-6 text-xl leading-8 ${
+                  loading ? "skeleton h-7" : "text-slate-700"
+                }`}
+              >
+                {summary}
+              </p>
+              <h2 className={`${loading && "skeleton w-[130px]"}`}>
+                Ingredients
+              </h2>
               <ul>
-                {ingredients.map((item: any) => (
-                  <li key={item}>{item}</li>
-                ))}
+                {loading ? (
+                  <>
+                    <li className="skeleton w-[60px]">Blank</li>
+                    <li className="skeleton w-[80px]">Empty</li>
+                    <li className="skeleton w-[120px]">Nothingness</li>
+                  </>
+                ) : (
+                  <>
+                    {ingredients?.map((item: any) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </>
+                )}
               </ul>
-              <h2>Creation Time</h2>
+              <h2 className={`${loading && "skeleton w-[200px]"}`}>
+                Creation Time
+              </h2>
               <span className="flex items-center font-bold leading-8 text-slate-700">
                 <ClockIcon className="mr-1 w-6 h-6" />
-                {cooking_time}
+                <span className={`${loading && "skeleton h-6 p-0"}`}>
+                  {cooking_time ? cooking_time : "90 minutes"}
+                </span>
               </span>
             </div>
           </div>
           <div className="flex flex-col lg:col-span-1 lg:col-start-1 lg:row-start-2 lg:gap-x-8 lg:px-0 lg:mx-auto lg:w-full lg:max-w-lg">
-            <h2>Instructions</h2>
+            <h2 className={`${loading && "skeleton w-[150px]"}`}>
+              Instructions
+            </h2>
             <div className="lg:pr-4">
               <div className="max-w-xl text-base leading-7 lg:max-w-lg text-slate-700">
                 <ol className="md:p-0">
-                  {instructions.map((item: any) => (
-                    <li key={item}>{item}</li>
-                  ))}
+                  {loading ? (
+                    <>
+                      <li className="skeleton">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Doloremque voluptatum nihil facere sunt aspernatur
+                        vitae amet consequatur earum quia odio voluptas
+                        laboriosam iure quidem dignissimos assumenda ratione a,
+                        autem neque?
+                      </li>
+                      <li className="skeleton">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Doloremque voluptatum nihil facere sunt aspernatur
+                        vitae amet consequatur earum quia odio voluptas
+                        laboriosam iure quidem dignissimos assumenda ratione a,
+                        autem neque?
+                      </li>
+                      <li className="skeleton">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Doloremque voluptatum nihil facere sunt aspernatur
+                        vitae amet consequatur earum quia odio voluptas
+                        laboriosam iure quidem dignissimos assumenda ratione a,
+                        autem neque?
+                      </li>
+                    </>
+                  ) : (
+                    <>
+                      {instructions?.map((item: any) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </>
+                  )}
                 </ol>
               </div>
             </div>

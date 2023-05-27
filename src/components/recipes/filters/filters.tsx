@@ -1,13 +1,10 @@
+import {getRecipeFilterCategories} from "@/app/lib/kysely";
 import {AdjustmentsVerticalIcon} from "@heroicons/react/24/outline";
 import Select from "./select";
 
-export default function Filters({
-  cuisines,
-  meals
-}: {
-  cuisines?: string[];
-  meals?: string[];
-}) {
+export default async function Filters({setFilterOptions}: any) {
+  const {meals, cuisines} = await getRecipeFilterCategories();
+
   return (
     <div className="space-y-2">
       <h3 className="flex items-center space-x-1 m-0">
