@@ -1,3 +1,4 @@
+import AnimateOnScroll from "@/components/animate";
 import Features from "@/components/home/features";
 import Hero from "@/components/home/hero";
 import Stats from "@/components/home/stats";
@@ -15,16 +16,18 @@ export default async function Home() {
       <Hero />
       <Features />
       <Stats />
-      <RecipeListContainer>
-        <RecipesHeading
-          title="Our latest recipes"
-          description="Enjoy trying out the most recent culinary adventures we have shared."
-        />
-        <RecipeList recipes={latestRecipes} />
-        <Link className="flex justify-center mt-4" href="/recipes" passHref>
-          <button className="primary">View All</button>
-        </Link>
-      </RecipeListContainer>
+      <AnimateOnScroll classNameInView="animate-fadeIn">
+        <RecipeListContainer>
+          <RecipesHeading
+            title="Our latest recipes"
+            description="Enjoy trying out the most recent culinary adventures we have shared."
+          />
+          <RecipeList recipes={latestRecipes} />
+          <Link className="flex justify-center mt-4" href="/recipes" passHref>
+            <button className="primary">View All</button>
+          </Link>
+        </RecipeListContainer>
+      </AnimateOnScroll>
     </>
   );
 }

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <div className="relative px-6 pt-14 lg:px-8 isolate animate-fadeIn">
+    <div className="relative px-6 pt-28 pb-40 lg:px-8 isolate animate-fadeIn">
       <div
         className="overflow-hidden absolute inset-x-0 -top-40 transform-gpu sm:-top-80 -z-10 blur-3xl"
         aria-hidden="true"

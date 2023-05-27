@@ -1,5 +1,5 @@
 import {QuestionMarkCircleIcon} from "@heroicons/react/24/outline";
-import RecipeCard from "./card";
+import {default as RecipeCard} from "./card";
 
 export default function RecipeList({recipes}: any) {
   let cards: any = [];
