@@ -15,7 +15,9 @@ module.exports = {
       animation: {
         fadeIn: "fadeIn .3s ease-in",
         slideLeft: "slideLeft .5s ease-in",
-        slideRight: "slideRight .5s ease-in"
+        slideRight: "slideRight .5s ease-in",
+        slideDown: "slideDown .2s ease-in",
+        slideUp: "slideUp .2s ease-out"
       },
       keyframes: {
         fadeIn: {

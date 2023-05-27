@@ -45,8 +45,6 @@ export default function Features() {
             <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl text-slate-900">
               Fabricate fantastically flavourful food.
             </p>
-          </AnimateOnScroll>
-          <AnimateOnScroll classNameInView="animate-fadeIn">
             <p className="mt-6 text-lg leading-8 text-slate-600">
               Make sure you remember to save your favourite recipes for quick
               and easy access whenever you are in the mood to cook them again.
