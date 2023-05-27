@@ -2,7 +2,7 @@ import {getRecipeFilterCategories} from "@/app/lib/kysely";
 import {AdjustmentsVerticalIcon} from "@heroicons/react/24/outline";
 import Select from "./select";
 
-export default async function Filters() {
+export default async function Filters({setFilterOptions}: any) {
   const {meals, cuisines} = await getRecipeFilterCategories();
 
   return (

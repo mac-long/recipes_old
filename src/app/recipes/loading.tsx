@@ -6,6 +6,7 @@ export default function Loading() {
       title="Our recipes."
       description="Enjoy searching through our crazy assortment of cuisine from around the world."
       loading
+      filters
     />
   );
 }

@@ -1,5 +1,5 @@
 import RecipeList from "@/components/recipes/recipe-list";
-import { getAllRecipes } from "../lib/kysely";
+import {getAllRecipes} from "../lib/kysely";
 
 export const metadata = {
   title: "Recipes | Super Sweet Recipes",
@@ -15,6 +15,7 @@ export default async function Recipes() {
       title="Our recipes."
       description="Enjoy searching through our crazy assortment of cuisine from around the world."
       recipes={recipes}
+      filters
     />
   );
 }

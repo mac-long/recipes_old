@@ -6,12 +6,14 @@ export default function RecipeList({
   title,
   description,
   recipes,
-  loading
+  loading,
+  filters
 }: {
   title: string;
   description: string;
   recipes?: any[];
   loading?: boolean;
+  filters: boolean;
 }) {
   let cards = [];
 
@@ -28,7 +30,7 @@ export default function RecipeList({
       <div className="px-6 mx-auto max-w-7xl lg:px-8">
         <div className="border-b pb-8 border-gray-200">
           <RecipesHeading title={title} description={description} />
-          <Filters />
+          {filters && <Filters recipes={recipes} />}
         </div>
         <div className="grid grid-cols-1 gap-x-8 pt-10 mx-auto space-y-4 max-w-2xl   md:gap-y-8 md:space-y-0 lg:grid-cols-3 lg:mx-0 lg:max-w-none">
           {cards}
