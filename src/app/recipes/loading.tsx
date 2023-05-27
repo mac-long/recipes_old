@@ -1,12 +1,24 @@
-import RecipeList from "@/components/recipes/recipe-list";
+import RecipeCard from "@/components/recipes/card";
+import RecipeListContainer from "@/components/recipes/container";
+import Filters from "@/components/recipes/filters/filters";
+import RecipesHeading from "@/components/recipes/heading";
+import List from "@/components/recipes/list";
+import {getRecipeFilterCategories} from "../lib/kysely";
 
-export default function Loading() {
+export default async function Recipes({filters}: any) {
+  let cards = [];
+  for (let i = 0; i < 12; i++) cards.push(<RecipeCard key={i} loading />);
+  const {meals, cuisines} = await getRecipeFilterCategories();
+
   return (
-    <RecipeList
-      title="Our recipes."
-      description="Enjoy searching through our crazy assortment of cuisine from around the world."
-      loading
-      filters
-    />
+    <RecipeListContainer>
+      <RecipesHeading
+        title="Our recipes."
+        description="Enjoy searching through our crazy assortment of cuisine from around the world."
+      >
+        <Filters meals={meals} cuisines={cuisines} />
+      </RecipesHeading>
+      <List recipes={cards} />
+    </RecipeListContainer>
   );
 }

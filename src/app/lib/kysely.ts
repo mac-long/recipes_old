@@ -5,8 +5,8 @@ export const db = createKysely<any>();
 export const newRecipe = (data: any) =>
   db.insertInto("recipes").values(data).execute();
 
-export const getAllRecipes = () =>
-  db.selectFrom("recipes").selectAll().orderBy("id", "desc").execute();
+export const getAllRecipes = async () =>
+  await db.selectFrom("recipes").selectAll().orderBy("id", "desc").execute();
 
 export const getLatestRecipes = () =>
   db.selectFrom("recipes").selectAll().orderBy("id", "desc").limit(3).execute();

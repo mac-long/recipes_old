@@ -35,7 +35,9 @@ export default function RecipeCard({
             </h3>
             <p className="mt-3 text-sm leading-6 text-slate-600 lg:h-[72px]">
               <span className="lg:hidden">{summary}</span>
-              <span className="hidden lg:block">{summary.slice(0, 52)}...</span>
+              <span className="hidden lg:block">
+                {summary?.slice(0, 52)}...
+              </span>
             </p>
           </div>
         </Link>

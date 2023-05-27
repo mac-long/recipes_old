@@ -1,7 +1,10 @@
 import Features from "@/components/home/features";
 import Hero from "@/components/home/hero";
 import Stats from "@/components/home/stats";
-import RecipeList from "@/components/recipes/recipe-list";
+import RecipeListContainer from "@/components/recipes/container";
+import RecipesHeading from "@/components/recipes/heading";
+import RecipeList from "@/components/recipes/list";
+import Link from "next/link";
 import {getLatestRecipes} from "./lib/kysely";
 
 export default async function Home() {
@@ -12,11 +15,16 @@ export default async function Home() {
       <Hero />
       <Features />
       <Stats />
-      <RecipeList
-        title="Our latest recipes"
-        description="Enjoy trying out the most recent culinary adventures we have shared."
-        recipes={latestRecipes}
-      />
+      <RecipeListContainer>
+        <RecipesHeading
+          title="Our latest recipes"
+          description="Enjoy trying out the most recent culinary adventures we have shared."
+        />
+        <RecipeList recipes={latestRecipes} />
+        <Link className="flex justify-center mt-4" href="/recipes" passHref>
+          <button className="primary">View All</button>
+        </Link>
+      </RecipeListContainer>
     </>
   );
 }
