@@ -30,10 +30,10 @@ export default function Hero() {
               Get Cooking
             </Link>
             <Link
-              href="#features"
+              href="/sign-up"
               className="text-sm font-semibold leading-6 text-slate-900"
             >
-              Learn more <span aria-hidden="true">→</span>
+              Create an account <span aria-hidden="true">→</span>
             </Link>
           </div>
         </div>
