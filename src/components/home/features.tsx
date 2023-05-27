@@ -41,7 +41,7 @@ export default function Features() {
             Tasty Meals
           </h2>
           <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl text-slate-900">
-            Fabricate fantastically flavourful food
+            Fabricate fantastically flavourful food.
           </p>
           <p className="mt-6 text-lg leading-8 text-slate-600">
             Make sure you remember to save your favourite recipes for quick and
