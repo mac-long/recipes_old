@@ -30,7 +30,7 @@ export default function Hero() {
               Get Cooking
             </Link>
             <Link
-              href="/sign-up"
+              href="#"
               className="text-sm font-semibold leading-6 text-slate-900"
             >
               Create an account <span aria-hidden="true">→</span>

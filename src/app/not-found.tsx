@@ -1,4 +1,5 @@
-import { FaceFrownIcon, HomeIcon } from "@heroicons/react/24/outline";
+import {FaceFrownIcon, HomeIcon} from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 export default function NotFound() {
   return (
@@ -10,10 +11,10 @@ export default function NotFound() {
       <p>
         Whoops, we couldn{"'"}t seem to find that page, double check your url.
       </p>
-      <button className="flex items-center primary">
+      <Link href="/" className="flex items-center button primary">
         <HomeIcon className="w-6 h-6" />
         <span className="ml-2">Head on home</span>
-      </button>
+      </Link>
     </div>
   );
 }
