@@ -12,9 +12,9 @@ export default function ShareButton({ title, summary }: any) {
   const pathname = usePathname();
 
   return (
-    <Menu as="div" className="relative inline-block text-left">
+    <Menu as="div" className="inline-block relative text-left">
       <div>
-        <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-transparent px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+        <Menu.Button className="inline-flex gap-x-1.5 justify-center py-2 px-3 w-full text-sm font-semibold text-gray-900 bg-transparent rounded-md ring-1 ring-inset ring-gray-300 shadow-sm hover:bg-gray-50">
           <ShareIcon className="w-5 h-5" />
         </Menu.Button>
       </div>
@@ -28,14 +28,14 @@ export default function ShareButton({ title, summary }: any) {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="absolute z-10 mt-2 -left-16 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <Menu.Items className="absolute -left-16 z-10 mt-2 bg-white rounded-md ring-1 ring-black ring-opacity-5 shadow-lg focus:outline-none">
           <div className="flex">
             <Menu.Item>
               <a
                 href={`mailto:?subject=Check%20Out%20This%20Interesting%20Recipe&body=${message}%0A${url}${pathname}%0A%0AEnjoy%21%0A%0A`}
                 target="_blank"
                 rel="noreferrer"
-                className="block px-4 py-2 text-sm hover:bg-gray-300 rounded-l-md"
+                className="block py-2 px-4 text-sm rounded-l-md hover:bg-gray-300"
               >
                 <Mail />
               </a>
@@ -43,14 +43,14 @@ export default function ShareButton({ title, summary }: any) {
             <Menu.Item>
               <a
                 href={`sms:&body=${message} ${url}${pathname}`}
-                className="block px-4 py-2 text-sm hover:bg-gray-300"
+                className="block py-2 px-4 text-sm hover:bg-gray-300"
               >
                 <Smartphone />
               </a>
             </Menu.Item>
             <Menu.Item>
               <button
-                className="block px-4 py-2 text-sm hover:bg-gray-300 hover:rounded-r-md hover:text-indigo-500"
+                className="block py-2 px-4 text-sm hover:text-indigo-500 hover:bg-gray-300 hover:rounded-r-md"
                 onClick={() =>
                   navigator.clipboard.writeText(`${url}${pathname}`)
                 }
