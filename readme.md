@@ -28,8 +28,8 @@ SSR is a super simple recipe blog that utilises ChatGPT to generate recipes and 
 - [ ] Update Kysely to use Code Gen.
 - [ ] Add Sanity CMS behind `/admin` locked off unless signed in as admin, enable live editing.
 - [ ] Split App into Components.
-- [ ] Move styles to `global.css` where possible to avoid repeat code.
 - [ ] Add Storybook for all components and pages.
+- [ ] Move styles to `global.css` where possible to avoid repeat code.
 - [ ] Add Husky for commit messages, formatting and linting.
 - [ ] Add login/signup, favourites and comments. Make sure to add a banner if email is unverified.
 - [ ] Add unit tests for everything.
