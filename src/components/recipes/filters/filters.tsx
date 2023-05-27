@@ -41,9 +41,9 @@ export default function Filters({
           options={meals}
         />
       </div>
-      <div className="min-w-full flex justify-between items-center">
+      <div className="sm:pt-4 min-w-full flex justify-between items-center">
         <input
-          className="w-full bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sms"
+          className="w-full bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm"
           type="text"
           name="query"
           value={query}

@@ -34,7 +34,7 @@ SSR is a super simple recipe blog that utilises ChatGPT to generate recipes and 
 - [ ] Add login/signup, favourites and comments. Make sure to add a banner if email is unverified.
 - [ ] Add unit tests for everything.
 - [ ] Add TypeScript types for everything.
-- [x] Add some fancy animations.
+- [ ] Add some fancy animations. Make numbers count up to value.
 - [ ] Optimise: Try using Signals to replace State. Page Speed Insights.
 - [ ] Add push notifications to browser for when new posts come out.
 
