@@ -15,8 +15,8 @@ export const Form: StoryObj = {
     await expect(canvas.getByText('Subscribe'));
 
     // TODO: Add Test.
-    // input name and email that already exist in db to inputs.
-    // press subscribe.
+    // input name and email that already exist in db to inputs. Use step('input email and password')
+    // press subscribe. Use step('submit form')
     // expect 'Already Subscribed'
     // wait 4s.
     // expect 'Subscribe'.
