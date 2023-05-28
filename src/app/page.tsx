@@ -8,7 +8,7 @@ import Link from "next/link";
 import { getLatestRecipes, getRecipeCount } from "./lib/kysely";
 
 export default async function Home() {
-	const latestRecipes = await getLatestRecipes();
+	// const latestRecipes = await getLatestRecipes();
 
 	return (
 		<>

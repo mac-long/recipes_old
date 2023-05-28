@@ -1,6 +1,6 @@
 import Container from "@/components/recipes/list/Container";
 import RecipeListContainer from "@/components/recipes/list/RecipeListContainer";
-import { getAllRecipes, getRecipeFilterCategories } from "../lib/kysely";
+import { getAllRecipes, getRecipeCount, getRecipeFilterCategories } from "../lib/kysely";
 
 export const metadata = {
 	title: "Recipes | Super Sweet Recipes",
@@ -10,18 +10,15 @@ export const metadata = {
 
 export default async function Recipes() {
 	const recipesData = await getAllRecipes();
-	console.log(
-		"🚀 ~ file: page.tsx:13 ~ Recipes ~ recipesData:",
-		JSON.stringify(recipesData),
-	);
+	const {meals, cuisines} = await getRecipeCount()
 
 	return (
 		<Container>
-			{/* <RecipeListContainer
+			<RecipeListContainer
 				recipesData={recipesData}
 				meals={meals}
 				cuisines={cuisines}
-			/> */}
+			/>
 		</Container>
 	);
 }

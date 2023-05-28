@@ -72,7 +72,7 @@ export default function Form() {
 					formResponse.status === 200 && "bg-green-300 text-black"
 				}`}
 			>
-				<div className="icon">
+				<div className="icon button">
 					{formResponse.status === 200 && (
 						<CheckCircleIcon className="w-5 h-5" />
 					)}
