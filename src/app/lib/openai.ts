@@ -5,5 +5,3 @@ export const openai = new OpenAIApi(
 		apiKey: process.env.GPT_KEY,
 	}),
 );
-
-
