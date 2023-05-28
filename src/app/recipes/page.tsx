@@ -13,16 +13,16 @@ export const metadata = {
 };
 
 export default async function Recipes() {
-	const recipesData = await getAllRecipes();
-	const { meals, cuisines } = await getRecipeCount();
+	// const recipesData = await getAllRecipes();
+	// const { meals, cuisines } = await getRecipeCount();
 
 	return (
 		<Container>
-			<RecipeListContainer
+			{/* <RecipeListContainer
 				recipesData={recipesData}
 				meals={meals}
 				cuisines={cuisines}
-			/>
+			/> */}
 		</Container>
 	);
 }
