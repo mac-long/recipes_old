@@ -53,7 +53,7 @@ SSR is a super simple recipe blog that utilises ChatGPT to generate recipes and 
 - [x] Setup Storybook & Chromatic.
 - [ ] Setup Testing.
 - [ ] Setup Rome Tools.
-- [ ] Add Stories, Unit Tests, E2E Tests and Types.
+- [ ] Add Stories, Unit Tests (for simple functions data mutation), E2E Tests (for canvas based user interaction) and Types.
 - [ ] [Structure Storybook](https://storybook.js.org/blog/structuring-your-storybook/).
 - [ ] Add push notifications to browser for when new posts come out.
 - [ ] Add Sanity CMS behind `/admin`, add secondary language.

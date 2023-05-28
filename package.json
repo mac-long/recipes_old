@@ -16,6 +16,7 @@
     "@headlessui/react": "^1.7.14",
     "@heroicons/react": "^2.0.18",
     "@sentry/nextjs": "^7.53.1",
+    "@storybook/addon-a11y": "^7.0.18",
     "@vercel/postgres-kysely": "^0.3.0",
     "kysely": "^0.25.0",
     "next": "13.4.4",

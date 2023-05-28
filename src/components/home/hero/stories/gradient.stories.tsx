@@ -1,8 +1,11 @@
 import { StoryObj } from '@storybook/react';
-import Gradient from '../Gradient';
+import GradientComponent from '../Gradient';
 
-export default { title: 'components/home/hero/Gradient', component: Gradient };
+export default {
+  title: 'components/home/hero',
+  component: GradientComponent
+};
 
-export const Main: StoryObj = {
-  render: () => <Gradient />
+export const Gradient: StoryObj = {
+  render: () => <GradientComponent />
 };

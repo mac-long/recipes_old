@@ -1,16 +1,20 @@
+import { expect } from '@storybook/jest';
 import { StoryObj } from '@storybook/react';
 import { within } from '@storybook/testing-library';
-import Form from '../Form';
+import FormComponent from '../Form';
 
 export default {
-  component: Form,
-  title: 'components/layout/Header'
+  component: FormComponent,
+  title: 'components/layout/footer/newsletter'
 };
 
-export const Main: StoryObj = {
+export const Form: StoryObj = {
   play: async ({ canvasElement }: any) => {
     const canvas = within(canvasElement);
 
+    await expect(canvas.getByText('Subscribe'));
+
+    // TODO: Add Test.
     // input name and email that already exist in db to inputs.
     // press subscribe.
     // expect 'Already Subscribed'
