@@ -1,6 +1,6 @@
 import Footer from '@/components/layout/footer/footer';
 import Header from '@/components/layout/header';
-import './globals.css';
+import './global.css';
 
 export const metadata = {
   title: 'Super Simple Recipes',

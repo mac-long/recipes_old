@@ -12,6 +12,8 @@ SSR is a super simple recipe blog that utilises ChatGPT to generate recipes and 
 - The OpenAI prompt is carefully crafted to ensure a good JSON response each time.
 - Sentry provides error tracking and logging for detailed reports on what went wrong.
 - Typescript keeps developers from making little mistakes regulary, saving lots of time in the long run.
+- Storybook is a great way to view your components and build them in isolation.
+- Chromatic allows for automated snapshot testing which saves the developers a lot of time.
 
 ## Tools
 
@@ -21,6 +23,8 @@ SSR is a super simple recipe blog that utilises ChatGPT to generate recipes and 
 - Vercel Postgres
 - Nodemailer
 - OpenAI
+- Storybook
+- Chromatic
 - Typescript
 - Sentry
 - ESLint & Prettier
@@ -38,12 +42,13 @@ SSR is a super simple recipe blog that utilises ChatGPT to generate recipes and 
 - [x] Add Husky for commit messages, formatting and linting.
 - [x] Add some fancy animations. Make numbers count up to value.
 - [x] Add share options [SMS, Twitter, Facebook, Copy Link and Email] to recipe pages.
-- [ ] Split App into Components.
-- [ ] Add Storybook for all components and pages.
-- [ ] Move styles to `global.css` where possible to avoid repeat code.
-- [ ] Add tests for everything. Unit and E2E. Make sure to add a husky hook for testing.
-- [ ] Add TypeScript types for everything.
+- [x] Split App into Components.
+- [ ] Setup Storybook & Chromatic.
+- [ ] Setup Testing.
+- [ ] Setup Rome Tools.
+- [ ] Add Stories, Tests and Types.
 - [ ] Add push notifications to browser for when new posts come out.
 - [ ] Add Sanity CMS behind `/admin`, add secondary language.
-- [ ] Add login/signup, favourites and comments. Make sure to add a banner if email is unverified.
+- [ ] Add login/signup, favourites and comments. Make sure to add a banner if email is unverified. (clerk.com?)
 - [ ] Optimise: Try using Signals to replace State. Page Speed Insights.
+- [ ] Add a Dark Mode.
