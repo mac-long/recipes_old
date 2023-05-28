@@ -58,12 +58,12 @@ export default function Header() {
 			</nav>
 			<Dialog
 				as="div"
-				className="lg:hidden"
+				className="lg:hidden "
 				open={mobileMenuOpen}
 				onClose={setMobileMenuOpen}
 			>
 				<div className="fixed inset-0 z-50" />
-				<Dialog.Panel className="overflow-y-auto fixed inset-y-0 right-0 z-50 py-6 px-6 w-full bg-white sm:max-w-sm md:animate-slideRight">
+				<Dialog.Panel className="overflow-y-auto md:animate-slideRight fixed inset-y-0 right-0 z-50 py-6 px-6 w-full bg-white sm:max-w-sm">
 					<div className="flex justify-between items-center">
 						<Logo />
 						<button
