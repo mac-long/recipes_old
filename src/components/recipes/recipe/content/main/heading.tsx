@@ -1,4 +1,4 @@
-import Share from '../../Share';
+import Share from './Share';
 
 export default function Heading({
   loading,

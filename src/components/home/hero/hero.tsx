@@ -7,7 +7,7 @@ export default function Hero() {
       <Gradient />
       <div className="py-32 mx-auto max-w-2xl sm:py-48 lg:py-56">
         <div className="text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-tr from-teal-600 to-pink-500">
+          <h1 className="text-4xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-tr from-teal-500 to-blue-500">
             Fun Recipes To Try At Home
           </h1>
           <p className="mt-6 text-lg leading-8 text-slate-600">
