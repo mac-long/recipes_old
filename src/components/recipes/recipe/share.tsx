@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import { Fragment } from 'react';
 import { Clipboard, Mail, Smartphone } from 'react-feather';
 
-export default function ShareButton({ title, summary }: any) {
+export default function ShareButton({ title }: { title: string }) {
   const message =
     'Checkout this awesome recipe I found on Super Simple Recipes: ';
   const url = 'https://recipe-sands.vercel.app';

@@ -1,5 +1,5 @@
-import { getRecipeById, getRecipeCount } from '@/app/lib/kysely';
-import Content from '@/components/recipes/recipe/content';
+import { getRecipeById } from '@/app/lib/kysely';
+import Content from '@/components/recipes/recipe/content/content';
 
 interface Props {
   params: {

@@ -1,5 +1,5 @@
 import Features from '@/components/home/features';
-import Hero from '@/components/home/hero';
+import Hero from '@/components/home/hero/hero';
 import Stats from '@/components/home/stats';
 import RecipeListContainer from '@/components/recipes/list/container';
 import RecipesHeading from '@/components/recipes/list/heading';
