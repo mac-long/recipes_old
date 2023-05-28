@@ -68,7 +68,7 @@ export default async function Header() {
 						<Logo />
 						<button
 							type="button"
-							className="p-2.5 mb-5 -m-2.5 rounded-md text-slate-700"
+							className="p-2.5 -m-2.5 mb-5 rounded-md text-slate-700"
 							onClick={() => setMobileMenuOpen(false)}
 						>
 							<span className="sr-only">Close main menu.</span>
