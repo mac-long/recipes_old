@@ -1,6 +1,7 @@
 import {Meta} from '@storybook/blocks'
 
-<Meta title="Documentation/Tools/Rome" />
+<Meta title="Documentation/Tools/Rome"/>
+
 
 
 # Rome vs. ESLint & Prettier.
@@ -11,24 +12,15 @@ The numbers correlate to: `Time Taken` / `CPU Usage`.
 
 ## Linting
 
-|       | **ESLint**       | **Rome**         |
-| ----- | ---------------- | ---------------- |
-| Run 1 | `1.28s` / `126%` | `0.28s` / `106%` |
-| Run 2 | `1.22s` / `139%` | `0.27s` / `108%` |
-| Run 3 | `1.23s` / `138%` | `0.27s` / `107%` |
-| Run 4 | `1.22s` / `139%` | `0.27s` / `108%` |
-| Run 5 | `1.23s` / `138%` | `0.29s` / `106%` |
+![Linting Comparison Table](https://i.imgur.com/CZmU9yr.png)
+
 
 ## Formatting
 
-|       | **Prettier**     | **Rome**         |
-| ----- | ---------------- | ---------------- |
-| Run 1 | `3.27s` / `145%` | `0.05s` / `106%` |
-| Run 2 | `3.21s` / `145%` | `0.05s` / `108%` |
-| Run 3 | `3.27s` / `145%` | `0.05s` / `107%` |
-| Run 4 | `3.27s` / `144%` | `0.05s` / `108%` |
-| Run 5 | `2.95s` / `150%` | `0.05s` / `106%` |
+![Formatting Comparison Table](https://i.imgur.com/HXMmSNl.png)
 
+
+### Script for Testing
 You can run these tests yourself with this super quick little shell script written in zsh, just replace `{script}`. e.g. `rome check --write`.
 
 ```shell
