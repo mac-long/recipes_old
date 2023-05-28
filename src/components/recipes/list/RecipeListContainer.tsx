@@ -1,8 +1,8 @@
 'use client';
 import { useEffect, useState } from 'react';
-import Filters from '../filters/filters';
-import RecipesHeading from './heading';
-import RecipeList from './list';
+import Filters from '../filters/Filters';
+import RecipesHeading from './Heading';
+import RecipeList from './RecipeList';
 
 export default function RecipeListContainer({
   recipesData,

@@ -29,7 +29,7 @@ export default function Select({
         <div className="flex flex-col items-start">
           <Listbox.Label className="font-semibold">{label}</Listbox.Label>
           <div className="relative">
-            <Listbox.Button className="relative pl-3 mb-4 h-7 text-left rounded-md ring-1 ring-inset shadow-sm cursor-pointer sm:mb-0 focus:ring-2 focus:ring-indigo-500 focus:outline-none w-[150px]">
+            <Listbox.Button className="relative pl-3 mb-4 h-7 text-left rounded-md ring-1 ring-inset shadow-sm cursor-pointer sm:mb-0 focus:ring-2 focus:ring-teal-500 focus:outline-none w-[150px]">
               <span>{selected}</span>
               <span className="flex absolute inset-y-0 right-0 items-center pr-2 ml-3 pointer-events-none">
                 <ChevronUpDownIcon

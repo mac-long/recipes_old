@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import { Fragment } from 'react';
 import { Clipboard, Mail, Smartphone } from 'react-feather';
 
-export default function ShareButton({ title }: { title: string }) {
+export default function Share({ title }: { title: string }) {
   const message =
     'Checkout this awesome recipe I found on Super Simple Recipes: ';
   const url = 'https://recipe-sands.vercel.app';
@@ -50,7 +50,7 @@ export default function ShareButton({ title }: { title: string }) {
             </Menu.Item>
             <Menu.Item>
               <button
-                className="block py-2 px-4 text-sm hover:text-indigo-500 hover:bg-gray-300 hover:rounded-r-md"
+                className="block py-2 px-4 text-sm hover:text-teal-500 hover:bg-gray-300 hover:rounded-r-md"
                 onClick={() =>
                   navigator.clipboard.writeText(`${url}${pathname}`)
                 }

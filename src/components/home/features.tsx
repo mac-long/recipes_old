@@ -4,7 +4,7 @@ import {
   FunnelIcon,
   ShareIcon
 } from '@heroicons/react/24/outline';
-import AnimateOnScroll from '../animate';
+import AnimateOnScroll from '../AnimateOnScroll';
 
 const features = [
   {
@@ -39,7 +39,7 @@ export default function Features() {
       <div className="px-6 mx-auto max-w-7xl lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <AnimateOnScroll classNameInView="animate-slideLeft">
-            <h2 className="text-base font-semibold leading-7 text-indigo-600">
+            <h2 className="text-base font-semibold leading-7 text-teal-600">
               Tasty Meals
             </h2>
             <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl text-slate-900">
@@ -60,7 +60,7 @@ export default function Features() {
               >
                 <div className="relative pl-16">
                   <dt className="text-base font-semibold leading-7 text-slate-900">
-                    <div className="flex absolute top-0 left-0 justify-center items-center w-10 h-10 bg-indigo-600 rounded-lg">
+                    <div className="flex absolute top-0 left-0 justify-center items-center w-10 h-10 bg-teal-600 rounded-lg">
                       <feature.icon
                         className="w-6 h-6 text-white"
                         aria-hidden="true"

@@ -1,5 +1,5 @@
-import Container from '@/components/recipes/list/container';
-import RecipeListContainer from '@/components/recipes/list/list-container';
+import Container from '@/components/recipes/list/Container';
+import RecipeListContainer from '@/components/recipes/list/RecipeListContainer';
 import { getAllRecipes, getRecipeFilterCategories } from '../lib/kysely';
 
 export const metadata = {

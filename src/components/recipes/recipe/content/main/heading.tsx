@@ -1,4 +1,4 @@
-import ShareButton from '../../share';
+import Share from './Share';
 
 export default function Heading({
   loading,
@@ -13,7 +13,7 @@ export default function Heading({
     <>
       <span
         className={`text-base font-semibold leading-7 ${
-          loading ? 'skeleton' : 'text-indigo-600'
+          loading ? 'skeleton' : 'text-teal-600'
         }`}
       >
         {meal ? meal : 'Test'}
@@ -24,7 +24,7 @@ export default function Heading({
         }`}
       >
         <span>{title ? title : 'Some Great Title'}</span>
-        <ShareButton title={title} />
+        <Share title={title} />
       </h1>
     </>
   );

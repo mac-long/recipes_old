@@ -1,7 +1,7 @@
 'use client';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
-import AnimateOnScroll from '../animate';
+import AnimateOnScroll from '../AnimateOnScroll';
 
 export default function Stats({ recipeCount }: any) {
   const stats = [

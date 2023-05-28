@@ -1,5 +1,5 @@
 'use client';
-
+import { ReactNode } from 'react';
 import { InView } from 'react-intersection-observer';
 
 export default function AnimateOnScroll({
@@ -7,7 +7,7 @@ export default function AnimateOnScroll({
   classNameInView,
   classNameNotInView
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
   classNameInView: string;
   classNameNotInView?: string;
 }) {

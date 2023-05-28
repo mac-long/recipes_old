@@ -2,7 +2,7 @@
 import { CheckCircleIcon, XCircleIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 
-export default function NewsletterForm() {
+export default function Form() {
   const [formResponse, setformResponse] = useState<any>({
     status: null,
     message: 'Subscribe'
@@ -47,7 +47,7 @@ export default function NewsletterForm() {
           type="text"
           autoComplete="name"
           required
-          className="flex-auto py-2 px-3.5 min-w-0 text-white rounded-md border-0 ring-1 ring-inset shadow-sm sm:text-sm sm:leading-6 focus:ring-2 focus:ring-inset focus:ring-indigo-500 bg-white/5 ring-white/10"
+          className="flex-auto py-2 px-3.5 min-w-0 text-white rounded-md border-0 ring-1 ring-inset shadow-sm sm:text-sm sm:leading-6 focus:ring-2 focus:ring-inset focus:ring-teal-500 bg-white/5 ring-white/10"
           placeholder="What should we call you?"
         />
         <label htmlFor="email-address" className="sr-only">
@@ -58,13 +58,13 @@ export default function NewsletterForm() {
           type="email"
           autoComplete="email"
           required
-          className="flex-auto py-2 px-3.5 min-w-0 text-white rounded-md border-0 ring-1 ring-inset shadow-sm sm:text-sm sm:leading-6 focus:ring-2 focus:ring-inset focus:ring-indigo-500 bg-white/5 ring-white/10"
+          className="flex-auto py-2 px-3.5 min-w-0 text-white rounded-md border-0 ring-1 ring-inset shadow-sm sm:text-sm sm:leading-6 focus:ring-2 focus:ring-inset focus:ring-teal-500 bg-white/5 ring-white/10"
           placeholder="Enter your email"
         />
       </div>
       <button
         type="submit"
-        className={`flex-none py-2.5 px-3.5 text-sm font-semibold text-white bg-indigo-500 rounded-md shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500
+        className={`flex-none py-2.5 px-3.5 text-sm font-semibold text-white bg-teal-500 rounded-md shadow-sm hover:bg-teal-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500
          ${formResponse.status === 500 && 'bg-red-400'} ${
           formResponse.status === 200 && 'bg-green-300 text-black'
         }`}

@@ -1,9 +1,9 @@
-import Features from '@/components/home/features';
-import Hero from '@/components/home/hero/hero';
-import Stats from '@/components/home/stats';
-import RecipeListContainer from '@/components/recipes/list/container';
-import RecipesHeading from '@/components/recipes/list/heading';
-import RecipeList from '@/components/recipes/list/list';
+import Features from '@/components/home/Features';
+import Stats from '@/components/home/Stats';
+import Hero from '@/components/home/hero/Hero';
+import RecipeListContainer from '@/components/recipes/list/Container';
+import RecipesHeading from '@/components/recipes/list/Heading';
+import RecipeList from '@/components/recipes/list/RecipeList';
 import Link from 'next/link';
 import { getLatestRecipes, getRecipeCount } from './lib/kysely';
 

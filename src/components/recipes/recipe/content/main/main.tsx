@@ -1,8 +1,8 @@
-import Heading from './heading';
-import Ingredients from './ingredients';
-import Instructions from './instructions';
-import Summary from './summary';
-import CreationTime from './time';
+import CreationTime from './CreationTime';
+import Heading from './Heading';
+import Ingredients from './Ingredients';
+import Instructions from './Instructions';
+import Summary from './Summary';
 
 export default function Main({
   loading,

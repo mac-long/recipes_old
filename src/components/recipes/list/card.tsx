@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import AnimateOnScroll from '../../animate';
+import AnimateOnScroll from '../../AnimateOnScroll';
 
-export default function RecipeCard({
+export default function Card({
   id,
   title,
   summary,
@@ -31,7 +31,7 @@ export default function RecipeCard({
         </div>
         <Link href={`/recipes/${id}`}>
           <div className="flex relative flex-col justify-between h-full cursor-pointer group">
-            <h3 className="mt-3 text-lg font-semibold leading-6 group-hover:text-indigo-600">
+            <h3 className="mt-3 text-lg font-semibold leading-6 group-hover:text-teal-600">
               {title}
             </h3>
             <p className="text-sm leading-6 text-slate-600">

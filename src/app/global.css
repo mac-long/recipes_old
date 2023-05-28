@@ -17,14 +17,14 @@
 
   button.primary,
   a.button.primary {
-    @apply rounded-md bg-indigo-600 px-3.5 py-2 text-sm font-semibold text-white shadow-sm;
-    @apply hover:bg-indigo-500;
-    @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600;
+    @apply rounded-md bg-teal-600 px-3.5 py-2 text-sm font-semibold text-white shadow-sm;
+    @apply hover:bg-teal-500;
+    @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600;
   }
 
   a {
     @apply no-underline transition-colors duration-100;
-    @apply hover:text-indigo-600;
+    @apply hover:text-teal-600;
   }
 }
 
@@ -58,6 +58,6 @@
 
   .tag {
     @apply relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-slate-700 text-center;
-    @apply hover:bg-indigo-600 hover:text-slate-50;
+    @apply hover:bg-teal-600 hover:text-slate-50;
   }
 }

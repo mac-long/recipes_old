@@ -1,6 +1,6 @@
 import { CalendarDaysIcon, HandRaisedIcon } from '@heroicons/react/24/outline';
 
-export default function FooterFeatures() {
+export default function NewsletterFeatures() {
   return (
     <dl className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
       <div className="flex flex-col items-start">
