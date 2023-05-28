@@ -39,7 +39,7 @@ export default function Features() {
       <div className="px-6 mx-auto max-w-7xl lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <AnimateOnScroll classNameInView="animate-slideLeft">
-            <h2 className="text-base font-semibold leading-7 text-indigo-600">
+            <h2 className="text-base font-semibold leading-7 text-teal-600">
               Tasty Meals
             </h2>
             <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl text-slate-900">
