@@ -89,7 +89,6 @@ export default function Header() {
 								))}
 							</div>
 							<div className="py-6">
-								1234
 								{/* <Link
                   href="/login"
                   className="block py-2.5 px-3 -mx-3 text-base font-semibold leading-7 rounded-lg hover:bg-gray-50 text-slate-900"

@@ -2,6 +2,33 @@ import { db, newRecipe } from "@/app/lib/kysely";
 import { openai } from "@/app/lib/openai";
 import { NextResponse } from "next/server";
 
+const randomAiOrHumanImage = async (prompt: string) => {
+	let image;
+	if (Math.random() < 0.5) {
+		const response = await openai.createImage({
+			prompt: prompt,
+			n: 1,
+			size: "1024x1024",
+		});
+
+		image = {
+			image_url: response.data.data[0].url,
+		};
+	} else {
+		const response = await fetch(
+			`https://api.unsplash.com/photos/random?query='${prompt}'&client_id=${process.env.UNSPLASH_ID}`,
+		).then((res) => res.json());
+
+		image = {
+			image_url: response.urls.raw,
+			photographer_name: response.user.name,
+			photographer_url: response.user.links.html,
+		};
+	}
+
+	return image;
+};
+
 export async function GET() {
 	const recipes = await db.selectFrom("recipes").select("title").execute();
 	const response: any = await openai.createCompletion({
@@ -15,23 +42,11 @@ export async function GET() {
 	});
 
 	const recipeJson = JSON.parse(response.data.choices[0].text);
-
-	let image_url;
-	if (Math.random() < 0.5) {
-		image_url = await openai.createImage({
-			prompt: recipeJson.title,
-			n: 1,
-			size: "1024x1024",
-		});
-	} else {
-		image_url = await fetch(
-			`https://api.unsplash.com/photos/random?query='${recipeJson.title}'&client_id=IVuqCPp50fkkZ4Cx3QX5SsONLZguKnjVUFE2UC2lP-Y`,
-		).then((res) => res.json());
-	}
+	const recipeImage = await randomAiOrHumanImage(recipeJson.title);
 
 	await newRecipe({
 		...recipeJson,
-		image_url,
+		...recipeImage,
 	});
 
 	return NextResponse.json({
@@ -40,7 +55,7 @@ export async function GET() {
 			all: recipes,
 			new: {
 				...recipeJson,
-				image_url,
+				...recipeImage,
 			},
 		},
 	});
