@@ -14,3 +14,31 @@ import {Meta} from '@storybook/blocks'
 - Chromatic allows for automated testing and ui review. Link stories to Figma components.
 - GitHub Actions runs some CI scripts to ensure code is up to scratch.
 - Rome for Linting and Formatting. It's super quick, see the table below.
+
+## Custom Content Management System
+
+- Create a custom `/admin` route that allows admins to sign in and live edit the page by interfacing with the SQL database.
+
+## Schema
+
+### Site Users
+
+```
+CREATE TABLE users (
+  id serial primary key,
+  firstName varchar,
+  lastName varchar,
+  email varchar not null unique,
+  createdOn timestamp default now()
+);
+```
+
+### Users Favourite Recipes
+
+```
+CREATE TABLE userFavouriteRecipes (
+  userId int references users(id),
+  recipeId int references recipes(id),
+  primary key (userId, recipeId)
+);
+```
