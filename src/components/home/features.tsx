@@ -2,35 +2,35 @@ import {
   AcademicCapIcon,
   ChatBubbleBottomCenterIcon,
   FunnelIcon,
-  ShareIcon
-} from '@heroicons/react/24/outline';
-import AnimateOnScroll from '../AnimateOnScroll';
+  ShareIcon,
+} from "@heroicons/react/24/outline";
+import AnimateOnScroll from "../AnimateOnScroll";
 
 const features = [
   {
-    name: 'Share your favourites',
+    name: "Share your favourites",
     description:
-      'Send the recipe to the whole family so everyone can try out the amazing recipes you discover and enjoy.',
-    icon: ShareIcon
+      "Send the recipe to the whole family so everyone can try out the amazing recipes you discover and enjoy.",
+    icon: ShareIcon,
   },
   {
-    name: 'Learn new dishes',
+    name: "Learn new dishes",
     description:
-      'Enhance your culinary ability by exploring food from all over the world. Incredible for your taste buds and your mind.',
-    icon: AcademicCapIcon
+      "Enhance your culinary ability by exploring food from all over the world. Incredible for your taste buds and your mind.",
+    icon: AcademicCapIcon,
   },
   {
-    name: 'Discuss with the community',
+    name: "Discuss with the community",
     description:
-      'Chat with other readers of the site to learn what other people have improvised with when low on ingredients.',
-    icon: ChatBubbleBottomCenterIcon
+      "Chat with other readers of the site to learn what other people have improvised with when low on ingredients.",
+    icon: ChatBubbleBottomCenterIcon,
   },
   {
-    name: 'Exquisite filters for fine tuning your meal',
+    name: "Exquisite filters for fine tuning your meal",
     description:
       "Search for recipes by meal, cuisine, difficulty, diet and more! Ensuring you get the exact meal you're after.",
-    icon: FunnelIcon
-  }
+    icon: FunnelIcon,
+  },
 ];
 
 export default function Features() {

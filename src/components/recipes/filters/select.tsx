@@ -1,7 +1,7 @@
-'use client';
-import { Listbox, Transition } from '@headlessui/react';
-import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid';
-import { Fragment, useState } from 'react';
+"use client";
+import { Listbox, Transition } from "@headlessui/react";
+import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
+import { Fragment, useState } from "react";
 
 export default function Select({
   filters,
@@ -10,7 +10,7 @@ export default function Select({
   setRecipes,
   recipesData,
   label,
-  options
+  options,
 }: any) {
   const [selected, setSelected] = useState(options[0]);
 
@@ -18,7 +18,7 @@ export default function Select({
     let newFilters;
     setSelected(e);
 
-    if (label === 'Cuisines') newFilters = { ...filters, cuisine: e };
+    if (label === "Cuisines") newFilters = { ...filters, cuisine: e };
     else newFilters = { ...filters, meal: e };
     setFilters(newFilters);
   };
@@ -53,14 +53,14 @@ export default function Select({
                       <div className="flex items-center">
                         <span
                           className={`block truncate ${
-                            selected && 'font-semibold'
+                            selected && "font-semibold"
                           }`}
                         >
                           {option}
                         </span>
 
                         {selected ? (
-                          <span className={'flex items-center pr-4'}>
+                          <span className={"flex items-center pr-4"}>
                             <CheckIcon className="w-5 h-5" aria-hidden="true" />
                           </span>
                         ) : null}

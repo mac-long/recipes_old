@@ -1,14 +1,14 @@
-'use client';
-import { Menu, Transition } from '@headlessui/react';
-import { ShareIcon } from '@heroicons/react/24/outline';
-import { usePathname } from 'next/navigation';
-import { Fragment } from 'react';
-import { Clipboard, Mail, Smartphone } from 'react-feather';
+"use client";
+import { Menu, Transition } from "@headlessui/react";
+import { ShareIcon } from "@heroicons/react/24/outline";
+import { usePathname } from "next/navigation";
+import { Fragment } from "react";
+import { Clipboard, Mail, Smartphone } from "react-feather";
 
 export default function Share({ title }: { title: string }) {
   const message =
-    'Checkout this awesome recipe I found on Super Simple Recipes: ';
-  const url = 'https://recipe-sands.vercel.app';
+    "Checkout this awesome recipe I found on Super Simple Recipes: ";
+  const url = "https://recipe-sands.vercel.app";
   const pathname = usePathname();
 
   return (

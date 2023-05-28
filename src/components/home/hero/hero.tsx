@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import Gradient from './Gradient';
+import Link from "next/link";
+import Gradient from "./Gradient";
 
 export default function Hero() {
   return (

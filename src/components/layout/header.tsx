@@ -1,14 +1,14 @@
-'use client';
-import { Dialog } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
-import Logo from './Logo';
+"use client";
+import { Dialog } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import Logo from "./Logo";
 
 const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'Recipes', href: '/recipes' }
+  { name: "Home", href: "/" },
+  { name: "Recipes", href: "/recipes" },
 ];
 
 export default function Header() {
@@ -39,10 +39,10 @@ export default function Header() {
             <Link
               key={name}
               href={href}
-              target={name === 'Github' ? '_blank' : '_self'}
-              rel={name === 'Github' ? 'noreferrer' : ''}
+              target={name === "Github" ? "_blank" : "_self"}
+              rel={name === "Github" ? "noreferrer" : ""}
               className={`text-sm font-semibold leading-6 text-slate-900 ${
-                href === pathname && 'text-teal-600 border-b-2 border-teal-600'
+                href === pathname && "text-teal-600 border-b-2 border-teal-600"
               }`}
             >
               {name}
@@ -81,7 +81,7 @@ export default function Header() {
                     key={name}
                     href={href}
                     className={`block py-2 px-3 -mx-3 text-base font-semibold leading-7 text-slate-900 rounded-lg hover:bg-gray-50 ${
-                      href === pathname && 'text-teal-600'
+                      href === pathname && "text-teal-600"
                     }`}
                   >
                     {name}

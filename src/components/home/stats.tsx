@@ -1,13 +1,13 @@
-'use client';
-import CountUp from 'react-countup';
-import { useInView } from 'react-intersection-observer';
-import AnimateOnScroll from '../AnimateOnScroll';
+"use client";
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
+import AnimateOnScroll from "../AnimateOnScroll";
 
 export default function Stats({ recipeCount }: any) {
   const stats = [
-    { name: 'Users signed up', value: 500 },
-    { name: 'Recipes and counting', value: recipeCount },
-    { name: 'Comments made', value: 400 }
+    { name: "Users signed up", value: 500 },
+    { name: "Recipes and counting", value: recipeCount },
+    { name: "Comments made", value: 400 },
   ];
 
   const { ref, inView } = useInView({ triggerOnce: true });

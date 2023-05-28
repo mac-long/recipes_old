@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import AnimateOnScroll from '../../AnimateOnScroll';
+import Link from "next/link";
+import AnimateOnScroll from "../../AnimateOnScroll";
 
 export default function Card({
   id,
@@ -8,7 +8,7 @@ export default function Card({
   cuisine,
   meal,
   created_on,
-  loading
+  loading,
 }: any) {
   if (!loading) {
     return (

@@ -1,5 +1,5 @@
-import { getRecipeById } from '@/app/lib/kysely';
-import Content from '@/components/recipes/recipe/content/Content';
+import { getRecipeById } from "@/app/lib/kysely";
+import Content from "@/components/recipes/recipe/content/Content";
 
 interface Props {
   params: {
@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: Props) {
 
   return {
     title: `${title} | Super Simple Recipe`,
-    description: summary
+    description: summary,
   };
 }
 

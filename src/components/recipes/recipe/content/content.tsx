@@ -1,12 +1,12 @@
-import { CameraIcon } from '@heroicons/react/24/outline';
-import Image from 'next/image';
-import { Link } from 'react-feather';
-import Background from './Background';
-import CreationTime from './main/CreationTime';
-import Heading from './main/Heading';
-import Ingredients from './main/Ingredients';
-import Instructions from './main/Instructions';
-import Summary from './main/Summary';
+import { CameraIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
+import { Link } from "react-feather";
+import Background from "./Background";
+import CreationTime from "./main/CreationTime";
+import Heading from "./main/Heading";
+import Ingredients from "./main/Ingredients";
+import Instructions from "./main/Instructions";
+import Summary from "./main/Summary";
 
 export default async function Content({
   meal,
@@ -18,7 +18,7 @@ export default async function Content({
   ingredients,
   cooking_time,
   instructions,
-  loading
+  loading,
 }: any) {
   return (
     <div className="overflow-hidden relative py-32 px-6 bg-white lg:overflow-visible lg:px-0 isolate">
@@ -38,7 +38,7 @@ export default async function Content({
         <div className="p-12 -mt-12 -ml-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 animate-slideRight">
           <Image
             className="max-w-none bg-gray-900 rounded-xl ring-1 shadow-2xl sm:max-w-2xl w-[64rem] ring-gray-400/10"
-            style={{ width: 'auto', height: 'auto' }}
+            style={{ width: "auto", height: "auto" }}
             src={image_url}
             alt={`${title} a food for ${meal}.`}
             width={1024}

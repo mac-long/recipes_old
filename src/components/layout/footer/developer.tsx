@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function Developer() {
   return (
@@ -9,7 +9,7 @@ export default function Developer() {
         target="_blank"
         rel="norefferer"
       >
-        Developer{' '}
+        Developer{" "}
       </Link>
       <span className="mx-2">|</span>
       <Link

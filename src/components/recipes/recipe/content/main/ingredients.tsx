@@ -1,13 +1,13 @@
 export default function Ingredients({
   loading,
-  ingredients
+  ingredients,
 }: {
   loading: boolean;
   ingredients: string[];
 }) {
   return (
     <>
-      <h2 className={`${loading && 'skeleton w-[130px]'}`}>Ingredients</h2>
+      <h2 className={`${loading && "skeleton w-[130px]"}`}>Ingredients</h2>
       <ul>
         {loading ? (
           <>

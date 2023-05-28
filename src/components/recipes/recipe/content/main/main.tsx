@@ -1,8 +1,8 @@
-import CreationTime from './CreationTime';
-import Heading from './Heading';
-import Ingredients from './Ingredients';
-import Instructions from './Instructions';
-import Summary from './Summary';
+import CreationTime from "./CreationTime";
+import Heading from "./Heading";
+import Ingredients from "./Ingredients";
+import Instructions from "./Instructions";
+import Summary from "./Summary";
 
 export default function Main({
   loading,
@@ -11,7 +11,7 @@ export default function Main({
   summary,
   ingredients,
   cooking_time,
-  instructions
+  instructions,
 }: {
   loading: boolean;
   meal: string;

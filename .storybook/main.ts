@@ -1,18 +1,18 @@
-import type { StorybookConfig } from '@storybook/nextjs';
+import type { StorybookConfig } from "@storybook/nextjs";
 const config: StorybookConfig = {
-  stories: ['../src/**/*.mdx', '../src/**/*.stories.(js|jsx|ts|tsx)'],
+  stories: ["../src/**/*.mdx", "../src/**/*.stories.(js|jsx|ts|tsx)"],
   addons: [
-    '@storybook/addon-essentials',
-    '@storybook/addon-interactions',
-    '@storybook/addon-links',
-    '@storybook/addon-a11y'
+    "@storybook/addon-essentials",
+    "@storybook/addon-interactions",
+    "@storybook/addon-links",
+    "@storybook/addon-a11y",
   ],
   framework: {
-    name: '@storybook/nextjs',
-    options: {}
+    name: "@storybook/nextjs",
+    options: {},
   },
   docs: {
-    autodocs: 'tag'
-  }
+    autodocs: "tag",
+  },
 };
 export default config;
