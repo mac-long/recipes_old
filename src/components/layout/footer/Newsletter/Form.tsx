@@ -40,23 +40,26 @@ export default function Form() {
 		>
 			<div className="flex flex-col space-y-2 sm:flex-row sm:space-x-2">
 				<label htmlFor="name" className="sr-only">
-					Your Name
+					Your name
 				</label>
 				<input
 					name="name"
 					type="text"
+					data-testid="name"
 					autoComplete="name"
 					required
 					className="flex-auto py-2 px-3.5 min-w-0 text-white rounded-md border-0 ring-1 ring-inset shadow-sm sm:text-sm sm:leading-6 focus:ring-2 focus:ring-inset focus:ring-teal-500 bg-white/5 ring-white/10"
 					placeholder="What should we call you?"
 				/>
-				<label htmlFor="email-address" className="sr-only">
+				<label htmlFor="email" className="sr-only">
 					Email address
 				</label>
 				<input
 					name="email"
 					type="email"
+					data-testid="email"
 					autoComplete="email"
+					aria-labelledby="Emaill address"
 					required
 					className="flex-auto py-2 px-3.5 min-w-0 text-white rounded-md border-0 ring-1 ring-inset shadow-sm sm:text-sm sm:leading-6 focus:ring-2 focus:ring-inset focus:ring-teal-500 bg-white/5 ring-white/10"
 					placeholder="Enter your email"

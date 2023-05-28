@@ -27,6 +27,7 @@ export default function Header() {
 			<nav className="flex justify-between items-center p-6 lg:px-8">
 				<Logo />
 				<div className="flex space-x-4 lg:hidden">
+					<UserButton afterSignOutUrl="/" />
 					<button
 						type="button"
 						className="inline-flex justify-center items-center rounded-md text-slate-700"
@@ -36,7 +37,6 @@ export default function Header() {
 						<span className="sr-only">Open main menu</span>
 						<Bars3Icon className="w-6 h-6" aria-hidden="true" />
 					</button>
-					<UserButton afterSignOutUrl="/" />
 				</div>
 				<div className="hidden items-center lg:flex lg:gap-x-12">
 					{navigation.map(({ name, href }) => (
@@ -58,12 +58,12 @@ export default function Header() {
 			</nav>
 			<Dialog
 				as="div"
-				className="lg:hidden"
+				className="lg:hidden "
 				open={mobileMenuOpen}
 				onClose={setMobileMenuOpen}
 			>
 				<div className="fixed inset-0 z-50" />
-				<Dialog.Panel className="overflow-y-auto fixed inset-y-0 right-0 z-50 py-6 px-6 w-full bg-white sm:max-w-sm">
+				<Dialog.Panel className="overflow-y-auto md:animate-slideRight fixed inset-y-0 right-0 z-50 py-6 px-6 w-full bg-white sm:max-w-sm">
 					<div className="flex justify-between items-center">
 						<Logo />
 						<button

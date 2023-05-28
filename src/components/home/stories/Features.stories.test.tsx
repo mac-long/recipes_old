@@ -1,13 +1,13 @@
 import { StoryObj } from "@storybook/react";
 import { userEvent, within } from "@storybook/testing-library";
-import HeaderComponent from "../Header";
+import FeaturesComponent from "../Features";
 
 export default {
-	component: HeaderComponent,
-	title: "Components/Layout",
+	component: FeaturesComponent,
+	title: "Components/Home",
 };
 
-export const Header: StoryObj = {
+export const Features: StoryObj = {
 	play: async ({ canvasElement }: any) => {
 		const canvas = within(canvasElement);
 

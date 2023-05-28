@@ -1,30 +1,34 @@
 import { expect } from "@storybook/jest";
 import { StoryObj } from "@storybook/react";
-import { within } from "@storybook/testing-library";
+import { userEvent, within } from "@storybook/testing-library";
 import FormComponent from "../Form";
+import { SetOperationNode } from "kysely";
+import { newEmail } from "@/app/lib/kysely";
 
 export default {
 	component: FormComponent,
-	title: "components/layout/footer/newsletter",
+	title: "Components/Layout/Footer/Newsletter",
 };
 
 export const Form: StoryObj = {
-	play: async ({ canvasElement }: any) => {
+	play: async ({ canvasElement, step }: any) => {
 		const canvas = within(canvasElement);
+		const newEmail = "mac@3sidedcube.com";
 
-		await expect(canvas.getByText("Subscribe"));
+		await step("Enter existing user data", async () => {
+			userEvent.type(canvas.getByTestId("name"), "Mac");
+			userEvent.type(canvas.getByTestId("email"), "maclong9@icloud.com");
+			userEvent.click(canvas.getByText("Subscribe"));
+			expect(canvas.getByText("Already Subscribed"));
+		});
 
-		// TODO: Add Test.
-		// input name and email that already exist in db to inputs.
-		// press subscribe.
-		// expect 'Already Subscribed'
-		// wait 4s.
-		// expect 'Subscribe'.
-		// input new name and email.
-		// press subscribe.
-		// expect 'Success'.
-		// waits 4s.
-		// expect 'Subscribe'.
-		// clean DB of test recipient.
+		await step("Enter new user data", async () => {
+			userEvent.type(canvas.getByTestId("name"), "Mac");
+			userEvent.type(canvas.getByTestId("email"), newEmail);
+			userEvent.click(canvas.getByText("Subscribe"));
+			setTimeout(async () => {
+				expect(canvas.getByText("Success"));
+			}, 2000);
+		});
 	},
 };
