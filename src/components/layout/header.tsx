@@ -38,7 +38,7 @@ export default function Header() {
 					</button>
 					<UserButton afterSignOutUrl="/" />
 				</div>
-				<div className="hidden lg:flex items-center lg:gap-x-12">
+				<div className="hidden items-center lg:flex lg:gap-x-12">
 					{navigation.map(({ name, href }) => (
 						<Link
 							key={name}
