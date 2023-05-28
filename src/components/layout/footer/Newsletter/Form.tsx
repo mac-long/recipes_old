@@ -69,7 +69,7 @@ export default function Form() {
 					formResponse.status === 200 && "bg-green-300 text-black"
 				}`}
 			>
-				<div className="flex items-center space-x-2">
+				<div className="icon">
 					{formResponse.status === 200 && (
 						<CheckCircleIcon className="w-5 h-5" />
 					)}

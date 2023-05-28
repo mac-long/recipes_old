@@ -22,9 +22,9 @@ export default function Error({
 				<p>If problem persists contact me...</p>
 			</div>
 			<div className="buttons">
-				<button className="flex items-center primary">
+				<button className="icon primary">
 					<ArrowPathIcon className="w-6 h-6" />
-					<span className="ml-2">Try again</span>
+					<span>Try again</span>
 				</button>
 				<Link href="mailto:mac@3sidedcube.com">Contact Me</Link>
 			</div>

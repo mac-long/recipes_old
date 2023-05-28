@@ -22,6 +22,10 @@
     @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600;
   }
 
+  button.icon, a.button.icon {
+    @apply flex items-center space-x-1
+  }
+
   a {
     @apply no-underline transition-colors duration-100;
     @apply hover:text-teal-600;

@@ -1,7 +1,10 @@
 import Link from "next/link";
 import Gradient from "./Gradient";
+import { auth } from "@clerk/nextjs";
+import { FireIcon } from "@heroicons/react/24/outline";
 
 export default function Hero() {
+	const { userId } = auth();
 	return (
 		<div className="relative px-6 pt-28 pb-40 lg:px-8 isolate animate-fadeIn">
 			<Gradient />
@@ -16,21 +19,26 @@ export default function Hero() {
 						good meals.
 					</p>
 					<div className="flex gap-x-6 justify-center items-center mt-10">
-						<Link href="/recipes" className="button primary">
-							Get Cooking
+						<Link href="/recipes" className="button primary icon">
+							<FireIcon className="w-5 h-5" />
+							<span>Get Cooking</span>
 						</Link>
-						<a
-							href="/api/auth/login"
-							className="text-sm font-semibold leading-6 text-slate-900"
-						>
-							Create an account <span aria-hidden="true">→</span>
-						</a>
-						{/* <Link
-							href="#footer"
-							className="text-sm font-semibold leading-6 text-slate-900"
-						>
-							Join our newsletter <span aria-hidden="true">→</span>
-						</Link> */}
+						{!userId && (
+							<a
+								href="/sign-up"
+								className="text-sm font-semibold leading-6 text-slate-900"
+							>
+								Create an account <span aria-hidden="true">→</span>
+							</a>
+						)}
+						{userId && (
+							<Link
+								href="#footer"
+								className="text-sm font-semibold leading-6 text-slate-900"
+							>
+								Join our newsletter <span aria-hidden="true">→</span>
+							</Link>
+						)}
 					</div>
 				</div>
 			</div>

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Logo from "./Logo";
-import { UserButton } from "@clerk/nextjs";
+import { UserButton, useAuth } from "@clerk/nextjs";
 
 const navigation = [
 	{ name: "Home", href: "/" },
@@ -19,6 +19,8 @@ export default function Header() {
 	useEffect(() => {
 		setMobileMenuOpen(false);
 	}, [pathname]);
+
+	const { userId } = useAuth();
 
 	return (
 		<header className="absolute inset-x-0 top-0 z-50">
@@ -36,7 +38,7 @@ export default function Header() {
 					</button>
 					<UserButton afterSignOutUrl="/" />
 				</div>
-				<div className="hidden lg:flex lg:gap-x-12">
+				<div className="hidden lg:flex items-center lg:gap-x-12">
 					{navigation.map(({ name, href }) => (
 						<Link
 							key={name}
@@ -50,6 +52,8 @@ export default function Header() {
 							{name}
 						</Link>
 					))}
+					{!userId && <Link href="/log-in">Log in</Link>}
+					{userId && <UserButton afterSignOutUrl="/" />}
 				</div>
 			</nav>
 			<Dialog
@@ -91,13 +95,14 @@ export default function Header() {
 								))}
 							</div>
 							<div className="py-6">
-								{/* <Link
-                  href="/login"
-                  className="block py-2.5 px-3 -mx-3 text-base font-semibold leading-7 rounded-lg hover:bg-gray-50 text-slate-900"
-                >
-                  Log in
-                </Link> */}
-								{/* TODO: Add a language changer here. */}
+								{!userId && (
+									<Link
+										href="/sign-in"
+										className="block py-2.5 px-3 -mx-3 text-base font-semibold leading-7 rounded-lg hover:bg-gray-50 text-slate-900"
+									>
+										Log in
+									</Link>
+								)}
 							</div>
 						</div>
 					</div>
