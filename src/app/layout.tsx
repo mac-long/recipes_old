@@ -1,7 +1,7 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/footer/Footer";
-import { ClerkProvider } from "@clerk/nextjs";
 import "./global.css";
+import { ClerkProvider } from "@clerk/nextjs";
 
 export const metadata = {
 	title: "Super Simple Recipes",
@@ -19,14 +19,15 @@ export default async function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<ClerkProvider>
-			<html lang="en">
-				<body>
+		<html lang="en">
+			<body>
+				<ClerkProvider>
+					{/* @ts-expect-error Async Server Component */}
 					<Header />
 					<main>{children}</main>
 					<Footer />
-				</body>
-			</html>
-		</ClerkProvider>
+				</ClerkProvider>
+			</body>
+		</html>
 	);
 }

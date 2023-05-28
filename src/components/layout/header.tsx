@@ -12,7 +12,7 @@ const navigation = [
 	{ name: "Recipes", href: "/recipes" },
 ];
 
-export default async function Header() {
+export default function Header() {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 	const pathname = usePathname();
 
@@ -24,7 +24,7 @@ export default async function Header() {
 		<header className="absolute inset-x-0 top-0 z-50">
 			<nav className="flex justify-between items-center p-6 lg:px-8">
 				<Logo />
-				<div className="flex lg:hidden">
+				<div className="flex space-x-4 lg:hidden">
 					<button
 						type="button"
 						className="inline-flex justify-center items-center rounded-md text-slate-700"
@@ -34,25 +34,22 @@ export default async function Header() {
 						<span className="sr-only">Open main menu</span>
 						<Bars3Icon className="w-6 h-6" aria-hidden="true" />
 					</button>
+					<UserButton afterSignOutUrl="/" />
 				</div>
 				<div className="hidden lg:flex lg:gap-x-12">
-					<>
-						{navigation.map(({ name, href }) => (
-							<Link
-								key={name}
-								href={href}
-								target={name === "Github" ? "_blank" : "_self"}
-								rel={name === "Github" ? "noreferrer" : ""}
-								className={`text-sm font-semibold leading-6 text-slate-900 ${
-									href === pathname &&
-									"text-teal-600 border-b-2 border-teal-600"
-								}`}
-							>
-								{name}
-							</Link>
-						))}
-						<UserButton afterSignOutUrl="/" />
-					</>
+					{navigation.map(({ name, href }) => (
+						<Link
+							key={name}
+							href={href}
+							target={name === "Github" ? "_blank" : "_self"}
+							rel={name === "Github" ? "noreferrer" : ""}
+							className={`text-sm font-semibold leading-6 text-slate-900 ${
+								href === pathname && "text-teal-600 border-b-2 border-teal-600"
+							}`}
+						>
+							{name}
+						</Link>
+					))}
 				</div>
 			</nav>
 			<Dialog
@@ -63,12 +60,11 @@ export default async function Header() {
 			>
 				<div className="fixed inset-0 z-50" />
 				<Dialog.Panel className="overflow-y-auto fixed inset-y-0 right-0 z-50 py-6 px-6 w-full bg-white sm:max-w-sm">
-					<UserButton afterSignOutUrl="/" />
 					<div className="flex justify-between items-center">
 						<Logo />
 						<button
 							type="button"
-							className="p-2.5 -m-2.5 mb-5 rounded-md text-slate-700"
+							className="p-2.5 -m-2.5 rounded-md text-slate-700"
 							onClick={() => setMobileMenuOpen(false)}
 						>
 							<span className="sr-only">Close main menu.</span>
@@ -95,12 +91,13 @@ export default async function Header() {
 								))}
 							</div>
 							<div className="py-6">
-								<Link
-									href="/sign-in"
-									className="block py-2.5 px-3 -mx-3 text-base font-semibold leading-7 rounded-lg hover:bg-gray-50 text-slate-900"
-								>
-									Log in
-								</Link>
+								{/* <Link
+                  href="/login"
+                  className="block py-2.5 px-3 -mx-3 text-base font-semibold leading-7 rounded-lg hover:bg-gray-50 text-slate-900"
+                >
+                  Log in
+                </Link> */}
+								{/* TODO: Add a language changer here. */}
 							</div>
 						</div>
 					</div>
