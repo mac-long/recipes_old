@@ -13,7 +13,8 @@ SSR is a super simple recipe blog that utilises ChatGPT to generate recipes and 
 - Sentry provides error tracking and logging for detailed reports on what went wrong.
 - Typescript keeps developers from making little mistakes regulary, saving lots of time in the long run.
 - Storybook is a great way to view your components and build them in isolation.
-- Chromatic allows for automated snapshot testing which saves the developers a lot of time.
+- Chromatic allows for automated testing and ui review. Link stories to Figma components.
+- GitHub Actions runs some CI scripts to ensure code is up to scratch.
 
 ## Tools
 
@@ -25,6 +26,7 @@ SSR is a super simple recipe blog that utilises ChatGPT to generate recipes and 
 - OpenAI
 - Storybook
 - Chromatic
+- GitHub Actions.
 - Typescript
 - Sentry
 - ESLint & Prettier
