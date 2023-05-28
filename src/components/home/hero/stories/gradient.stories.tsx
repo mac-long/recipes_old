@@ -1,12 +1,8 @@
-import { Meta, StoryObj } from '@storybook/react';
-import Gradient from '../gradient';
+import { StoryObj } from '@storybook/react';
+import Gradient from '../Gradient';
 
-const meta: Meta = {
-  title: 'components/home/hero/Gradient',
-  component: Gradient
-};
+export default { title: 'components/home/hero/Gradient', component: Gradient };
 
-export default meta;
 type Story = StoryObj;
 
 export const Main: Story = {

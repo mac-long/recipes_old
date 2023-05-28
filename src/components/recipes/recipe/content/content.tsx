@@ -1,12 +1,12 @@
 import { CameraIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
-import Link from 'next/link';
-import Background from './background';
-import Heading from './main/heading';
-import Ingredients from './main/ingredients';
-import Instructions from './main/instructions';
-import Summary from './main/summary';
-import CreationTime from './main/time';
+import { Link } from 'react-feather';
+import Background from './Background';
+import CreationTime from './main/CreationTime';
+import Heading from './main/Heading';
+import Ingredients from './main/Ingredients';
+import Instructions from './main/Instructions';
+import Summary from './main/Summary';
 
 export default async function Content({
   meal,

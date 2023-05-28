@@ -1,4 +1,4 @@
-export default function instructions({
+export default function Instructions({
   loading,
   instructions
 }: {

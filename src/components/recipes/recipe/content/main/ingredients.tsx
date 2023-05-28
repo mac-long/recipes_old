@@ -1,4 +1,4 @@
-export default function ingredients({
+export default function Ingredients({
   loading,
   ingredients
 }: {
