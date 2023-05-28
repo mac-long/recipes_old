@@ -62,7 +62,7 @@ SSR is a super simple recipe blog that utilises ChatGPT to generate recipes and 
 - [ ] Add push notifications to browser for when new posts come out.
 - [ ] Add Sanity CMS behind `/admin`, add secondary language.
 - [ ] Add login/signup, favourites and comments. Make sure to add a banner if email is unverified. (clerk.com?)
-- [ ] Setup GitHub Actions: Chromatic...
+- [ ] Setup GitHub Actions: Chromatic, Branch Protection, Code Coverage.
 - [ ] Fix Deployment Errors
 - [ ] Optimise: Try using Signals to replace State. Page Speed Insights.
 - [ ] Add a Dark Mode.
