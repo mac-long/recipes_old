@@ -74,7 +74,7 @@ export default function Header() {
             </button>
           </div>
           <div className="flow-root mt-6">
-            <div className="-my-6 divide-y ">
+            <div className="-my-6 divide-y">
               <div className="py-6 space-y-2">
                 {navigation.map(({ href, name }) => (
                   <Link
