@@ -4,6 +4,11 @@ SSR is a super simple recipe blog that utilises ChatGPT to generate recipes and 
 
 **Get Cooking.**
 
+## Sweet Links
+
+- [Main Site](https://recipes-sand.vercel.app)
+- [Storybook]()
+
 ## Key Development Notes
 
 - Kysely interfaces beautifully with the Vercel Postgres creating simple dot notated typesafe SQL querys.
@@ -45,10 +50,11 @@ SSR is a super simple recipe blog that utilises ChatGPT to generate recipes and 
 - [x] Add some fancy animations. Make numbers count up to value.
 - [x] Add share options [SMS, Twitter, Facebook, Copy Link and Email] to recipe pages.
 - [x] Split App into Components.
-- [ ] Setup Storybook & Chromatic.
-- [ ] Setup Testing.
+- [x] Setup Storybook & Chromatic.
+- [x] Setup Testing.
 - [ ] Setup Rome Tools.
 - [ ] Add Stories, Unit Tests, E2E Tests and Types.
+- [ ] [Structure Storybook](https://storybook.js.org/blog/structuring-your-storybook/).
 - [ ] Add push notifications to browser for when new posts come out.
 - [ ] Add Sanity CMS behind `/admin`, add secondary language.
 - [ ] Add login/signup, favourites and comments. Make sure to add a banner if email is unverified. (clerk.com?)

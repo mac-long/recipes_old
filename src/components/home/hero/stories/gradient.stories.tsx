@@ -3,8 +3,6 @@ import Gradient from '../Gradient';
 
 export default { title: 'components/home/hero/Gradient', component: Gradient };
 
-type Story = StoryObj;
-
-export const Main: Story = {
+export const Main: StoryObj = {
   render: () => <Gradient />
 };

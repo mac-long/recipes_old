@@ -28,6 +28,7 @@ export default function Header() {
             type="button"
             className="inline-flex justify-center items-center rounded-md text-slate-700"
             onClick={() => setMobileMenuOpen(true)}
+            data-testid="open-menu"
           >
             <span className="sr-only">Open main menu</span>
             <Bars3Icon className="w-6 h-6" aria-hidden="true" />
@@ -64,6 +65,7 @@ export default function Header() {
               className="p-2.5 -m-2.5 rounded-md text-slate-700"
               onClick={() => setMobileMenuOpen(false)}
             >
+              <span className="sr-only">Close main menu.</span>
               <XMarkIcon
                 className="w-6 h-6"
                 aria-hidden="true"
