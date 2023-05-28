@@ -49,14 +49,11 @@ export default async function Content({
 					/>
 					<Link
 						className="flex items-center w-64 text-xs font-extralight"
-						href={
-							photographer_url ||
-							`https://unsplash.com/s/users/${photographer_name}`
-						}
+						href={photographer_url || "https://openai.com/dalle"}
 						target="_blank"
 					>
 						<CameraIcon className="mr-1 w-6 h-6" />
-						{photographer_name}
+						{photographer_name || "DALL-E 2"}
 					</Link>
 				</div>
 				<Link href="/recipes" className="mx-auto button primary">

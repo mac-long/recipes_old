@@ -1,4 +1,6 @@
 import type { StorybookConfig } from "@storybook/nextjs";
+import remarkDirective from "remark-directive";
+
 const config: StorybookConfig = {
 	stories: ["../src/**/*.mdx", "../src/**/*.stories.(js|jsx|ts|tsx)"],
 	addons: [
@@ -6,6 +8,19 @@ const config: StorybookConfig = {
 		"@storybook/addon-interactions",
 		"@storybook/addon-links",
 		"@storybook/addon-a11y",
+		{
+			name: '@storybook/addon-docs',
+			options: {
+				mdxPluginOptions: {
+					mdxCompileOptions: {
+						remarkPlugins: [remarkDirective]
+					}
+				}
+			}
+		},
+		 {
+      name: "@hewes/storybook-addon-docs-graymatter"
+    },
 	],
 	framework: {
 		name: "@storybook/nextjs",

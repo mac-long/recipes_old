@@ -1,0 +1,16 @@
+import {Meta} from '@storybook/blocks'
+
+<Meta title="Documentation/Notes"/>
+
+# Key Development Notes
+
+- Kysely interfaces beautifully with the Vercel Postgres creating simple dot notated typesafe SQL querys.
+- Husky will Format, Lint and run all tests before commits to ensure only good code is pushed to the remote. It will also lint [commit messages](https://conventionalcommits.org).
+- Nodemailer utilises a gmail application password to send out emails via Vercel's cron functions.
+- The OpenAI prompt is carefully crafted to ensure a good JSON response each time.
+- Sentry provides error tracking and logging for detailed reports on what went wrong.
+- Typescript keeps developers from making little mistakes regulary, saving lots of time in the long run.
+- Storybook is a great way to view your components and build them in isolation.
+- Chromatic allows for automated testing and ui review. Link stories to Figma components.
+- GitHub Actions runs some CI scripts to ensure code is up to scratch.
+- Rome for Linting and Formatting. It's super quick, see the table below.
