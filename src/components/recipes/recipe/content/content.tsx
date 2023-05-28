@@ -1,6 +1,6 @@
 import { CameraIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
-import { Link } from "react-feather";
+import Link from "next/link";
 import Background from "./Background";
 import CreationTime from "./main/CreationTime";
 import Heading from "./main/Heading";
@@ -52,7 +52,7 @@ export default async function Content({
 						href={photographer_url || "https://openai.com/dalle"}
 						target="_blank"
 					>
-						<CameraIcon className="mr-1 w-6 h-6" />
+						<CameraIcon className="mr-1 mb-1 w-6 h-6" />
 						{photographer_name || "DALL-E 2"}
 					</Link>
 				</div>

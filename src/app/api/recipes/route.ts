@@ -15,15 +15,23 @@ export async function GET() {
 	});
 
 	const recipeJson = JSON.parse(response.data.choices[0].text);
-	const recipeImage = await openai.createImage({
-		prompt: recipeJson.title,
-		n: 1,
-		size: "1024x1024",
-	});
+
+	let image_url;
+	if (Math.random() < 0.5) {
+		image_url = await openai.createImage({
+			prompt: recipeJson.title,
+			n: 1,
+			size: "1024x1024",
+		});
+	} else {
+		image_url = await fetch(
+			`https://api.unsplash.com/photos/random?query='${recipeJson.title}'&client_id=IVuqCPp50fkkZ4Cx3QX5SsONLZguKnjVUFE2UC2lP-Y`,
+		).then((res) => res.json());
+	}
 
 	await newRecipe({
 		...recipeJson,
-		image_url: recipeImage.data.data[0].url,
+		image_url,
 	});
 
 	return NextResponse.json({
@@ -32,7 +40,7 @@ export async function GET() {
 			all: recipes,
 			new: {
 				...recipeJson,
-				image_url: recipeImage.data.data[0].url,
+				image_url,
 			},
 		},
 	});
