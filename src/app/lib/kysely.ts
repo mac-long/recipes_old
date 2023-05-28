@@ -26,24 +26,6 @@ export const getRecipesByMeal = (meal: string) =>
 export const getRecipeById = (id: number) =>
 	db.selectFrom("recipes").selectAll().where("id", "=", id).limit(1).execute();
 
-export const getRecipeFilterCategories = async () => {
-	let cuisines: string[] = [];
-	let meals: string[] = [];
-
-	await db
-		.selectFrom("recipes")
-		.select(["cuisine", "meal"])
-		.execute()
-		.then((res) => {
-			for (const item of res) {
-				cuisines.push(item["cuisine"]);
-				meals.push(item["meal"]);
-			}
-		});
-
-	return { cuisines: [...new Set(cuisines)], meals: [...new Set(meals)] };
-};
-
 export const newEmail = (data: any) =>
 	db.insertInto("newsletter").values(data).execute();
 

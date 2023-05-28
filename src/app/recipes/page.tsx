@@ -10,15 +10,18 @@ export const metadata = {
 
 export default async function Recipes() {
 	const recipesData = await getAllRecipes();
-	const { meals, cuisines } = await getRecipeFilterCategories();
+	console.log(
+		"🚀 ~ file: page.tsx:13 ~ Recipes ~ recipesData:",
+		JSON.stringify(recipesData),
+	);
 
 	return (
 		<Container>
-			<RecipeListContainer
+			{/* <RecipeListContainer
 				recipesData={recipesData}
 				meals={meals}
 				cuisines={cuisines}
-			/>
+			/> */}
 		</Container>
 	);
 }

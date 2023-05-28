@@ -8,7 +8,7 @@ import { getRecipeFilterCategories } from "../lib/kysely";
 export default async function Recipes({ filters }: any) {
 	let cards = [];
 	for (let i = 0; i < 12; i++) cards.push(<RecipeCard key={i} loading />);
-	const { meals, cuisines } = await getRecipeFilterCategories();
+	// const { meals, cuisines } = await getRecipeFilterCategories();
 
 	return (
 		<RecipeListContainer>
@@ -16,7 +16,7 @@ export default async function Recipes({ filters }: any) {
 				title="Our recipes."
 				description="Enjoy searching through our crazy assortment of cuisine from around the world."
 			>
-				<Filters meals={meals} cuisines={cuisines} />
+				{/* <Filters meals={meals} cuisines={cuisines} /> */}
 			</RecipesHeading>
 			<List recipes={cards} />
 		</RecipeListContainer>
