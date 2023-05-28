@@ -21,6 +21,10 @@ SSR is a super simple recipe blog that utilises ChatGPT to generate recipes and 
 - Chromatic allows for automated testing and ui review. Link stories to Figma components.
 - GitHub Actions runs some CI scripts to ensure code is up to scratch.
 
+## Notes For Next App
+
+- Might be a good idea to setup all the testing/automation at the start to ensure bets dev experience. Storybook, CI + Testing etc.
+
 ## Tools
 
 - Next.js
