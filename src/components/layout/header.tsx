@@ -41,8 +41,7 @@ export default function Header() {
               target={name === 'Github' ? '_blank' : '_self'}
               rel={name === 'Github' ? 'noreferrer' : ''}
               className={`text-sm font-semibold leading-6 text-slate-900 ${
-                href === pathname &&
-                'text-teal-600 border-b-2 border-teal-600'
+                href === pathname && 'text-teal-600 border-b-2 border-teal-600'
               }`}
             >
               {name}
