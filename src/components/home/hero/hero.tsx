@@ -1,7 +1,9 @@
 import Link from "next/link";
 import Gradient from "./Gradient";
+import { auth } from "@clerk/nextjs";
 
 export default function Hero() {
+	const { userId } = auth();
 	return (
 		<div className="relative px-6 pt-28 pb-40 lg:px-8 isolate animate-fadeIn">
 			<Gradient />
@@ -19,11 +21,19 @@ export default function Hero() {
 						<Link href="/recipes" className="button primary">
 							Get Cooking
 						</Link>
+						{!userId && (
+							<Link
+								href="/sign-up"
+								className="text-sm font-semibold leading-6 text-slate-900"
+							>
+								Create an account <span aria-hidden="true">→</span>
+							</Link>
+						)}
 						<Link
-							href="#"
+							href="#footer"
 							className="text-sm font-semibold leading-6 text-slate-900"
 						>
-							Create an account <span aria-hidden="true">→</span>
+							Join our newsletter <span aria-hidden="true">→</span>
 						</Link>
 					</div>
 				</div>

@@ -1,5 +1,6 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/footer/Footer";
+import { ClerkProvider } from "@clerk/nextjs";
 import "./global.css";
 
 export const metadata = {
@@ -18,12 +19,14 @@ export default async function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en">
-			<body>
-				<Header />
-				<main>{children}</main>
-				<Footer />
-			</body>
-		</html>
+		<ClerkProvider>
+			<html lang="en">
+				<body>
+					<Header />
+					<main>{children}</main>
+					<Footer />
+				</body>
+			</html>
+		</ClerkProvider>
 	);
 }

@@ -13,6 +13,7 @@
 		"build-storybook": "storybook build"
 	},
 	"dependencies": {
+		"@clerk/nextjs": "^4.19.0",
 		"@headlessui/react": "^1.7.14",
 		"@heroicons/react": "^2.0.18",
 		"@sentry/nextjs": "^7.53.1",

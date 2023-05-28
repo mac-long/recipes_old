@@ -18,9 +18,6 @@ const config: StorybookConfig = {
 				}
 			}
 		},
-		 {
-      name: "@hewes/storybook-addon-docs-graymatter"
-    },
 	],
 	framework: {
 		name: "@storybook/nextjs",
