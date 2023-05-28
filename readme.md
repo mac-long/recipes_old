@@ -7,7 +7,7 @@ SSR is a super simple recipe blog that utilises ChatGPT to generate recipes and 
 ## Sweet Links
 
 - [Main Site](https://recipes-sand.vercel.app)
-- [Storybook]()
+- [Storybook](https://6472adaed790cead3eb3857e-qkvabqvamz.chromatic.com)
 
 ## Key Development Notes
 
@@ -20,10 +20,50 @@ SSR is a super simple recipe blog that utilises ChatGPT to generate recipes and 
 - Storybook is a great way to view your components and build them in isolation.
 - Chromatic allows for automated testing and ui review. Link stories to Figma components.
 - GitHub Actions runs some CI scripts to ensure code is up to scratch.
+- Rome for Linting and Formatting. It's super quick, see the table below.
+
+## Rome vs. ESLint & Prettier.
+
+Here you can see Rome compared to ESLint for linting and Prettier for formatting. The script ran formatting and linting on `57` files.
+
+The numbers correlate to: `Time Taken` / `CPU Usage`.
+
+### Linting
+
+|       | **ESLint**       | **Rome**         |
+| ----- | ---------------- | ---------------- |
+| Run 1 | `1.28s` / `126%` | `0.28s` / `106%` |
+| Run 2 | `1.22s` / `139%` | `0.27s` / `108%` |
+| Run 3 | `1.23s` / `138%` | `0.27s` / `107%` |
+| Run 4 | `1.22s` / `139%` | `0.27s` / `108%` |
+| Run 5 | `1.23s` / `138%` | `0.29s` / `106%` |
+
+### Formatting
+
+|       | **Prettier**     | **Rome**         |
+| ----- | ---------------- | ---------------- |
+| Run 1 | `3.27s` / `145%` | `0.05s` / `106%` |
+| Run 2 | `3.21s` / `145%` | `0.05s` / `108%` |
+| Run 3 | `3.27s` / `145%` | `0.05s` / `107%` |
+| Run 4 | `3.27s` / `144%` | `0.05s` / `108%` |
+| Run 5 | `2.95s` / `150%` | `0.05s` / `106%` |
+
+You can run these tests yourself with this super quick little shell script written in zsh, just replace `{script}`. e.g. `rome check --write`.
+
+```shell
+for i in `seq 1 5`
+do
+  time {script}
+done
+```
+
+> ❗️**NOTE**: Make sure to add `'!.next'` when running Prettier
+> This is as you don't generally format build output as it's not commited.
+> Example: `prettier --write . '!.next'`.
 
 ## Notes For Next App
 
-- Might be a good idea to setup all the testing/automation at the start to ensure bets dev experience. Storybook, CI + Testing etc.
+- Might be a good idea to setup all the testing / automation at the start to ensure bets dev experience. Storybook, CI + Testing etc.
 
 ## Tools
 
@@ -38,7 +78,7 @@ SSR is a super simple recipe blog that utilises ChatGPT to generate recipes and 
 - GitHub Actions.
 - Typescript
 - Sentry
-- ESLint & Prettier
+- Rome
 
 ## Todo List
 
@@ -55,13 +95,13 @@ SSR is a super simple recipe blog that utilises ChatGPT to generate recipes and 
 - [x] Add share options [SMS, Twitter, Facebook, Copy Link and Email] to recipe pages.
 - [x] Split App into Components.
 - [x] Setup Storybook & Chromatic.
-- [ ] Setup Testing.
-- [ ] Setup Rome Tools.
+- [x] Setup Testing.
+- [x] Setup Rome Tools.
 - [ ] Add Stories, Unit Tests (for simple functions data mutation), E2E Tests (for canvas based user interaction) and Types.
 - [ ] [Structure Storybook](https://storybook.js.org/blog/structuring-your-storybook/).
+- [ ] Add Sanity CMS behind ` /admin`, add secondary language.
 - [ ] Add push notifications to browser for when new posts come out.
-- [ ] Add Sanity CMS behind `/admin`, add secondary language.
-- [ ] Add login/signup, favourites and comments. Make sure to add a banner if email is unverified. (clerk.com?)
+- [ ] Add login / signup, favourites and comments. Make sure to add a banner if email is unverified. [Clerk](https://clerk.com).
 - [ ] Setup GitHub Actions: Chromatic, Branch Protection, Code Coverage.
 - [ ] Fix Deployment Errors
 - [ ] Optimise: Try using Signals to replace State. Page Speed Insights.

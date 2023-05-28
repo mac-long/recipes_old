@@ -1,12 +1,12 @@
 {
-  "crons": [
-    {
-      "path": "/api/recipes",
-      "schedule": "0 5 * * *"
-    },
-    {
-      "path": "/api/newsletter",
-      "schedule": "0 6 * * 1"
-    }
-  ]
+	"crons": [
+		{
+			"path": "/api/recipes",
+			"schedule": "0 5 * * *"
+		},
+		{
+			"path": "/api/newsletter",
+			"schedule": "0 6 * * 1"
+		}
+	]
 }
